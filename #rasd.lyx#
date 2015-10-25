@@ -68,15 +68,15 @@
 
 \begin_body
 
-\begin_layout Quote
+\begin_layout Quotation
 Requirement Analysis Specification Document
 \end_layout
 
-\begin_layout Quote
+\begin_layout Quotation
 Matteo Maria Fusi
 \end_layout
 
-\begin_layout Quote
+\begin_layout Quotation
 Matteo Locatelli
 \end_layout
 
@@ -162,44 +162,24 @@ Goals
 \end_layout
 
 \begin_layout Standard
-The main goals of the proposed service will be:
-\end_layout
-
-\begin_layout Enumerate
-Allow customers to make a reservation.
- 
-\end_layout
-
-\begin_layout Enumerate
-Allow customers to make a request.
-\end_layout
-
-\begin_layout Enumerate
-Allow customers to use the system via the web-app version.
-\end_layout
-
-\begin_layout Enumerate
-Allow customers to use the system via the smartphone app version.
-\end_layout
-
-\begin_layout Enumerate
-Guarantee a fair management of taxi queues for each taxi zone.
-\end_layout
-
-\begin_layout Enumerate
-Allow taxi drivers to use a mobile application to access to the system.
-\end_layout
-
-\begin_layout Enumerate
-Allow taxi drivers to accept a request.
-\end_layout
-
-\begin_layout Enumerate
-Allow taxi drivers to refuse a request.
-\end_layout
-
-\begin_layout Enumerate
-The service must be extendible.
+The main goals of the proposed service will be: I.
+ Allow customers to make a reservation.
+ II.
+ Allow customers to make a request.
+ III.
+ Allow customers to use the system via the web-app version.
+ IV.
+ Allow customers to use the system via the smartphone app version.
+ V.
+ Guarantee a fair management of taxi queues for each taxi zone.
+ VI.
+ Allow taxi drivers to use a mobile application to access to the system.
+ VII.
+ Allow taxi drivers to accept a request.
+ VIII.
+ Allow taxi drivers to refuse a request.
+ IX.
+ The service must be extendible.
 \end_layout
 
 \begin_layout Subsection
@@ -320,7 +300,7 @@ Taxi drivers are inserted in the system from the beginning.
 \end_layout
 
 \begin_layout Enumerate
-A taxi driver can only drive the taxi associated to him/her.
+Every taxi davi driver can only drive one taxi because 
 \end_layout
 
 \begin_layout Enumerate
@@ -333,11 +313,6 @@ Every taxi driver should have installed the mytaxi application on their
 \begin_layout Enumerate
 We assume that taxi drivers will accept or refuse a request in an admissible
  time, for example 1 minute.
-\end_layout
-
-\begin_layout Enumerate
-We assume that the location where the service will be installed and set
- up is near the city in which will be exploited.
 \end_layout
 
 \begin_layout Subsection
@@ -550,7 +525,7 @@ The system must maintain a reasonable time to manage information.
 \end_layout
 
 \begin_layout Enumerate
-The application must be free to improve its spread.
+The application must be free.
 \end_layout
 
 \begin_layout Subsection
@@ -575,13 +550,8 @@ The GPS of the smartphone used by taxi drivers must be always turned on,
  in this way the system knows always the position of the taxis.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Legal Constraints
-\end_layout
-
-\begin_layout Itemize
-Taxis and taxi drivers are subjected by the actual law in the country where
- mytaxi is installed and used.
 \end_layout
 
 \begin_layout Section
