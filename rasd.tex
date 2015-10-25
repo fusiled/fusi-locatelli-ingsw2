@@ -1,0 +1,266 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{babel}
+\begin{document}
+\begin{quotation}
+Requirement Analysis Specification Document
+
+Matteo Maria Fusi
+
+Matteo Locatelli
+\end{quotation}
+\pagebreak{}\tableofcontents{}
+
+\pagebreak{}
+
+
+\section{Document Overview}
+
+
+\subsection{Document Purpose}
+
+This document is the Requirements Analysis Specification Document
+(RASD) for mytaxi, the system that must be developed. The purpose
+of this document is to describe the requirements of this system (both
+functional and non functional), to identify its main goals and users
+that will mainly interact with it, especially its stakeholders. This
+document will also analyze the properties of the domain in which the
+system will be used and the constraints that have to be respected.
+The main application scenarios will be analyzed to clearly explain
+how the system works. This document is intended for developers and
+other people that will work on this system and need to know the fundamental
+information about it.
+
+
+\subsection{Document Structure}
+
+Part 1 talks about what is Requirements Analysis Specification Document
+(RASD) and how this paper is structured. Part 2 contains a little
+introduction of mytaxy service and general information such as the
+scope of the service, identified stakeholders and the terminology
+used. The Section 3 is composed by the analysis of the requirements,
+from the domain properties to functional and non functional requirements.
+Section 4 will describe use cases and will be proposed some common
+scenarios to the reader. 
+
+
+\section{The mytaxi service}
+
+
+\subsection{Scope }
+
+The purpose of the project is to develop a web-based service that
+manages the taxi service. Using their smartphone, or a web-app, users
+can request a taxi ride in a simple way. Also taxi drivers will use
+their smartphone for accept or reject requests of performance. 
+
+
+\subsubsection{Goals}
+
+The main goals of the proposed service will be: I. Allow customers
+to make a reservation. II. Allow customers to make a request. III.
+Allow customers to use the system via the web-app version. IV. Allow
+customers to use the system via the smartphone app version. V. Guarantee
+a fair management of taxi queues for each taxi zone. VI. Allow taxi
+drivers to use a mobile application to access to the system. VII.
+Allow taxi drivers to accept a request. VIII. Allow taxi drivers to
+refuse a request. IX. The service must be extendible.
+
+
+\subsection{Stakeholders Identification}
+
+The financial stakeholder of this project is probably the taxi company,
+that wants to use a system to improve its service in order to satisfy
+its customers and to increase the number of people who use its taxi.
+Another possible stakeholder is the government of the city, that wants
+to employ mytaxi service for the same reasons explained above. The
+only difference is that the taxis are administrated by the government
+and not by a private company. Citizens or tourist of a city can also
+be stakeholders. 
+
+
+\subsection{Glossary}
+\begin{description}
+\item [{Customer/Passenger:}] a citizen who requires a taxi ride using
+the service.
+\item [{Confirmation:}] after a request is taken in charge by a taxi driver,
+the system generates a confirmation that will be sent to the customer.
+The confirmation informs the customer about the waiting time and the
+code of the taxi. mytaxy: is the service proposed in this document. 
+\item [{Performance:}] (Taxi related) in this paper is synonym of the term
+Ride. 
+\item [{Request:}] when a customer requests for a ride to the system, this
+will generate a request that will be forwarded to a taxi driver, containing
+information about the customer (such as his/hers name and surname
+provided during the registration to the system, etc.) and the origin
+of the ride. 
+\item [{Reservation:}] when a customer wants to book a ride, the system
+will generate a reservation instance. The reservation must be made
+at least 2 hours before the ride, but the request is processed by
+the system only 10 minutes before the performance takes place. Despite
+of the request, the customer must also provide to the system the destination
+of the ride 
+\item [{Ride:}] performance made by a taxi driver that take a customer
+from a place to the desired destination. 
+\item [{Driver:}] (taxi related) the one who drives, and also usually owns,
+a taxi. He will use the service to find customers. 
+\item [{Zone:}] a zone is a section which the city is divided in. Zones
+are 2 km2 wide.
+\end{description}
+
+\section{Requirement Analysis}
+
+
+\subsection{Domain Properties}
+\begin{enumerate}
+\item The City is divided in taxi zones. 
+\item Zones are 2 km2 wide. 
+\item The position of a taxi is known by receiving GPS coordinates from
+the smartphone that the taxi driver owns.
+\item A taxi is associated to a zone if its location is inside the zone's
+boundaries.
+\end{enumerate}
+
+\subsection{Assumptions}
+
+This section will clarify some points that aren't explained in the
+specification document. 
+\begin{enumerate}
+\item Every taxi driver should have installed the mytaxi application on
+their smartphone for the sake of establish the position of the vehicle
+and, so, assign him to a zone of the city. 
+\item We assume that taxi drivers will accept or refuse a request in an
+admissible time, for example 1 minute.
+\end{enumerate}
+
+\subsection{Functional Requirements}
+
+
+\subsubsection{Overview}
+
+Passengers can use an app installed on their phone or a web-app to
+request or reserve a taxi ride. Taxi drivers will also use the same
+app to inform the system about their availability and to confirm requests
+made by customers. A customer can send a request for a performance
+to the system; the system will forward the request to the first taxi
+available. The taxi driver can accept or refuse the request: in the
+case of rejection the system will contact the second available taxi
+and so on. When the request is accepted by a driver, the customer
+is notified with the waiting time and the code of the taxi. If a customer
+wants to book a ride, it can also make a reservation. If there no
+available taxi in the zone, the system will try to contact the three
+nearest taxis in the city outside the inquired zone. 
+
+
+\subsubsection{Analysis}
+\begin{enumerate}
+\item Allow customers to make a request.
+
+\begin{enumerate}
+\item A customer can make a request specifying his/her name and the origin
+of the ride.
+
+\begin{enumerate}
+\item If the customer is using the smartphone app, he can also specify the
+origin of the ride using the GPS.
+\end{enumerate}
+\item When the request is accepted by a taxi driver a confirm message will
+sent to the customer.
+
+\begin{enumerate}
+\item If an available taxi is found, the customer is notified with the code
+of the taxi and the estimated waiting time.
+\item If the available taxi is in a different zone from the one in which
+the customer is, when the passenger receive the confirmation he can
+decide to accept or refuse the ride.
+\end{enumerate}
+\end{enumerate}
+\item Allow customers to make a reservation.
+
+\begin{enumerate}
+\item A customer can make a reservation specifying the name, the origin
+and the destination of the ride and the hour at which he wants to
+make it.
+\item If the customer is using the smartphone app, he can also specify the
+origin of the ride using the GPS.
+\item The system will confirm the reservation to the customer.
+\item The system will automatically make a request 10 minutes before the
+time chosen by the customer.
+\end{enumerate}
+\item Allow customers to use the system via the web-app version. 
+
+\begin{enumerate}
+\item A customer can use the web-app version of the system which will allow
+him to access to every functionality of the system. IV. Allow customers
+to use the system via the smartphone app version.
+\end{enumerate}
+\item A customer can use the smartphone app version of the system which
+will allow him to access to every functionality of the system.
+\item Guarantee a fair management of taxi queues for each taxi zone. 
+
+\begin{enumerate}
+\item When a taxi enters a zone, if it's available it's added to the queue
+of that zone.
+\item When a taxi exits a zone, it is removed from the queue of that zone.
+\item If a taxi driver refuses a request from a customer, the taxi is moved
+to the last place of the queue.
+\item If there isn't any available taxi in the customer's zone or every
+taxi in it refuses his request, the request will be forwarded to taxis
+in other zones. 
+\end{enumerate}
+\item Allow taxi drivers to use a mobile application to access to the system.
+
+\begin{enumerate}
+\item Taxi drivers are given a code and a password, thanks to them they
+can log into the system. 
+\item Using the app, taxi drivers can choose to appear available to make
+a ride.
+\item Taxi drivers can also decide to appear unavailable.
+\end{enumerate}
+\item Allow taxi drivers to accept a request. 
+
+\begin{enumerate}
+\item Taxi drivers can accept a request from a customer.
+\end{enumerate}
+\item Allow taxi drivers to refuse a request.
+
+\begin{enumerate}
+\item Taxi drivers can refuse a request from a customer.
+\end{enumerate}
+\item The service must be extendible. 
+
+\begin{enumerate}
+\item Guarantee programmatic interfaces to enable the development of additional
+services.
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Non Functional Requirements}
+\begin{enumerate}
+\item The UX should be the same in every system in which the application
+is available. For example, the user interface should be the same in
+IOS and Android apps. 
+\item The system must maintain a reasonable time to manage information.
+Which means, the time of processing a request made by a customer (the
+time elapsed from the submission to the forwarding of the requesto
+to a taxi driver) should resolve in no more than 30 seconds. The same
+amount of time must not pass between the acceptance or rejection of
+the request and the arrival of the confirmation message to the customer.
+\end{enumerate}
+
+\subsection{Constraints}
+\begin{enumerate}
+\item Internet connection is required for accessing the service.
+\item The reservation must be made at least 2 house before the time of the
+ride.
+\item If the customer is using the system with the web-app version, the
+origin of the ride must be inserted manually.
+\item The GPS of the smartphone used by taxi drivers must be always turned
+on, in this way the system knows always the position of the taxis.
+\end{enumerate}
+
+\section{Use Case Analysis}
+\end{document}
