@@ -535,13 +535,22 @@ Non Functional Requirements
 \end_layout
 
 \begin_layout Enumerate
-The UX should be the same in every system in which the application is available.
+
+\series bold
+Same UX
+\series default
+: The UX should be the same in every system in which the application is
+ available.
  For example, the user interface should be the same in IOS and Android apps.
- 
+ A similar UX should be reproduced on the web-app if used by a desktop computer.
 \end_layout
 
 \begin_layout Enumerate
-The system must maintain a reasonable time to manage information.
+
+\series bold
+Acceptable performance
+\series default
+: The system must maintain a reasonable time to manage information.
  Which means, the time of processing a request made by a customer (the time
  elapsed from the submission to the forwarding of the requesto to a taxi
  driver) should resolve in no more than 30 seconds.
@@ -550,7 +559,11 @@ The system must maintain a reasonable time to manage information.
 \end_layout
 
 \begin_layout Enumerate
-The application must be free to improve its spread.
+
+\series bold
+Freeware
+\series default
+: The application must be free to improve its spread.
 \end_layout
 
 \begin_layout Subsection
@@ -586,6 +599,132 @@ Taxis and taxi drivers are subjected by the actual law in the country where
 
 \begin_layout Section
 Use Case Analysis
+\end_layout
+
+\begin_layout Subsection
+Scenarios
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 1
+\end_layout
+
+\begin_layout Standard
+Marcello is a citizen who wants to request a taxi ride to go to work.
+ He is at home, so he turns on his computer and open the mytaxi website
+ to call the ride.
+ In order to complete his request, Marcello fills the form with his name
+ and his address.
+ The system, once it has received Marcello's request, start looking for
+ a taxi in the same zone of the customer's house.
+ An available taxi has been found in that zone, so the request is sent to
+ the smartphone of the driver who is driving that taxi.
+ The taxi driver decides to accept Marcello's request, so a confirmation
+ message in sent to the customer with the code of the taxi and the estimated
+ waiting time.
+ Marcello receives the confirmation and goes out oh his house to wait for
+ the taxi.
+ Once the taxi arrives to Marcello's position, the taxi driver verify that
+ Marcello was the one who made the request and then use his app to appear
+ unavailable.
+ Marcello tells the driver his destination and the driver takes him there.
+ At the end of the ride, the customer pays the taxi driver, who then use
+ again his mytaxi app to appear available.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 2
+\end_layout
+
+\begin_layout Standard
+Oscar is really tired, he always gets lost in the huge city he lives in.
+ He decides to request a taxi ride using the mytaxi service, so he downloads
+ the app on his smartphone and fills the form for the request: he inserts
+ his name e uses the GPS system to detect his position.
+ The system finds a taxi in the same zone of Oscar, but the taxi driver
+ is having lunch break so he decides to refuse the request.
+ The request is then forwarded to the next taxi in the queue and the driver
+ accepts the call.
+ The taxi driver makes himself appear as unavailable and then takes Oscar
+ to his house, who pays for the service and thanks kindly the driver for
+ saving him.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 3 
+\end_layout
+
+\begin_layout Standard
+Gwyn is a foreign traveler who arrives to the city of Milan to visit it.
+ He decides to request a ride to go back to the hotel, after spending the
+ whole day walking around.
+ Gwyn downloads the mytaxi app and fill the request form submitting is name
+ and his position (he doesn't use the GPS because his smartphone is low
+ on battery).
+ Unfortunately, there isn't any free taxi in Gwyn's zone, so the system
+ forwards his request to the nearest taxi in a different zone.
+ The taxi driver accepts the request, so a confirmation message is sent
+ to the customer.
+ When Gwyn sees the waiting time he gets very angry, because he has to wait
+ for more than an hour.
+ He decides to refuse the ride and visit Milan a little more, waiting for
+ a closer taxi the be avaialble.
+ After half an hour, Gwyn tries again to make a request and he's lucky this
+ time because there's a free taxi in his zone.
+ He submits all the needed information so he can make the ride and reach
+ his hotel.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 4
+\end_layout
+
+\begin_layout Standard
+Jack wants to request a taxi ride, because he has to go to university but
+ there is a strike and the public transport isn't an option.
+ He makes a request using the app installed on his smartphone, but the system
+ can't find any available taxi inside Jack's zone.
+ The request is sent to the nearest taxi, but the taxi driver refuses the
+ request because he's stuck in traffic; so the request is forwarded two
+ more times but the two drivers refuse Jack's call because of the same problem.
+ Jack is notified that the service is unavailable for the moment, so he
+ has to decide either not to go to university or wait a little to make another
+ request and hope that there's some taxi available.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 5
+\end_layout
+
+\begin_layout Standard
+Bob wants to go to visit a friend of his who lives in Bob's city but far
+ away from his house.
+ Bob decides to take a taxi, then uses the mytaxi web-app to request a ride.
+ There are three taxi available in Bob's zone, but all of the taxi drivers
+ refuse the call of the customer (such things occures very rarely).
+ The request is forwarded to the nearest available taxi, the driver accept
+ the request and Bob decides to take that taxi because he doesn't have to
+ wait much time.
+ The driver takes Bob to his friend's house and Bob pay the driver for the
+ service.
+\end_layout
+
+\begin_layout Subsubsection
+Scenario 6
+\end_layout
+
+\begin_layout Standard
+Lautrec of Carim wants to book a request in the city of Lordran, so he decides
+ to use the mytaxi app that is already installed on his smartphone.
+ It's 4 pm and Lautrec wants to make a reservation for 5 pm but, because
+ reservations can only be made at least two hours before the ride, the system
+ notifies him with an error.
+ Lautrec then decides to postpone is ride and books a ride for 6.30 pm, filling
+ the form with the hour, his name, the origin and the destination.
+ 10 minutes before 6.30 pm, the system makes a request for Lautrec's ride
+ and a taxi is found in the same zone of the starting point.
+ At 6.30 pm Lautrec is at the decided place for the start of the ride and
+ the taxi driver takes him to his destination.
 \end_layout
 
 \end_body

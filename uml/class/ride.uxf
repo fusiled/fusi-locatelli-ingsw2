@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>224</y>
+      <w>240</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>RideFactory
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>152</y>
+      <w>224</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>/AbstractRide/
+--
+- passenger: final AbstractPassenger
+- origin: final Position
+- destination: final Position
+- numberOfPeople: final int
+- luggage : final boolean
+--
++ getOrigin(): Position
++ getDestination(): Position
++ Passenger(): AbstractPassenger
++ getNumberOfPeople: int
++ ifMustTransportLuggage(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>232</y>
+      <w>200</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>64</x>
+      <y>40</y>
+      <w>208</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>/AbstractRideFactory/
+--
+--
++ generateRide ( AbstractTaxi taxi
+  AbstractRequest req,
+  Position destination): AbstractRide
++ generateRide ( AbstractTaxi taxi,
+  AbstractReservation req,
+  Position destination): AbstractRide
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>144</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>536</x>
+      <y>416</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Ride</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>336</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+</diagram>
