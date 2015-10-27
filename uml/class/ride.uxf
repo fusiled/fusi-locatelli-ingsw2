@@ -148,7 +148,7 @@ getPrice(): float
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>80</x>
+      <x>136</x>
       <y>312</y>
       <w>184</w>
       <h>72</h>
