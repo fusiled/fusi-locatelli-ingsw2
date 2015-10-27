@@ -885,7 +885,7 @@ None.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/Use cases diagram/make a request.png
+	filename Use cases diagram/make a request.png
 	width 15cm
 
 \end_inset
@@ -1058,7 +1058,7 @@ The customer has to make the reservation at least two house before the time
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/Use cases diagram/make a reservation.png
+	filename Use cases diagram/make a reservation.png
 	width 15cm
 
 \end_inset
@@ -1233,7 +1233,7 @@ The taxi driver doesn't answer to the request in the within 1 minute.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/Use cases diagram/system searches in zone.png
+	filename Use cases diagram/system searches in zone.png
 	width 15cm
 
 \end_inset
@@ -1408,7 +1408,7 @@ None.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/Use cases diagram/system searches in other zone.png
+	filename Use cases diagram/system searches in other zone.png
 	width 15cm
 
 \end_inset
@@ -1418,7 +1418,7 @@ None.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/Use cases diagram/search second nearest taxi.png
+	filename Use cases diagram/search second nearest taxi.png
 	width 15cm
 
 \end_inset
@@ -1428,7 +1428,7 @@ None.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/Use cases diagram/search third nearest taxi.png
+	filename Use cases diagram/search third nearest taxi.png
 	width 15cm
 
 \end_inset
@@ -1590,7 +1590,7 @@ None.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/Use cases diagram/send refusable message.png
+	filename Use cases diagram/send refusable message.png
 	width 15cm
 
 \end_inset
