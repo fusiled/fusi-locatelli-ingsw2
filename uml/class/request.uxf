@@ -6,13 +6,14 @@
     <coordinates>
       <x>272</x>
       <y>224</y>
-      <w>224</w>
+      <w>288</w>
       <h>168</h>
     </coordinates>
     <panel_attributes>/AbstractRequest/
 /a request is generated when/
 /a passenger wants a Ride/
 --
+- forwarder: static final AbstractRequestForwarder
 - passenger: final AbstractPassenger
 - origin: final Position
 - numberOfPeople: final int
@@ -53,13 +54,15 @@
       <x>624</x>
       <y>200</y>
       <w>184</w>
-      <h>64</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>/AbstractReservation/
 --
 - destination: Position
+- Time, departingTime
 --
-+ getDestination() : Position</panel_attributes>
++ getDestination() : Position
++ getDepartingTime(): Time</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -78,13 +81,13 @@ Serializable
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>488</x>
+      <x>552</x>
       <y>224</y>
-      <w>152</w>
+      <w>88</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -102,12 +105,12 @@ Serializable
     <id>Relation</id>
     <coordinates>
       <x>712</x>
-      <y>256</y>
+      <y>280</y>
       <w>24</w>
-      <h>88</h>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>

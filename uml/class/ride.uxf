@@ -16,7 +16,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>464</x>
+      <x>392</x>
       <y>152</y>
       <w>224</w>
       <h>192</h>
@@ -41,11 +41,11 @@
     <coordinates>
       <x>280</x>
       <y>232</y>
-      <w>200</w>
+      <w>128</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -53,35 +53,31 @@
       <x>64</x>
       <y>40</y>
       <w>208</w>
-      <h>112</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>/AbstractRideFactory/
 --
 --
 + generateRide ( AbstractTaxi taxi
   AbstractRequest req,
-  Position destination): AbstractRide
-+ generateRide ( AbstractTaxi taxi,
-  AbstractReservation req,
-  Position destination): AbstractRide
-</panel_attributes>
+  Position destination): AbstractRide</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>160</x>
-      <y>144</y>
+      <y>104</y>
       <w>24</w>
-      <h>96</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>536</x>
+      <x>456</x>
       <y>416</y>
       <w>80</w>
       <h>24</h>
@@ -92,12 +88,90 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
+      <x>488</x>
       <y>336</y>
       <w>24</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>40</y>
+      <w>144</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>/AbstractRideDump/
+--
+- price: float
+--
+getPrice(): float
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>48</y>
+      <w>192</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>200</y>
+      <w>128</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>RideDump</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>96</y>
+      <w>24</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>312</y>
+      <w>184</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+RideStatus
+--
+DRIVING
+CLOSED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>376</y>
+      <w>232</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>RideDumpFactory
+--
++ generateDump(AbstractRide ride) 
+         throws NotClosedRideExcpetion: void</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

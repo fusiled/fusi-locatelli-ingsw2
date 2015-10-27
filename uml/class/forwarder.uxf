@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>160</y>
+      <w>540</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>/AbstractForwarder/
+--
+- rideFactory:static final AbstractRideFactorySingleton
+--
+\\search for a taxi for passed req
++ storeRequest(AbstractRequest req): int
+\\wait until 10 minutes before the departing time and search
+\\for a taxi driver
++ storeReservation( AbstratReservation res)
+\\transform a request into a ride
++ invokeRequest(
+        AbstractRequest req,
+        AbstractTaxi taxi,
+        Position destination
+        ): void
+\\transform a reservation into a ride
++ invokeReservation(
+        AbstractReservation resId,
+        AbstractTaxi taxi
+        ): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>520</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Forwarder</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>440</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>
