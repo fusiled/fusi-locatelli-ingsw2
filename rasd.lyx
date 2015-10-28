@@ -732,8 +732,8 @@ Scenario 6
 \end_layout
 
 \begin_layout Standard
-Lautrec of Carim wants to book a request in the city of Lordran, so he decides
- to use the mytaxi app that is already installed on his smartphone.
+Lautrec wants to book a request in the city of Lordran, so he decides to
+ use the mytaxi app that is already installed on his smartphone.
  It's 4 pm and Lautrec wants to make a reservation for 5 pm but, because
  reservations can only be made at least two hours before the ride, the system
  notifies him with an error.
@@ -786,7 +786,7 @@ Use Cases
 \end_layout
 
 \begin_layout Subsubsection
-A customer makes a request
+Request
 \end_layout
 
 \begin_layout Standard
@@ -948,7 +948,7 @@ None.
 \end_layout
 
 \begin_layout Subsubsection
-A customer makes a reservation
+Reservation
 \end_layout
 
 \begin_layout Standard
@@ -1121,7 +1121,7 @@ The customer has to make the reservation at least two house before the time
 \end_layout
 
 \begin_layout Subsubsection
-The system searches for an available taxi
+Search taxi in zone
 \end_layout
 
 \begin_layout Standard
@@ -1296,7 +1296,7 @@ The taxi driver doesn't answer to the request in the within 1 minute.
 \end_layout
 
 \begin_layout Subsubsection
-The system searches for an available taxi outside the customer's zone
+Search taxi in another zone
 \end_layout
 
 \begin_layout Standard
@@ -1491,7 +1491,7 @@ None.
 \end_layout
 
 \begin_layout Subsubsection
-The system sends a refusable confirmation message
+Send refusable confirmation message
 \end_layout
 
 \begin_layout Standard
@@ -1653,7 +1653,7 @@ None.
 \end_layout
 
 \begin_layout Subsubsection
-The taxi driver receive a request
+Taxi driver receive a request
 \end_layout
 
 \begin_layout Standard

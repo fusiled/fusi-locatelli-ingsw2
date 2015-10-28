@@ -20,36 +20,24 @@
       <w>740</w>
       <h>460</h>
     </coordinates>
-    <panel_attributes>Customer makes a request
+    <panel_attributes>Request
 --
 bg=white</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>330</x>
-      <y>310</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Make a request
-layer=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>120</x>
-      <y>310</y>
-      <w>230</w>
-      <h>40</h>
+      <y>210</y>
+      <w>460</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=
 m2=
 </panel_attributes>
-    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+    <additional_attributes>10.0;120.0;440.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
@@ -110,18 +98,6 @@ layer=1</panel_attributes>
     <panel_attributes>Insert origin using GPS
 layer=1</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>440</x>
-      <y>220</y>
-      <w>150</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>130.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>

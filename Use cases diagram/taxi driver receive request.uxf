@@ -26,42 +26,18 @@ bg=white</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>230</x>
-      <y>90</y>
-      <w>150</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>Receive request
-layer=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>60</x>
       <y>100</y>
-      <w>190</w>
+      <w>430</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=
 m2=
 </panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>370</x>
-      <y>100</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;410.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>

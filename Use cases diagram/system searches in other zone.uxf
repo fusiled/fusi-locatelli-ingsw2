@@ -9,7 +9,7 @@
       <w>740</w>
       <h>630</h>
     </coordinates>
-    <panel_attributes>System searches for an available taxi outside the customer's zone
+    <panel_attributes>Search taxi in another zone
 --
 bg=white</panel_attributes>
     <additional_attributes/>
@@ -37,30 +37,18 @@ bg=white</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>180</x>
-      <y>70</y>
-      <w>270</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>Search nearest taxi in another zone
-layer=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
       <x>60</x>
       <y>100</y>
-      <w>140</w>
+      <w>550</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=
 m2=
 </panel_attributes>
-    <additional_attributes>10.0;60.0;120.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;530.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
@@ -73,18 +61,6 @@ m2=
     <panel_attributes>Find available taxi
 layer=1</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>440</x>
-      <y>90</y>
-      <w>170</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLUseCase</id>
