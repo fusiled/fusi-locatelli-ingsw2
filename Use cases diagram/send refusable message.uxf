@@ -102,8 +102,8 @@ m2=
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>540</x>
-      <y>310</y>
+      <x>560</x>
+      <y>320</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -176,14 +176,14 @@ m2=
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
+      <x>610</x>
       <y>240</y>
-      <w>100</w>
-      <h>90</h>
+      <w>90</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -212,14 +212,14 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>600</x>
-      <y>340</y>
-      <w>120</w>
-      <h>100</h>
+      <x>620</x>
+      <y>350</y>
+      <w>110</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;80.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;60.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -246,5 +246,33 @@ m1=
 m2=
 </panel_attributes>
     <additional_attributes>10.0;30.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>810</x>
+      <y>120</y>
+      <w>120</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes>
+    <additional_attributes>10.0;200.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>670</x>
+      <y>120</y>
+      <w>260</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=
+m2=
+</panel_attributes>
+    <additional_attributes>10.0;220.0;240.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -786,6 +786,20 @@ Use Cases
 \end_layout
 
 \begin_layout Subsubsection
+General use case diagram
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Use cases diagram/general uml.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Request
 \end_layout
 
@@ -1046,6 +1060,10 @@ The customer inserts the origin of the ride into the form, manually or using
 
 \begin_layout Enumerate
 The customer inserts the destination of the ride into the form.
+\end_layout
+
+\begin_layout Enumerate
+The customer inserts the hour at which he wants to make the ride.
 \end_layout
 
 \begin_layout Enumerate

@@ -639,11 +639,15 @@ Marcello is a citizen who wants to request a taxi ride to go to work.
  Marcello receives the confirmation and goes out oh his house to wait for
  the taxi.
  Once the taxi arrives to Marcello's position, the taxi driver verify that
- Marcello was the one who made the request and then use his app to appear
- unavailable.
+ Marcello was the one who made the request and then use his app to register
+ the start of the ride, this also makes the taxi appear unavailable.
  Marcello tells the driver his destination and the driver takes him there.
  At the end of the ride, the customer pays the taxi driver, who then use
- again his mytaxi app to appear available.
+ again his mytaxi app to register the end of the ride (and appear available
+ again).
+ In this way the ride will be registered and the taxi driver will find it
+ when he checks all the rides that he has made.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -728,8 +732,8 @@ Scenario 6
 \end_layout
 
 \begin_layout Standard
-Lautrec of Carim wants to book a request in the city of Lordran, so he decides
- to use the mytaxi app that is already installed on his smartphone.
+Lautrec wants to book a request in the city of Lordran, so he decides to
+ use the mytaxi app that is already installed on his smartphone.
  It's 4 pm and Lautrec wants to make a reservation for 5 pm but, because
  reservations can only be made at least two hours before the ride, the system
  notifies him with an error.
@@ -782,7 +786,7 @@ Use Cases
 \end_layout
 
 \begin_layout Subsubsection
-A customer makes a request
+Request
 \end_layout
 
 \begin_layout Standard
@@ -944,7 +948,7 @@ None.
 \end_layout
 
 \begin_layout Subsubsection
-A customer makes a reservation
+Reservation
 \end_layout
 
 \begin_layout Standard
@@ -1045,6 +1049,10 @@ The customer inserts the destination of the ride into the form.
 \end_layout
 
 \begin_layout Enumerate
+The customer inserts the hour at which he wants to make the ride.
+\end_layout
+
+\begin_layout Enumerate
 The customer presses the confirm button.
 \end_layout
 
@@ -1117,7 +1125,7 @@ The customer has to make the reservation at least two house before the time
 \end_layout
 
 \begin_layout Subsubsection
-The system searches for an available taxi
+Search taxi in zone
 \end_layout
 
 \begin_layout Standard
@@ -1292,7 +1300,7 @@ The taxi driver doesn't answer to the request in the within 1 minute.
 \end_layout
 
 \begin_layout Subsubsection
-The system searches for an available taxi outside the customer's zone
+Search taxi in another zone
 \end_layout
 
 \begin_layout Standard
@@ -1476,7 +1484,6 @@ None.
 
 \end_layout
 
-<<<<<<< HEAD
 \begin_layout Standard
 \begin_inset Graphics
 	filename Use cases diagram/search third nearest taxi.png
@@ -1487,10 +1494,8 @@ None.
 
 \end_layout
 
-=======
->>>>>>> cad5a9bacb5b94b186e29bfaacfe1e3e2ed95fcc
 \begin_layout Subsubsection
-The system sends a refusable confirmation message
+Send refusable confirmation message
 \end_layout
 
 \begin_layout Standard
@@ -1644,6 +1649,176 @@ None.
 \begin_layout Standard
 \begin_inset Graphics
 	filename Use cases diagram/send refusable message.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Taxi driver receive a request
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Taxi driver
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal number 6, 7 and 8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Input condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The system has sent to a taxi driver the request for a ride.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Event flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Enumerate
+The taxi driver can accept or refuse the customer's request.
+\end_layout
+
+\begin_layout Enumerate
+The taxi driver can refuse the customer's request.
+\end_layout
+
+\begin_layout Enumerate
+If the taxi driver accepts, when he reches the customer he registers the
+ start of the ride.
+\end_layout
+
+\begin_layout Enumerate
+The taxi driver takes the customer to the destination.
+\end_layout
+
+\begin_layout Enumerate
+When the driver has taken the customer to his destination, he will register
+ the end of the ride.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Enumerate
+If the taxi driver refuses, the request will be sent to the next taxi available
+ by the system.
+\end_layout
+
+\begin_layout Enumerate
+If the taxi driver accepts, the customer is taken to his destination.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exception
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Use cases diagram/taxi driver receive request.png
 	width 15cm
 
 \end_inset
