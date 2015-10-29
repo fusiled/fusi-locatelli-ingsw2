@@ -102,30 +102,6 @@ m2=
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>560</x>
-      <y>320</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Ride accepted
-layer=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>710</x>
-      <y>310</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Ride refused
-layer=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
       <x>610</x>
       <y>220</y>
       <w>160</w>
@@ -174,33 +150,9 @@ m2=
     <additional_attributes>10.0;120.0;150.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>610</x>
-      <y>240</y>
-      <w>90</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>740</x>
-      <y>240</y>
-      <w>100</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;30.0;70.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>610</x>
+      <x>620</x>
       <y>420</y>
       <w>190</w>
       <h>50</h>
@@ -212,67 +164,27 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>620</x>
-      <y>350</y>
-      <w>110</w>
-      <h>90</h>
+      <x>680</x>
+      <y>250</y>
+      <w>90</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>340</y>
-      <w>100</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>30.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>790</x>
+      <x>800</x>
       <y>410</y>
-      <w>130</w>
+      <w>120</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=
 m2=
 </panel_attributes>
-    <additional_attributes>10.0;30.0;110.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>810</x>
-      <y>120</y>
-      <w>120</w>
-      <h>220</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=
-m2=
-</panel_attributes>
-    <additional_attributes>10.0;200.0;100.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>670</x>
-      <y>120</y>
-      <w>260</w>
-      <h>240</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=
-m2=
-</panel_attributes>
-    <additional_attributes>10.0;220.0;240.0;10.0</additional_attributes>
+    <additional_attributes>10.0;30.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>
