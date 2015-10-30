@@ -782,7 +782,7 @@ System
 \end_layout
 
 \begin_layout Subsection
-Use Cases
+Use cases
 \end_layout
 
 \begin_layout Subsubsection
@@ -1834,6 +1834,103 @@ None.
 \begin_inset Graphics
 	filename Use cases diagram/taxi driver receive request.png
 	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Sequence diagrams
+\end_layout
+
+\begin_layout Standard
+For clarifying the interactions between actors in use cases will be proposed
+ sequenced diagrams.
+\end_layout
+
+\begin_layout Subsubsection
+Customer operations
+\end_layout
+
+\begin_layout Standard
+The first diagram is relative to the request for a ride made by a customer,
+ the second explain how the reservation process musth be executed.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/sequence/request.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/sequence/reservation.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+System operations
+\end_layout
+
+\begin_layout Standard
+The system must pair customers and taxi driver using the first the taxi-queue
+ of a zone, then the 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+3-time out-of-zone
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\emph default
+method.
+ The first diagram explains how the system handle a queue of a zone.
+ The second diagram explains how the system manages the 3 attemps of calling
+ a taxi out of the zone of the inquiring customer.
+\end_layout
+
+\begin_layout Verse
+\begin_inset Graphics
+	filename uml/sequence/searchTaxi.png
+	width 14cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Verse
+\begin_inset Graphics
+	filename uml/sequence/searchTaxiAnotherZone.png
+	width 14cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Taxi Driver operations
+\end_layout
+
+\begin_layout Standard
+Taxi driver can simply accept or reject proposed by the system.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/sequence/taxiChoose.png
 
 \end_inset
 
