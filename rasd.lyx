@@ -1931,6 +1931,7 @@ Taxi driver can simply accept or reject proposed by the system.
 \begin_layout Standard
 \begin_inset Graphics
 	filename uml/sequence/taxiChoose.png
+	width 15cm
 
 \end_inset
 
