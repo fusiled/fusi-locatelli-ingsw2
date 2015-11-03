@@ -339,10 +339,6 @@ We assume that the location where the service will be installed and set
  up is near the city in which will be exploited.
 \end_layout
 
-\begin_layout Enumerate
-One customer can do only one request at once.
-\end_layout
-
 \begin_layout Subsection
 Functional Requirements
 \end_layout
@@ -1935,6 +1931,20 @@ Taxi driver can simply accept or reject proposed by the system.
 \begin_layout Standard
 \begin_inset Graphics
 	filename uml/sequence/taxiChoose.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Class diagram
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/class/is2alt.png
 	width 15cm
 
 \end_inset

@@ -339,6 +339,11 @@ We assume that the location where the service will be installed and set
  up is near the city in which will be exploited.
 \end_layout
 
+\begin_layout Enumerate
+A taxi can arrive at the origin of a reservation with a tolerance of 5 minutes,
+ this mean 5 minutes before or after the scheduled time.
+\end_layout
+
 \begin_layout Subsection
 Functional Requirements
 \end_layout
@@ -586,6 +591,20 @@ If the customer is using the system with the web-app version, the origin
 \begin_layout Enumerate
 The GPS of the smartphone used by taxi drivers must be always turned on,
  in this way the system knows always the position of the taxis.
+\end_layout
+
+\begin_layout Subsubsection
+Functional constraints
+\end_layout
+
+\begin_layout Enumerate
+All the rides must be memorized by the system.
+\end_layout
+
+\begin_layout Enumerate
+A taxi cannot make multiple rides at the same time.
+ So, the taxi driver cannot accept other requests while he/she's performing
+ a ride.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1931,6 +1950,20 @@ Taxi driver can simply accept or reject proposed by the system.
 \begin_layout Standard
 \begin_inset Graphics
 	filename uml/sequence/taxiChoose.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Class diagram
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/class/is2alt.png
 	width 15cm
 
 \end_inset

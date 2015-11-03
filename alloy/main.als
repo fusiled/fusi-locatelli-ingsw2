@@ -12,8 +12,7 @@ status: one RideStatus,
 executes: one AbstractPrestation
 }
 
-sig Customer{
-}
+sig Customer{}
 
 sig System{
 handles: set AbstractPrestation,
@@ -56,9 +55,13 @@ fact RidesStatusAndRideAssociationIsUnique{
 	all r:RideStatus | r in Ride.status and all ride1,ride2:Ride |(r in ride1.status and r in ride2.status) implies (ride1=ride2)
 }
 
-fact customerMinimumNumber{
-#Customer = 3
+fact distinctRequestAndReservation{
+	Request + Reservation = AbstractPrestation
 }
+
+/*fact customerMinimumNumber{
+#Customer = 3
+}*/
 
 pred show(){ }
 run show
