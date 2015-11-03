@@ -140,6 +140,16 @@ Part 1 talks about what is Requirements Analysis Specification Document
 \end_layout
 
 \begin_layout Subsection
+Attachements
+\end_layout
+
+\begin_layout Itemize
+Alloy model: 
+\family typewriter
+model.als
+\end_layout
+
+\begin_layout Subsection
 Software used
 \end_layout
 
