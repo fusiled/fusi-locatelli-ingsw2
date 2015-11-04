@@ -36,7 +36,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>406</x>
-      <y>35</y>
+      <y>21</y>
       <w>168</w>
       <h>42</h>
     </coordinates>
@@ -49,36 +49,38 @@
     <id>Relation</id>
     <coordinates>
       <x>637</x>
-      <y>84</y>
+      <y>91</y>
       <w>126</w>
-      <h>77</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=0..n
 m2=1
 performedBy</panel_attributes>
-    <additional_attributes>10.0;90.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>700</x>
-      <y>42</y>
+      <y>28</y>
       <w>147</w>
-      <h>49</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Taxi
 --
 - available: boolean
+- taxiId: int
 --
-+ getAvailable(): boolean</panel_attributes>
++ getAvailable(): boolean
++ getTaxiId(): int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>567</x>
-      <y>42</y>
+      <y>28</y>
       <w>147</w>
       <h>35</h>
     </coordinates>
@@ -211,7 +213,7 @@ status</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>189</x>
-      <y>35</y>
+      <y>21</y>
       <w>105</w>
       <h>28</h>
     </coordinates>
@@ -223,7 +225,7 @@ System</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>287</x>
-      <y>42</y>
+      <y>28</y>
       <w>133</w>
       <h>35</h>
     </coordinates>
@@ -251,28 +253,28 @@ executes</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>231</x>
-      <y>56</y>
+      <y>42</y>
       <w>56</w>
-      <h>210</h>
+      <h>224</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=1
 m2=0..n
 handles</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;300.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>273</x>
-      <y>56</y>
+      <y>42</y>
       <w>189</w>
-      <h>105</h>
+      <h>119</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 memorize
 m1=1
 m2=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;250.0;130.0</additional_attributes>
+    <additional_attributes>10.0;10.0;250.0;150.0</additional_attributes>
   </element>
 </diagram>

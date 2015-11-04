@@ -69,18 +69,11 @@
 \begin_body
 
 \begin_layout Quote
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status open
+\align center
+
+\size giant
+mytaxy
+\end_layout
 
 \begin_layout Quote
 \align center
@@ -91,21 +84,12 @@ Requirement Analysis Specification Document
 
 \begin_layout Quote
 \align center
-
-\size large
 Matteo Maria Fusi
 \end_layout
 
 \begin_layout Quote
 \align center
-
-\size large
 Matteo Locatelli
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -162,8 +146,8 @@ Part 1 talks about what is Requirements Analysis Specification Document
  used.
  The Section 3 is composed by the analysis of the requirements, from the
  domain properties to functional and non functional requirements.
- Section 4 will describe use cases and will be proposed some common scenarios
- to the reader.
+ In Section 4 some common scenarios will be proposed to the reader, then
+ use cases and UML diagram will described.
  
 \end_layout
 
@@ -175,6 +159,11 @@ Attachements
 Alloy model: 
 \family typewriter
 model.als
+\end_layout
+
+\begin_layout Standard
+Images used in the document can be found in their relative folders attached
+ to the document.
 \end_layout
 
 \begin_layout Subsection
@@ -844,6 +833,8 @@ Taxi driver
 System
 \series default
 .
+ It manages the various requests and reservations made by customers and
+ establishes the connection between customers and taxi drivers.
 \end_layout
 
 \begin_layout Subsection
@@ -1966,6 +1957,10 @@ None.
 
 \end_layout
 
+\begin_layout Section
+Other UML diagrams
+\end_layout
+
 \begin_layout Subsection
 Sequence diagrams
 \end_layout
@@ -2078,7 +2073,7 @@ Class diagram
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Alloy
 \end_layout
 
