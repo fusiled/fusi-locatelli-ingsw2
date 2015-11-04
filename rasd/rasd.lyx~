@@ -844,8 +844,6 @@ Taxi driver
 System
 \series default
 .
- It manages the various requests and reservations made by customers and
- establishes the connection between customers and taxi drivers.
 \end_layout
 
 \begin_layout Subsection
