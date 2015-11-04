@@ -1,5 +1,4 @@
-## mytaxy project
-# fusi-locatelli-ingsw2
+# mytaxy project
 Project of Polimi Software Engineering 2. 
 Students: 
 * Matteo Maria Fusi
