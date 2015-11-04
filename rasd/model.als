@@ -1,24 +1,45 @@
-//Time is in milliseconds after the unix date
-//misc
+/********************************************************************
+
+				mytaxy ALLOY MODEL
+	AUTHORS: Matteo Maria Fusi, Matteo Locatelli                
+                                                                                            
+**********************************************************************/
+
+
+/**
+NOTES
+- Binary variables such as available and status has been modeled with Int
+	 that assumes value 0 or 1
+- Time variables such as executedAt, finishedAt and arrivalTime are Int
+	that express milliseconds after the unix date
+*/
+
+/** SIGNATURES */
+
+//taxis in the city
 sig Taxi{
-available: Int
+// 0 -> not available, 1 -> available
+available: Int //binary
 }
 
+//zones of the city
 sig Zone{
-contains: set Taxi
+contains: set Taxi //taxis in a zone
 }
 
+//when a prestation takes place a ride is generated
 sig Ride{
-executedAt: Int,
-finishedAt: Int,
+executedAt: Int, //time
+finishedAt: Int, //time
 performedBy: one Taxi,
-status: Int,
-executes: one AbstractPrestation
+status: Int, // 0-> ride ended, 1 -> ride is taking place
+executes: one AbstractPrestation //prestation that a ride executes
 }
 
-sig Customer{
-}
+//who requests prestations
+sig Customer{}
 
+//it manages zones, rides and prestations
 sig System{
 memorize: set Ride,
 handles: set AbstractPrestation,
@@ -27,30 +48,39 @@ manages: set Zone
 
 //prestations
 abstract sig AbstractPrestation{
-invokes: one Customer
+invokes: one Customer //who requests the prestation
 }
 
-
+//request is the base implementation
 sig Request extends AbstractPrestation{}
 
+//reservation
 sig Reservation extends AbstractPrestation{
-arrivalTime: Int
+arrivalTime: Int //time
 }
 
 
+/** FACTS */
+
+//support facts
+
+fact availableIsBinary{
+	all t:Taxi | (t.available = 0) or (t.available = 1)
+}
+
+fact rideStatusIsBinary{
+	all r:Ride | (r.status = 0) or (r.status = 1)
+}
+
+
+//modelization
+
+//system must be unique
 fact oneSystem {
 	#System=1
 }
 
-fact availableIsABoolean{
-	all t:Taxi | (t.available = 0) or (t.available = 1)
-}
-
-fact rideStatusIsABoolean{
-	all r:Ride | (r.status = 0) or (r.status = 1)
-}
-
-fact allZonesManagedBySystem{
+fact allZonePointedBySystem{
 	all z :Zone | z in System.manages  
 }
 
@@ -70,13 +100,14 @@ fact AllAbstractPrestationsAreLinkedToSystem{
 	all p: AbstractPrestation | p in System.handles
 }
 
-fact allPrestationsBelongsToARide{
-	all p : AbstractPrestation | one r : Ride | p in r.executes
+fact allRideMustHaveAPrestation{
+	all r : Ride | one p : AbstractPrestation | p in r.executes
 }
-
-fact aRideCannotStartAndEndAtTheSameTime{
-	all r:Ride | r.executedAt != r.finishedAt
-}
+/** NOTE
+As said above, all rides must have an AbstractPrestation instance associated,
+	but the inverse is not necessary true. For instance, when an AbstractPrestation
+	doesn't take place (all taxi drivers refuse the request) the ride doesn't take
+	place*/
 
 fact aTaxiCannotMakeTwoRidesAtTheSameTime{
 	some r1:Ride | some r2:Ride | r1.executedAt=r2.executedAt  	implies r1.performedBy != r2.performedBy
@@ -90,10 +121,11 @@ fact aTaxiIsAvailableIfIsNotRunning{
 	all t:Taxi | (t.available = 0) implies ( one r:Ride | (t in r.performedBy) and r.status = 1)
 }
 
+//tolerance is set to 5 minutes= 300000 milliseconds
 fact maximumToleranceOfArrivalTime{
 	all rid: Ride | some res: Reservation | (res in rid.executes) implies ((res.arrivalTime <= rid.executedAt + 300000) or (res.arrivalTime >= rid.executedAt - 300000))
 }
-
+//2 hours are 7200000 milliseconds
 fact reservationMustBeMadeAtLeastTwoHoursBeforeTheRide{
 	all res:Reservation | some rid:Ride | (res in rid.executes) implies (res.arrivalTime < rid.executedAt - 7200000)
 }
@@ -101,6 +133,10 @@ fact reservationMustBeMadeAtLeastTwoHoursBeforeTheRide{
 pred addRequest[s, s': System, r:Request]{
 	s'.handles = s.handles + r
 }
+
+
+
+/** PREDICATES AND ASSERTIONS */
 
 pred addReservation[s, s': System, r:Reservation, time: Int]{
 	r.arrivalTime = time and
@@ -125,12 +161,17 @@ assert checkAddedReservation{
 }
 check checkAddedReservation
 
+//try to add an illegal ride.
+// this should violate the reservationMustBeMadeAtLeastTwoHoursBeforeTheRide fact.
 assert checkWrongRide{
 	no s,s':System , r:Ride, t:Taxi , res:Reservation | all exTime, resTime:Int | addRideMadeFromReservation[s,s',r,exTime,exTime+10,t,0,res] and addReservation[s,s',res,resTime] and(exTime - resTime < 7200000) 
 }
 check checkWrongRide
 
 pred show(){ }
+
+
+/** RUN COMANDS */
 run show
 run addRequest
 run addReservation

@@ -150,72 +150,11 @@ model.als
 \end_layout
 
 \begin_layout Subsection
-Software used
+Document version
 \end_layout
 
 \begin_layout Standard
-For the production of this document has been used the sofware elencated
- below:
-\end_layout
-
-\begin_layout Itemize
-Document production and layout: LyX 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.lyx.org
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-UML diagrams (sequence, use cases, class): UMLet 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.umlet.com
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Structoure and model analyzer: Alloy 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-alloy.mit.edu/alloy
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-Mockups: Pencil 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-pencil.evolus.vn
-\end_layout
-
-\end_inset
-
-
+Current version is 1.0
 \end_layout
 
 \begin_layout Section
@@ -1223,6 +1162,67 @@ The customer has to make the reservation at least two house before the time
 
 \end_inset
 
+For the production of this document has been used the sofware elencated
+ below:
+\end_layout
+
+\begin_layout Itemize
+Document production and layout: LyX 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.lyx.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+UML diagrams (sequence, use cases, class): UMLet 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.umlet.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Structoure and model analyzer: Alloy 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+alloy.mit.edu/alloy
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Mockups: Pencil 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+pencil.evolus.vn
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2069,6 +2069,88 @@ model.als.
 
 \begin_layout Subsection
 Mockups
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Software used
+\end_layout
+
+\begin_layout Standard
+For the production of this document has been used the sofware elencated
+ below:
+\end_layout
+
+\begin_layout Itemize
+Document production and layout: LyX 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.lyx.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+UML diagrams (sequence, use cases, class): UMLet 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.umlet.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Structoure and model analyzer: Alloy 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+alloy.mit.edu/alloy
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Mockups: Pencil 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+pencil.evolus.vn
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Time spent
+\end_layout
+
+\begin_layout Itemize
+Matteo Maria Fusi: ~25 h
+\end_layout
+
+\begin_layout Itemize
+Matteo Locatelli: ~25h
 \end_layout
 
 \end_body
