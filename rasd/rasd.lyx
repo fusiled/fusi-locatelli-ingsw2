@@ -184,7 +184,7 @@ Document version
 \end_layout
 
 \begin_layout Standard
-Current version is 1.0
+Current version is 1.0 .
 \end_layout
 
 \begin_layout Section
@@ -279,7 +279,11 @@ Confirmation: after a request is taken in charge by a taxi driver, the system
  generates a confirmation that will be sent to the customer.
  The confirmation informs the customer about the waiting time and the code
  of the taxi.
- mytaxy: is the service proposed in this document.
+ 
+\end_layout
+
+\begin_layout Description
+mytaxy: is the service proposed in this document.
  
 \end_layout
 
@@ -320,7 +324,16 @@ Driver: (taxi related) the one who drives, and also usually owns, a taxi.
 
 \begin_layout Description
 Zone: a zone is a section which the city is divided in.
- Zones are 2 km2 wide.
+ Zones are 2 km
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ wide.
 \end_layout
 
 \begin_layout Section
@@ -337,7 +350,16 @@ The City is divided in taxi zones.
 \end_layout
 
 \begin_layout Enumerate
-Zones are 2 km2 wide.
+Zones are 2 km
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ wide.
  
 \end_layout
 
@@ -348,6 +370,15 @@ The position of a taxi is known by receiving GPS coordinates from the smartphone
 
 \begin_layout Enumerate
 A taxi is associated to a zone if its location is inside the zone's boundaries.
+\end_layout
+
+\begin_layout Enumerate
+Costumers don't lie about a request made, which means they are present at
+ the location submitted when the taxi arrives.
+\end_layout
+
+\begin_layout Enumerate
+Costumers use real information for making requests.
 \end_layout
 
 \begin_layout Subsection
@@ -362,7 +393,7 @@ This section will clarify some points that aren't explained in the specification
 \begin_layout Enumerate
 Taxi drivers are inserted in the system from the beginning.
  They don't need to make any kind of registration to the service.
- Credentials needed for using the app are provided by sending an e-mail
+ Credentials needed for log into the app are provided by sending an e-mail
  to them.
 \end_layout
 
@@ -1191,67 +1222,6 @@ The customer has to make the reservation at least two house before the time
 </cell>
 </row>
 </lyxtabular>
-
-\end_inset
-
-For the production of this document has been used the sofware elencated
- below:
-\end_layout
-
-\begin_layout Itemize
-Document production and layout: LyX 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.lyx.org
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-UML diagrams (sequence, use cases, class): UMLet 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.umlet.com
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Structoure and model analyzer: Alloy 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-alloy.mit.edu/alloy
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-Mockups: Pencil 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-pencil.evolus.vn
-\end_layout
 
 \end_inset
 
