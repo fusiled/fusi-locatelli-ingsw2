@@ -147,8 +147,11 @@ Part 1 talks about what is Requirements Analysis Specification Document
  The Section 3 is composed by the analysis of the requirements, from the
  domain properties to functional and non functional requirements.
  In Section 4 some common scenarios will be proposed to the reader, then
- use cases and UML diagram will described.
- 
+ use cases will described.
+ The Section 5 focuses on the exposure of sequence diagrams and the class
+ diagram.
+ Section 6 introduces the alloy model proposed in the attachement.
+ Section 7 contains some mockups of a future implementation of the application.
 \end_layout
 
 \begin_layout Subsection
@@ -2090,7 +2093,7 @@ model.als.
  the modelization.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Mockups
 \end_layout
 
