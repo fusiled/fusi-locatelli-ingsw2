@@ -63,7 +63,6 @@ arrivalTime: Int //time
 /** FACTS */
 
 //support facts
-
 fact availableIsBinary{
 	all t:Taxi | (t.available = 0) or (t.available = 1)
 }
@@ -168,11 +167,11 @@ assert checkWrongRide{
 }
 check checkWrongRide
 
-pred show(){ }
+pred show(){}
 
 
 /** RUN COMANDS */
-run show
+run show for 15 but exactly 30 Taxi
 run addRequest
 run addReservation
 run addRideMadeFromReservation

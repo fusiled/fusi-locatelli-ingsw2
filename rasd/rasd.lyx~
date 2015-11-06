@@ -69,6 +69,7 @@
 \begin_body
 
 \begin_layout Quote
+\noindent
 \align center
 
 \size giant
@@ -76,6 +77,7 @@ mytaxy
 \end_layout
 
 \begin_layout Quote
+\noindent
 \align center
 
 \size larger
@@ -83,13 +85,9 @@ Requirement Analysis Specification Document
 \end_layout
 
 \begin_layout Quote
+\noindent
 \align center
-Matteo Maria Fusi
-\end_layout
-
-\begin_layout Quote
-\align center
-Matteo Locatelli
+Matteo Maria Fusi, Matteo Locatelli
 \end_layout
 
 \begin_layout Standard
@@ -124,8 +122,8 @@ Document Purpose
 This document is the Requirements Analysis Specification Document (RASD)
  for mytaxi, the system that must be developed.
  The purpose of this document is to describe the requirements of this system
- (both functional and non functional), to identify its main goals and users
- that will mainly interact with it, especially its stakeholders.
+ (both functional and non functional), to identify its main goals and the
+ users that will mainly interact with it, especially its stakeholders.
  This document will also analyze the properties of the domain in which the
  system will be used and the constraints that have to be respected.
  The main application scenarios will be analyzed to clearly explain how
@@ -139,8 +137,8 @@ Document Structure
 \end_layout
 
 \begin_layout Standard
-Part 1 talks about what is Requirements Analysis Specification Document
- (RASD) and how this paper is structured.
+Section 1 explains what a Requirements Analysis Specification Document (RASD)
+ is and how this paper is structured.
  Part 2 contains a little introduction of mytaxy service and general information
  such as the scope of the service, identified stakeholders and the terminology
  used.
@@ -154,19 +152,14 @@ Part 1 talks about what is Requirements Analysis Specification Document
  Section 7 contains some mockups of a future implementation of the application.
 \end_layout
 
-\begin_layout Subsection
-Attachements
-\end_layout
-
-\begin_layout Itemize
-Alloy model: 
-\family typewriter
-model.als
+\begin_layout Standard
+\noindent
+Appendix A contains links to the software used.
 \end_layout
 
 \begin_layout Standard
-Images used in the document can be found in their relative folders attached
- to the document.
+\noindent
+Appendix B contains the amount of time spent for the creation of this document.
 \end_layout
 
 \begin_layout Subsection
@@ -174,7 +167,7 @@ Document version
 \end_layout
 
 \begin_layout Standard
-Current version is 1.0
+Current version is 1.0 .
 \end_layout
 
 \begin_layout Section
@@ -186,11 +179,11 @@ Scope
 \end_layout
 
 \begin_layout Standard
-The purpose of the project is to develop a web-based service that manages
+The purpose of the project is to develope a web-based service that manages
  the taxi service.
  Using their smartphone, or a web-app, users can request a taxi ride in
  a simple way.
- Also taxi drivers will use their smartphone for accept or reject requests
+ Also taxi drivers will use their smartphone to accept or reject requests
  of performance.
  
 \end_layout
@@ -250,9 +243,9 @@ The financial stakeholder of this project is probably the taxi company,
  customers and to increase the number of people who use its taxi.
  Another possible stakeholder is the government of the city, that wants
  to employ mytaxi service for the same reasons explained above.
- The only difference is that the taxis are administrated by the government
- and not by a private company.
- Citizens or tourist of a city can also be stakeholders.
+ The only difference is that the taxis are managed by the government and
+ not by a private company.
+ Citizens or tourists of a city can also be stakeholders.
  
 \end_layout
 
@@ -267,9 +260,13 @@ Customer/Passenger: a citizen who requires a taxi ride using the service.
 \begin_layout Description
 Confirmation: after a request is taken in charge by a taxi driver, the system
  generates a confirmation that will be sent to the customer.
- The confirmation informs the customer about the waiting time and the code
- of the taxi.
- mytaxy: is the service proposed in this document.
+ The confirmation informs the customer about the waiting time and the taxi
+ code.
+ 
+\end_layout
+
+\begin_layout Description
+mytaxy: is the service proposed in this document.
  
 \end_layout
 
@@ -281,15 +278,15 @@ Performance: (Taxi related) in this paper is synonym of the term Ride.
 \begin_layout Description
 Request: when a customer requests for a ride to the system, this will generate
  a request that will be forwarded to a taxi driver, containing information
- about the customer (such as his/hers name and surname provided during the
- registration to the system, etc.) and the origin of the ride.
+ about the customer (such as his/her name and surname provided during the
+ registration to the system, etc.) and ride origin source.
  
 \end_layout
 
 \begin_layout Description
 Reservation: when a customer wants to book a ride, the system will generate
  a reservation instance.
- The reservation must be made at least 2 hours before the ride, but the
+ The reservation must be done at least 2 hours before the ride, but the
  request is processed by the system only 10 minutes before the performance
  takes place.
  Despite of the request, the customer must also provide to the system the
@@ -303,14 +300,23 @@ Ride: performance made by a taxi driver that take a customer from a place
 \end_layout
 
 \begin_layout Description
-Driver: (taxi related) the one who drives, and also usually owns, a taxi.
+Driver: (taxi related) someone who drives, and also usually owns a taxi.
  He will use the service to find customers.
  
 \end_layout
 
 \begin_layout Description
 Zone: a zone is a section which the city is divided in.
- Zones are 2 km2 wide.
+ Zones are 2 km
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ wide.
 \end_layout
 
 \begin_layout Section
@@ -327,7 +333,16 @@ The City is divided in taxi zones.
 \end_layout
 
 \begin_layout Enumerate
-Zones are 2 km2 wide.
+Zones are 2 km
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ wide.
  
 \end_layout
 
@@ -338,6 +353,15 @@ The position of a taxi is known by receiving GPS coordinates from the smartphone
 
 \begin_layout Enumerate
 A taxi is associated to a zone if its location is inside the zone's boundaries.
+\end_layout
+
+\begin_layout Enumerate
+Costumers don't lie about a request made, which means they are present at
+ the location submitted when the taxi arrives.
+\end_layout
+
+\begin_layout Enumerate
+Costumers use real information for making requests.
 \end_layout
 
 \begin_layout Subsection
@@ -352,7 +376,7 @@ This section will clarify some points that aren't explained in the specification
 \begin_layout Enumerate
 Taxi drivers are inserted in the system from the beginning.
  They don't need to make any kind of registration to the service.
- Credentials needed for using the app are provided by sending an e-mail
+ Credentials needed for log into the app are provided by sending an e-mail
  to them.
 \end_layout
 
@@ -362,8 +386,8 @@ A taxi driver can only drive the taxi associated to him/her.
 
 \begin_layout Enumerate
 Every taxi driver should have installed the mytaxi application on their
- smartphone for the sake of establish the position of the vehicle and, so,
- assign him to a zone of the city.
+ smartphone in order to detect the vehicle position and, so, assign him
+ to a zone of the city.
  
 \end_layout
 
@@ -374,7 +398,7 @@ We assume that taxi drivers will accept or refuse a request in an admissible
 
 \begin_layout Enumerate
 We assume that the location where the service will be installed and set
- up is near the city in which will be exploited.
+ up is near the city in which it will be exploited.
 \end_layout
 
 \begin_layout Enumerate
@@ -400,9 +424,9 @@ Passengers can use an app installed on their phone or a web-app to request
  The taxi driver can accept or refuse the request: in the case of rejection
  the system will contact the second available taxi and so on.
  When the request is accepted by a driver, the customer is notified with
- the waiting time and the code of the taxi.
- If a customer wants to book a ride, it can also make a reservation.
- If there no available taxi in the zone, the system will try to contact
+ the waiting time and the taxi code.
+ If a customer wants to book a ride, he can also make a reservation.
+ If there is no available taxi in the zone, the system will try to contact
  the three nearest taxis in the city outside the inquired zone.
  
 \end_layout
@@ -412,7 +436,7 @@ Analysis
 \end_layout
 
 \begin_layout Enumerate
-Allow customers to make a request.
+To allow customers to make a request.
 \end_layout
 
 \begin_deeper
@@ -441,20 +465,20 @@ If an available taxi is found, the customer is notified with the code of
 
 \begin_layout Enumerate
 If the available taxi is in a different zone from the one in which the customer
- is, when the passenger receive the confirmation he can decide to accept
+ is, when the passenger receives the confirmation he can decide to accept
  or refuse the ride.
 \end_layout
 
 \end_deeper
 \end_deeper
 \begin_layout Enumerate
-Allow customers to make a reservation.
+To allow customers to make a reservation.
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 A customer can make a reservation specifying the name, the origin and the
- destination of the ride and the hour at which he wants to make it.
+ destination of the ride and the hour he wants to make it.
 \end_layout
 
 \begin_layout Enumerate
@@ -473,7 +497,7 @@ The system will automatically make a request 10 minutes before the time
 
 \end_deeper
 \begin_layout Enumerate
-Allow customers to use the system via the web-app version.
+To allow customers to use the system via web-app version.
  
 \end_layout
 
@@ -481,8 +505,6 @@ Allow customers to use the system via the web-app version.
 \begin_layout Enumerate
 A customer can use the web-app version of the system which will allow him
  to access to every functionality of the system.
- IV.
- Allow customers to use the system via the smartphone app version.
 \end_layout
 
 \end_deeper
@@ -492,13 +514,13 @@ A customer can use the smartphone app version of the system which will allow
 \end_layout
 
 \begin_layout Enumerate
-Guarantee a fair management of taxi queues for each taxi zone.
+To guarantee a fair management of taxi queues for each taxi zone.
  
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-When a taxi enters a zone, if it's available it's added to the queue of
+When a taxi enters a zone, if it's available, it's added to the queue of
  that zone.
 \end_layout
 
@@ -512,8 +534,8 @@ If a taxi driver refuses a request from a customer, the taxi is moved to
 \end_layout
 
 \begin_layout Enumerate
-If there isn't any available taxi in the customer's zone or every taxi in
- it refuses his request, the request will be forwarded to taxis in other
+If there isn't any available taxi in the customer's zone or all the taxis
+ in it refuse his request, the request will be forwarded to taxis in other
  zones.
  
 \end_layout
@@ -567,7 +589,7 @@ The service must be extendible.
 
 \begin_deeper
 \begin_layout Enumerate
-Guarantee programmatic interfaces to enable the development of additional
+To guarantee programmatic interfaces to enable the development of additional
  services.
 \end_layout
 
@@ -617,7 +639,7 @@ Internet connection is required for accessing the service.
 \end_layout
 
 \begin_layout Enumerate
-The reservation must be made at least 2 house before the time of the ride.
+The reservation must be made at least 2 hours before the time of the ride.
 \end_layout
 
 \begin_layout Enumerate
@@ -628,7 +650,7 @@ If the customer is using the system with the web-app version, the origin
 
 \begin_layout Enumerate
 The GPS of the smartphone used by taxi drivers must be always turned on,
- in this way the system knows always the position of the taxis.
+ in this way the system always is informed about the position of the taxis.
 \end_layout
 
 \begin_layout Subsubsection
@@ -636,7 +658,7 @@ Functional constraints
 \end_layout
 
 \begin_layout Enumerate
-All the rides must be memorized by the system.
+All the rides must be stored by the system.
 \end_layout
 
 \begin_layout Enumerate
@@ -650,7 +672,7 @@ Legal Constraints
 \end_layout
 
 \begin_layout Itemize
-Taxis and taxi drivers are subjected by the actual law in the country where
+Taxis and taxi drivers are subjected to the actual law in the country where
  mytaxi is installed and used.
 \end_layout
 
@@ -682,24 +704,23 @@ Scenario 1
 
 \begin_layout Standard
 Marcello is a citizen who wants to request a taxi ride to go to work.
- He is at home, so he turns on his computer and open the mytaxi website
+ He is at home, so he turns on his computer and opens the mytaxi website
  to call the ride.
- In order to complete his request, Marcello fills the form with his name
- and his address.
- The system, once it has received Marcello's request, start looking for
- a taxi in the same zone of the customer's house.
+ In order to complete his request, Marcello fills in the form with his name
+ and address.
+ As soon as the system has received Marcello's request, it starts looking
+ for a taxi in the same zone of the customer's house.
  An available taxi has been found in that zone, so the request is sent to
  the smartphone of the driver who is driving that taxi.
  The taxi driver decides to accept Marcello's request, so a confirmation
- message in sent to the customer with the code of the taxi and the estimated
- waiting time.
- Marcello receives the confirmation and goes out oh his house to wait for
- the taxi.
- Once the taxi arrives to Marcello's position, the taxi driver verify that
- Marcello was the one who made the request and then use his app to register
+ message is sent to the customer with the taxi code and the estimated waiting
+ time.
+ Marcello receives the confirmation and waits for the taxi.
+ When the taxi arrives to Marcello's position, the taxi driver checks that
+ Marcello is the person who made the request and then use his app to register
  the start of the ride, this also makes the taxi appear unavailable.
  Marcello tells the driver his destination and the driver takes him there.
- At the end of the ride, the customer pays the taxi driver, who then use
+ At the end of the ride, the customer pays the taxi driver, who then uses
  again his mytaxi app to register the end of the ride (and appear available
  again).
  In this way the ride will be registered and the taxi driver will find it
@@ -716,13 +737,13 @@ Oscar is really tired, he always gets lost in the huge city he lives in.
  He decides to request a taxi ride using the mytaxi service, so he downloads
  the app on his smartphone and fills the form for the request: he inserts
  his name e uses the GPS system to detect his position.
- The system finds a taxi in the same zone of Oscar, but the taxi driver
- is having lunch break so he decides to refuse the request.
+ The system finds a taxi in the same zone where Oscar is, but the taxi driver
+ is having a break, so he decides to refuse the request.
  The request is then forwarded to the next taxi in the queue and the driver
  accepts the call.
  The taxi driver makes himself appear as unavailable and then takes Oscar
- to his house, who pays for the service and thanks kindly the driver for
- saving him.
+ to his destination, who pays for the service and thanks kindly the driver
+ for saving him.
 \end_layout
 
 \begin_layout Subsubsection
@@ -730,18 +751,18 @@ Scenario 3
 \end_layout
 
 \begin_layout Standard
-Gwyn is a foreign traveler who arrives to the city of Milan to visit it.
+Gwyn is a foreign traveler who arrives to Milan for a city tour.
  He decides to request a ride to go back to the hotel, after spending the
  whole day walking around.
- Gwyn downloads the mytaxi app and fill the request form submitting is name
- and his position (he doesn't use the GPS because his smartphone is low
- on battery).
+ Gwyn downloads the mytaxi app and fills the request form submitting is
+ name and his position (he doesn't use the GPS because his smartphone is
+ low on battery).
  Unfortunately, there isn't any free taxi in Gwyn's zone, so the system
  forwards his request to the nearest taxi in a different zone.
  The taxi driver accepts the request, so a confirmation message is sent
  to the customer.
- When Gwyn sees the waiting time he gets very angry, because he has to wait
- for more than an hour.
+ When Gwyn receives the waiting time he gets very angry, because he has
+ to wait for more than an hour.
  He decides to refuse the ride and visit Milan a little more, waiting for
  a closer taxi the be avaialble.
  After half an hour, Gwyn tries again to make a request and he's lucky this
@@ -772,16 +793,16 @@ Scenario 5
 \end_layout
 
 \begin_layout Standard
-Bob wants to go to visit a friend of his who lives in Bob's city but far
- away from his house.
+Bob wants to go to visit a friend living in Bob's town but far away from
+ his house.
  Bob decides to take a taxi, then uses the mytaxi web-app to request a ride.
  There are three taxi available in Bob's zone, but all of the taxi drivers
  refuse the call of the customer (such things occures very rarely).
  The request is forwarded to the nearest available taxi, the driver accept
  the request and Bob decides to take that taxi because he doesn't have to
  wait much time.
- The driver takes Bob to his friend's house and Bob pay the driver for the
- service.
+ The driver takes Bob to his friend's house and Bob pays the driver for
+ the service.
 \end_layout
 
 \begin_layout Subsubsection
@@ -815,8 +836,8 @@ Customer
  He/She's the one who exploit the taxi service.
  We can say that he/she is the end user.
  He can use the application for request or reserve a taxi ride.
- He/She interact at first with the system when he requests for a ride, then
- with the taxi driver during the performance.
+ He/She interacts at first with the system when he requests for a ride,
+ then with the taxi driver during the performance.
 \end_layout
 
 \begin_layout Itemize
@@ -1181,67 +1202,6 @@ The customer has to make the reservation at least two house before the time
 </cell>
 </row>
 </lyxtabular>
-
-\end_inset
-
-For the production of this document has been used the sofware elencated
- below:
-\end_layout
-
-\begin_layout Itemize
-Document production and layout: LyX 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.lyx.org
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-UML diagrams (sequence, use cases, class): UMLet 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-www.umlet.com
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Structoure and model analyzer: Alloy 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-alloy.mit.edu/alloy
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-Mockups: Pencil 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-pencil.evolus.vn
-\end_layout
 
 \end_inset
 
@@ -1713,8 +1673,8 @@ Event flow
 \begin_inset Text
 
 \begin_layout Enumerate
-The system sends a message with the code of the taxi and the waiting time
- to the customer.
+The system sends a message with the taxi code and the waiting time to the
+ customer.
 \end_layout
 
 \begin_layout Enumerate
@@ -1791,7 +1751,158 @@ None.
 \end_layout
 
 \begin_layout Subsubsection
-Taxi driver receive a request
+Taxi driver log in
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Taxi driver
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Goal number 6
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Input condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The taxi driver has the application installed on his smartphone.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Event flow
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Enumerate
+The taxi driver inserts the taxi id.
+\end_layout
+
+\begin_layout Enumerate
+The taxi driver inserts his password.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Output condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+The taxi driver successfully logs into the system.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Exception
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Use cases diagram/taxi driver login.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Taxi driver receives a request
 \end_layout
 
 \begin_layout Standard
@@ -1978,8 +2089,8 @@ Customer operations
 \end_layout
 
 \begin_layout Standard
-The first diagram is relative to the request for a ride made by a customer,
- the second explain how the reservation process musth be executed.
+The first diagram regards the request for a ride made by a customer, the
+ second explains how the reservation process must be executed.
 \end_layout
 
 \begin_layout Standard
@@ -2019,7 +2130,7 @@ The system must pair customers and taxi driver using the first the taxi-queue
  
 \emph default
 method.
- The first diagram explains how the system handle a queue of a zone.
+ The first diagram explains how the system handles a queue of a zone.
  The second diagram explains how the system manages the 3 attemps of calling
  a taxi out of the zone of the inquiring customer.
 \end_layout
@@ -2049,7 +2160,22 @@ Taxi Driver operations
 \end_layout
 
 \begin_layout Standard
-Taxi driver can simply accept or reject proposed by the system.
+Taxi driver can log into the system.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/sequence/taxiDriverLoginSequence.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Taxi driver can simply accept or reject the request proposed by the system.
 \end_layout
 
 \begin_layout Standard
@@ -2081,16 +2207,942 @@ Alloy
 \end_layout
 
 \begin_layout Standard
-Using the class diagram defined in the section above an alloy model has
+Using the class diagram referred in the section above an alloy model has
  been developed for the sake of checking the correctness of our model.
  The model proposed can be found as attachement of this document.
- Its name is 
-\family typewriter
-model.als.
+ To be remarked that some signatures do not contain some attributes for
+ simplifying the modelization.
+\end_layout
 
-\family default
- Note that some signatures does not contain some attributes for simplifying
- the modelization.
+\begin_layout Standard
+\begin_inset listings
+lstparams "numbers=left,breaklines=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/********************************************************************
+\end_layout
+
+\begin_layout Plain Layout
+
+mytaxy ALLOY MODEL 
+\end_layout
+
+\begin_layout Plain Layout
+
+AUTHORS: Matteo Maria Fusi, Matteo Locatelli                           
+                                                                       
+            ********************************************************************
+**/
+\end_layout
+
+\begin_layout Plain Layout
+
+/** 
+\end_layout
+
+\begin_layout Plain Layout
+
+NOTES 
+\end_layout
+
+\begin_layout Plain Layout
+
+- Binary variables such as available and status has been modeled
+\end_layout
+
+\begin_layout Plain Layout
+
+	with Int that assumes value 0 or 1
+\end_layout
+
+\begin_layout Plain Layout
+
+- Time variables such as executedAt, finishedAt and arrivalTime
+\end_layout
+
+\begin_layout Plain Layout
+
+	are Int that express milliseconds after the unix date
+\end_layout
+
+\begin_layout Plain Layout
+
+*/
+\end_layout
+
+\begin_layout Plain Layout
+
+/** SIGNATURES */
+\end_layout
+
+\begin_layout Plain Layout
+
+//taxis in the city 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Taxi{
+\end_layout
+
+\begin_layout Plain Layout
+
+	0 -> not available, 1 -> available available: Int //binary 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+//zones of the city 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Zone{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	contains: set Taxi //taxis in a zone 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//when a prestation takes place a ride is generated 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Ride{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	executedAt: Int, //time
+\end_layout
+
+\begin_layout Plain Layout
+
+	finishedAt: Int, //time
+\end_layout
+
+\begin_layout Plain Layout
+
+	performedBy: one Taxi,
+\end_layout
+
+\begin_layout Plain Layout
+
+	status: Int, // 0-> ride ended, 1 -> ride is taking place
+\end_layout
+
+\begin_layout Plain Layout
+
+	executes: one AbstractPrestation //prestation that a ride executes
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//who requests prestations 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Customer{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//it manages zones, rides and prestations 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig System{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	memorize: set Ride,
+\end_layout
+
+\begin_layout Plain Layout
+
+	handles: set AbstractPrestation,
+\end_layout
+
+\begin_layout Plain Layout
+
+	manages: set Zone 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//prestations 
+\end_layout
+
+\begin_layout Plain Layout
+
+abstract sig AbstractPrestation{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	invokes: one Customer //who requests the prestation 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//request is the base implementation 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Request extends AbstractPrestation{}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//reservation 
+\end_layout
+
+\begin_layout Plain Layout
+
+sig Reservation extends AbstractPrestation{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	arrivalTime: Int //time 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/** FACTS */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//support facts 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact availableIsBinary{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all t:Taxi | (t.available = 0) or (t.available = 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact rideStatusIsBinary{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all r:Ride | (r.status = 0) or (r.status = 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//modelization
+\end_layout
+
+\begin_layout Plain Layout
+
+//system must be unique 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact oneSystem { 
+\end_layout
+
+\begin_layout Plain Layout
+
+	#System=1
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact allZonePointedBySystem{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all z :Zone | z in System.manages 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact allRidesMemorizedBySystem{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all r :Ride | r in System.memorize 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+fact allTaxisBelongsToAZone{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all t :Taxi | t in Zone.contains
+\end_layout
+
+\begin_layout Plain Layout
+
+		and all z1, z2:Zone |
+\end_layout
+
+\begin_layout Plain Layout
+
+			(t in z1.contains and t in z2.contains) implies (z1=z2)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact allAbstractPrestationsHaveCustomer{
+\end_layout
+
+\begin_layout Plain Layout
+
+	all p:AbstractPrestation | one c: Customer  | c in p.invokes 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact AllAbstractPrestationsAreLinkedToSystem{
+\end_layout
+
+\begin_layout Plain Layout
+
+	all p: AbstractPrestation | p in System.handles 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact allRideMustHaveAPrestation{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all r : Ride | one p : AbstractPrestation | p in r.executes 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+/** NOTE As said above, all rides must have an AbstractPrestation
+\end_layout
+
+\begin_layout Plain Layout
+
+instance associated, but the inverse is not necessary true.
+\end_layout
+
+\begin_layout Plain Layout
+
+For instance, when an AbstractPrestation doesn't take place
+\end_layout
+
+\begin_layout Plain Layout
+
+(all taxi drivers refuse the request) the ride doesn't take place*/
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact aTaxiCannotMakeTwoRidesAtTheSameTime{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	some r1:Ride | 
+\end_layout
+
+\begin_layout Plain Layout
+
+		some r2:Ride |
+\end_layout
+
+\begin_layout Plain Layout
+
+			r1.executedAt=r2.executedAt implies r1.performedBy != r2.performedBy
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact theEndOfARideIsAfterItsBeginning {
+\end_layout
+
+\begin_layout Plain Layout
+
+	all r:Ride | r.executedAt < r.finishedAt 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact aTaxiIsAvailableIfIsNotRunning{
+\end_layout
+
+\begin_layout Plain Layout
+
+	all t:Taxi |
+\end_layout
+
+\begin_layout Plain Layout
+
+		(t.available = 0) implies ( one r:Ride | (t in r.performedBy) and r.status
+ = 1)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//tolerance is set to 5 minutes= 300000 milliseconds 
+\end_layout
+
+\begin_layout Plain Layout
+
+fact maximumToleranceOfArrivalTime{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all rid: Ride | 
+\end_layout
+
+\begin_layout Plain Layout
+
+		some res: Reservation | 
+\end_layout
+
+\begin_layout Plain Layout
+
+			(res in rid.executes) 
+\end_layout
+
+\begin_layout Plain Layout
+
+			implies 
+\end_layout
+
+\begin_layout Plain Layout
+
+				((res.arrivalTime <= rid.executedAt + 300000)
+\end_layout
+
+\begin_layout Plain Layout
+
+				or
+\end_layout
+
+\begin_layout Plain Layout
+
+				(res.arrivalTime >= rid.executedAt - 300000))
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//2 hours are 7200000 milliseconds
+\end_layout
+
+\begin_layout Plain Layout
+
+fact reservationMustBeMadeAtLeastTwoHoursBeforeTheRide{
+\end_layout
+
+\begin_layout Plain Layout
+
+	all res:Reservation |
+\end_layout
+
+\begin_layout Plain Layout
+
+		some rid:Ride |
+\end_layout
+
+\begin_layout Plain Layout
+
+			(res in rid.executes) implies (res.arrivalTime < rid.executedAt - 7200000)
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/** PREDICATES AND ASSERTIONS */
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pred addRequest[s, s': System, r:Request]{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	s'.handles = s.handles + r 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pred addReservation[s, s': System, r:Reservation, time: Int]{
+\end_layout
+
+\begin_layout Plain Layout
+
+	r.arrivalTime = time and 
+\end_layout
+
+\begin_layout Plain Layout
+
+	s'.handles = s.handles + r 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pred addRideMadeFromReservation[s, s': System, r:Ride, ex:Int, fin:Int,
+ t:Taxi, stat:Int, res:Reservation]{
+\end_layout
+
+\begin_layout Plain Layout
+
+	r.executedAt = ex and
+\end_layout
+
+\begin_layout Plain Layout
+
+	r.finishedAt = fin and 
+\end_layout
+
+\begin_layout Plain Layout
+
+	r.performedBy = t and 
+\end_layout
+
+\begin_layout Plain Layout
+
+	r.executes = res and 
+\end_layout
+
+\begin_layout Plain Layout
+
+	s'.memorize = s.memorize + r	
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+assert checkAddedRequest{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all s, s': System, r: Request |
+\end_layout
+
+\begin_layout Plain Layout
+
+		addRequest[s, s', r] implies (r in s'.handles) 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+check checkAddedRequest
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+assert checkAddedReservation{
+\end_layout
+
+\begin_layout Plain Layout
+
+	all s, s': System, r: Reservation |
+\end_layout
+
+\begin_layout Plain Layout
+
+		addReservation[s, s', r, 1000]
+\end_layout
+
+\begin_layout Plain Layout
+
+		implies 
+\end_layout
+
+\begin_layout Plain Layout
+
+		(r in s'.handles)
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+check checkAddedReservation
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//try to add an illegal ride.
+\end_layout
+
+\begin_layout Plain Layout
+
+// this should violate the reservationMustBeMadeAtLeastTwoHoursBeforeTheRide
+ fact.
+\end_layout
+
+\begin_layout Plain Layout
+
+assert checkWrongRide{
+\end_layout
+
+\begin_layout Plain Layout
+
+	no s,s':System , r:Ride, t:Taxi , res:Reservation |
+\end_layout
+
+\begin_layout Plain Layout
+
+		all exTime, resTime:Int |
+\end_layout
+
+\begin_layout Plain Layout
+
+			addRideMadeFromReservation[s,s',r,exTime,exTime+10,t,0,res]
+\end_layout
+
+\begin_layout Plain Layout
+
+			and 
+\end_layout
+
+\begin_layout Plain Layout
+
+			addReservation[s,s',res,resTime] 
+\end_layout
+
+\begin_layout Plain Layout
+
+			and(exTime - resTime < 7200000) 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+check checkWrongRide
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pred show(){}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/** RUN COMANDS */ 
+\end_layout
+
+\begin_layout Plain Layout
+
+run show for 15 but exactly 20 Taxi
+\end_layout
+
+\begin_layout Plain Layout
+
+run addRequest
+\end_layout
+
+\begin_layout Plain Layout
+
+run addReservation 
+\end_layout
+
+\begin_layout Plain Layout
+
+run addRideMadeFromReservation 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Generated worlds
 \end_layout
 
 \begin_layout Section
@@ -2103,8 +3155,8 @@ Software used
 \end_layout
 
 \begin_layout Standard
-For the production of this document has been used the sofware elencated
- below:
+For the production of this document the sofware elencated below has been
+ used:
 \end_layout
 
 \begin_layout Itemize
