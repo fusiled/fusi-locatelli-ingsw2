@@ -364,4 +364,39 @@ layer=1</panel_attributes>
 &lt;&lt;include&gt;&gt;</panel_attributes>
     <additional_attributes>10.0;400.0;20.0;10.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>220</x>
+      <y>60</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Insert phone number
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>80</y>
+      <w>140</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>70</x>
+      <y>80</y>
+      <w>170</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;160.0;150.0;10.0</additional_attributes>
+  </element>
 </diagram>

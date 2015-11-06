@@ -240,4 +240,39 @@ m2=
 </panel_attributes>
     <additional_attributes>10.0;180.0;120.0;10.0</additional_attributes>
   </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>280</x>
+      <y>90</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Insert phone number
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>410</x>
+      <y>100</y>
+      <w>130</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+&lt;&lt;includes&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>80</x>
+      <y>110</y>
+      <w>220</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;130.0;200.0;10.0</additional_attributes>
+  </element>
 </diagram>

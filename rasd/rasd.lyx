@@ -2641,6 +2641,25 @@ fact allAbstractPrestationsHaveCustomer{
 
 \begin_layout Plain Layout
 
+fact allCustomersHaveAPrestation{ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	all c:Customer | some p:AbstractPrestation | c in p.invokes 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 fact AllAbstractPrestationsAreLinkedToSystem{
 \end_layout
 
@@ -3143,6 +3162,40 @@ run addRideMadeFromReservation
 
 \begin_layout Subsection
 Generated worlds
+\end_layout
+
+\begin_layout Standard
+The first world is generated to show all the relations between signatures.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename alloy/generatedWorld1.png
+	width 15cm
+	height 25cm
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The second world is generated to show how the system is modeled with multiple
+ instance of taxis, customers etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename alloy/generatedWorld2.png
+	width 15cm
+	height 25cm
+	rotateAngle 90
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
