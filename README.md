@@ -4,6 +4,9 @@ Students:
 * Matteo Maria Fusi
 * Matteo Locatelli
 
+## Documents Released
+* RASD v1.0
+
 
 ## Project schedule
 * Group registration 14/10/2015

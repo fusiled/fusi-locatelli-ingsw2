@@ -3202,7 +3202,7 @@ The second world is generated to show how the system is modeled with multiple
 Mockups
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Main Menu
 \end_layout
 
@@ -3216,7 +3216,7 @@ Main Menu
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Info Page
 \end_layout
 
@@ -3230,7 +3230,7 @@ Info Page
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subsubsection*
 Request mockup
 \end_layout
 
@@ -3244,11 +3244,17 @@ Request mockup
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subparagraph*
 Reservation mockups
 \end_layout
 
-\begin_layout Subparagraph*
+\begin_layout Standard
+\begin_inset Graphics
+	filename mocks/resTot.png
+
+\end_inset
+
+
 \begin_inset Graphics
 	filename mocks/resTot.png
 	width 15cm
@@ -3258,17 +3264,11 @@ Reservation mockups
 
 \end_layout
 
-\begin_layout Subsection*
+\begin_layout Subparagraph*
 Taxi Requests
 \end_layout
 
-\begin_layout Subsection*
-\begin_inset Graphics
-	filename mocks/taxiOfferTot.png
-	width 15cm
-
-\end_inset
-
+\begin_layout Standard
 
 \end_layout
 

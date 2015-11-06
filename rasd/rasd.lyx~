@@ -2641,6 +2641,25 @@ fact allAbstractPrestationsHaveCustomer{
 
 \begin_layout Plain Layout
 
+fact allCustomersHaveAPrestation{ 	
+\end_layout
+
+\begin_layout Plain Layout
+
+	all c:Customer | some p:AbstractPrestation | c in p.invokes 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
 fact AllAbstractPrestationsAreLinkedToSystem{
 \end_layout
 
@@ -3118,7 +3137,7 @@ pred show(){}
 
 \begin_layout Plain Layout
 
-run show for 15 but exactly 20 Taxi
+run show
 \end_layout
 
 \begin_layout Plain Layout
@@ -3145,8 +3164,116 @@ run addRideMadeFromReservation
 Generated worlds
 \end_layout
 
+\begin_layout Standard
+The first world is generated to show all the relations between signatures.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename alloy/generatedWorld1.png
+	width 15cm
+	height 25cm
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The second world is generated to show how the system is modeled with multiple
+ instance of taxis, customers etc.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename alloy/generatedWorld2.png
+	width 15cm
+	height 25cm
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Mockups
+\end_layout
+
+\begin_layout Subsubsection*
+Main Menu
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename mocks/mainmenu.png
+	height 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Info Page
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename mocks/info.png
+	height 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Request mockup
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename mocks/request.png
+	height 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Reservation mockups
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subparagraph*
+\begin_inset Graphics
+	filename mocks/resTot.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Taxi Requests
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename mocks/taxiOfferTot.png
+	width 15cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
