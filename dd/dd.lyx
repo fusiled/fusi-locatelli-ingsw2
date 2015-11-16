@@ -95,6 +95,32 @@ Matteo Maria Fusi, Matteo Locatelli
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Document version
+\end_layout
+
+\begin_layout Standard
+Current version is 1.0 .
+\end_layout
+
+\begin_layout Subsection
+Time Spent
+\end_layout
+
+\begin_layout Standard
+2h
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -119,15 +145,106 @@ Document Purpose
 \end_layout
 
 \begin_layout Subsection
-Document Structure
+Definitions, Acronyms, Abbreviations
 \end_layout
 
 \begin_layout Subsection
-Document version
+Reference Documents
 \end_layout
 
-\begin_layout Standard
-Current version is 1.0 .
+\begin_layout Subsection
+Document Structure 
+\end_layout
+
+\begin_layout Section
+Architectural Design
+\end_layout
+
+\begin_layout Subsection
+Overview
+\end_layout
+
+\begin_layout Subsection
+High level components and their interaction
+\end_layout
+
+\begin_layout Subsection
+Component view 
+\end_layout
+
+\begin_layout Itemize
+Client-Server.
+ 2-tier with remote presentation (correct put this here??)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+input validation (2-hour constraint) is considered part of application logic?
+\end_layout
+
+\begin_layout Itemize
+2 tier could be good in term of physical security and maintainance, but
+ bad in terms of scalability.
+\end_layout
+
+\begin_layout Itemize
+3 tier better??
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Client is made by UX + service requestor
+\end_layout
+
+\begin_layout Itemize
+Server made by service provider, core + several plugins
+\end_layout
+
+\begin_layout Itemize
+where can we put service registry?
+\end_layout
+
+\begin_layout Subsection
+Deployment view 
+\end_layout
+
+\begin_layout Subsection
+Runtime view
+\end_layout
+
+\begin_layout Subsection
+Component interfaces
+\end_layout
+
+\begin_layout Subsection
+Selected architectural styles and patterns
+\end_layout
+
+\begin_layout Itemize
+Service Oriented Architecture could be a good idea.
+ Service provider publishes type of services (request and reservation for
+ clients).
+ A future extension could be very simple
+\end_layout
+
+\begin_layout Itemize
+Using plugin can we develope new services in an easy way?
+\end_layout
+
+\begin_layout Subsection
+Other design decisions
+\end_layout
+
+\begin_layout Section
+Algorithm Design
+\end_layout
+
+\begin_layout Section
+Requirements Traceability
+\end_layout
+
+\begin_layout Section
+References
 \end_layout
 
 \end_body
