@@ -110,7 +110,7 @@ Time Spent
 \end_layout
 
 \begin_layout Standard
-2h
+5h
 \end_layout
 
 \begin_layout Standard
@@ -197,6 +197,71 @@ Component view (F)
 \begin_layout Standard
 Descrizione dettagliata dei componenti (client e server) con descrizione
  dei moduli al loro interno (gui, logica e servizi).
+\end_layout
+
+\begin_layout Subsubsection
+Client
+\end_layout
+
+\begin_layout Standard
+\noindent
+The client is the component that take the input of the user and sends it
+ to the system.
+ It also has the duty of gathering available services from the Service List
+ through the Service Requestor.
+ Presenting informations sent by the system is also requested.
+\end_layout
+
+\begin_layout Itemize
+GUI
+\end_layout
+
+\begin_layout Itemize
+Client Logic
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+GUI-Bridge
+\end_layout
+
+\begin_layout Itemize
+Service Requestor
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Server
+\end_layout
+
+\begin_layout Itemize
+Database
+\end_layout
+
+\begin_layout Itemize
+Server Logic
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Core
+\end_layout
+
+\begin_layout Itemize
+Service Provider
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Service List
+\end_layout
+
+\begin_layout Standard
+Service List is provided by the Server.
+ It contains a list of all services that server can fulfill.
+ Using this technique the client can know what services the system offers
+ just making a simple lookup to the Service List.
+ He can also gathers all the available services for the sake of using them.
 \end_layout
 
 \begin_layout Subsection
