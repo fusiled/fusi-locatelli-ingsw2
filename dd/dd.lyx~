@@ -161,7 +161,7 @@ Architectural Design
 \end_layout
 
 \begin_layout Subsection
-Overview (L)
+Overview
 \end_layout
 
 \begin_layout Standard
@@ -182,7 +182,7 @@ Client-Server.
 
 \end_deeper
 \begin_layout Subsection
-High level components and their interaction (L)
+High level components and their interaction
 \end_layout
 
 \begin_layout Standard
@@ -191,7 +191,7 @@ Grafico con triangolo disegnato da teo con descrizione generale dei componenti
 \end_layout
 
 \begin_layout Subsection
-Component view (F)
+Component view 
 \end_layout
 
 \begin_layout Standard
@@ -200,7 +200,7 @@ Descrizione dettagliata dei componenti (client e server) con descrizione
 \end_layout
 
 \begin_layout Subsection
-Deployment view (L)
+Deployment view 
 \end_layout
 
 \begin_layout Standard
@@ -209,7 +209,7 @@ Dispositivi hardware specificando quale software viene inserito (se client
 \end_layout
 
 \begin_layout Subsection
-Runtime view (F)
+Runtime view
 \end_layout
 
 \begin_layout Standard
@@ -218,7 +218,7 @@ SEQUENCE DIAGRAM con più dettagli rispetto a quelli nel rasd, soprattutto
 \end_layout
 
 \begin_layout Subsection
-Component interfaces (F)
+Component interfaces
 \end_layout
 
 \begin_layout Standard
@@ -227,7 +227,7 @@ Spiegare come funzionano i servizi delle interfacce di client e server (in
 \end_layout
 
 \begin_layout Subsection
-Selected architectural styles and patterns (L)
+Selected architectural styles and patterns
 \end_layout
 
 \begin_layout Standard
