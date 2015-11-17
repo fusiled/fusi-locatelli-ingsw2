@@ -165,7 +165,16 @@ Overview (L)
 \end_layout
 
 \begin_layout Standard
-Descrizione generale.
+The architecture we based our system on is the client-server architecture
+ with two tiers.
+ One tier (the server tier) is composed by the server logic and the database,
+ the other tier (the client tier) is composed by the client logic and the
+ GUI that allows the user to intract with the system.
+ The fact that both the server and the client tiers have an aplication logic
+ means that the application is distributed; this, added to the fact that
+ we decided to use a service oriented architure, allows our system to be
+ scalable, so other services can be added without modifying the structure
+ of the system.
 \end_layout
 
 \begin_layout Itemize
@@ -186,8 +195,13 @@ High level components and their interaction (L)
 \end_layout
 
 \begin_layout Standard
-Grafico con triangolo disegnato da teo con descrizione generale dei componenti
- e interazione generale.
+\begin_inset Graphics
+	filename uml/HighLevel.png
+	width 15cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

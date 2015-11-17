@@ -161,11 +161,20 @@ Architectural Design
 \end_layout
 
 \begin_layout Subsection
-Overview
+Overview (L)
 \end_layout
 
 \begin_layout Standard
-Descrizione generale.
+The architecture we based our system on is the client-server architecture
+ with two tiers.
+ One tier (the server tier) is composed by the server logic and the database,
+ the other tier (the client tier) is composed by the client logic and the
+ GUI that allows the user to intract with the system.
+ The fact that both the server and the client tiers have an aplication logic
+ means that the application is distributed; this, added to the fact that
+ we decided to use a service oriented architure, allows our system to be
+ scalable, so other services can be added without modifying the structure
+ of the system.
 \end_layout
 
 \begin_layout Itemize
@@ -182,16 +191,21 @@ Client-Server.
 
 \end_deeper
 \begin_layout Subsection
-High level components and their interaction
+High level components and their interaction (L)
 \end_layout
 
 \begin_layout Standard
-Grafico con triangolo disegnato da teo con descrizione generale dei componenti
- e interazione generale.
+\begin_inset Graphics
+	filename uml/HighLevel.png
+	width 15cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-Component view 
+Component view (F)
 \end_layout
 
 \begin_layout Standard
@@ -200,7 +214,7 @@ Descrizione dettagliata dei componenti (client e server) con descrizione
 \end_layout
 
 \begin_layout Subsection
-Deployment view 
+Deployment view (L)
 \end_layout
 
 \begin_layout Standard
@@ -209,7 +223,7 @@ Dispositivi hardware specificando quale software viene inserito (se client
 \end_layout
 
 \begin_layout Subsection
-Runtime view
+Runtime view (F)
 \end_layout
 
 \begin_layout Standard
@@ -218,7 +232,7 @@ SEQUENCE DIAGRAM con più dettagli rispetto a quelli nel rasd, soprattutto
 \end_layout
 
 \begin_layout Subsection
-Component interfaces
+Component interfaces (F)
 \end_layout
 
 \begin_layout Standard
@@ -227,7 +241,7 @@ Spiegare come funzionano i servizi delle interfacce di client e server (in
 \end_layout
 
 \begin_layout Subsection
-Selected architectural styles and patterns
+Selected architectural styles and patterns (L)
 \end_layout
 
 \begin_layout Standard
