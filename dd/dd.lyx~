@@ -110,7 +110,7 @@ Time Spent
 \end_layout
 
 \begin_layout Standard
-2h
+5h
 \end_layout
 
 \begin_layout Standard
@@ -166,7 +166,7 @@ Overview (L)
 
 \begin_layout Standard
 The architecture we based our system on is the client-server architecture
- with two tiers.
+ with two tiers and distributed logic.
  One tier (the server tier) is composed by the server logic and the database,
  the other tier (the client tier) is composed by the client logic and the
  GUI that allows the user to intract with the system.
@@ -175,21 +175,13 @@ The architecture we based our system on is the client-server architecture
  we decided to use a service oriented architure, allows our system to be
  scalable, so other services can be added without modifying the structure
  of the system.
+ For example, if a future implementation of the system needs a different
+ type of client, the new client can use the same services provided by the
+ server without modifying the implementation of its logic.
+ Furthermore, using a two tier architecture allows our system to be easy
+ to maintain and to repair if some of its components break.
 \end_layout
 
-\begin_layout Itemize
-\noindent
-Client-Server.
- 2-tier with distributed application 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-2 tier could be good in term of physical security and maintainance, but
- bad in terms of scalability.
-\end_layout
-
-\end_deeper
 \begin_layout Subsection
 High level components and their interaction (L)
 \end_layout
@@ -211,6 +203,71 @@ Component view (F)
 \begin_layout Standard
 Descrizione dettagliata dei componenti (client e server) con descrizione
  dei moduli al loro interno (gui, logica e servizi).
+\end_layout
+
+\begin_layout Subsubsection
+Client
+\end_layout
+
+\begin_layout Standard
+\noindent
+The client is the component that take the input of the user and sends it
+ to the system.
+ It also has the duty of gathering available services from the Service List
+ through the Service Requestor.
+ Presenting informations sent by the system is also requested.
+\end_layout
+
+\begin_layout Itemize
+GUI
+\end_layout
+
+\begin_layout Itemize
+Client Logic
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+GUI-Bridge
+\end_layout
+
+\begin_layout Itemize
+Service Requestor
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Server
+\end_layout
+
+\begin_layout Itemize
+Database
+\end_layout
+
+\begin_layout Itemize
+Server Logic
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Core
+\end_layout
+
+\begin_layout Itemize
+Service Provider
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Service List
+\end_layout
+
+\begin_layout Standard
+Service List is provided by the Server.
+ It contains a list of all services that server can fulfill.
+ Using this technique the client can know what services the system offers
+ just making a simple lookup to the Service List.
+ He can also gathers all the available services for the sake of using them.
 \end_layout
 
 \begin_layout Subsection
