@@ -275,8 +275,45 @@ Deployment view (L)
 \end_layout
 
 \begin_layout Standard
-Dispositivi hardware specificando quale software viene inserito (se client
- o server).
+The main hardware components that will interact and will be part of our
+ system are the server, the database, smartphones and personal computers.
+\end_layout
+
+\begin_layout Subsubsection
+Server and database
+\end_layout
+
+\begin_layout Standard
+The server is located in a safe structure where the risk of malfuctions
+ and device breaks are at minimum.
+ The functionality of the server has to be guaranteed for the most part
+ of the year (except from short periods of time due to maintenance) and
+ must be able to answer to every call coming from a customer errors.
+ This means that before choosing a proper server for the system, an estimation
+ of the average number of requests must be made, in order to build a server
+ with the right capabilities to fulfill every request.
+ Before choosing the right database to use, some facts must be take into
+ account, such as the number of zones in which the city is devided and the
+ number of taxi drivers working in the city.
+ The database must be able to manage all these data without errors and must
+ be capable of managing more data if new zones are created or if new taxi
+ drivers decide to work in the city.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Smartphones and personal computers
+\end_layout
+
+\begin_layout Standard
+Smartphones will be used by both taxi drivers and customers to use the system.
+ It's important to highlight the fact that the smartphones belonging to
+ taxi drivers and customers use the same type of client, the only difference
+ is the type of services that will be requested (the client on a customer's
+ smartphone requests only services available for customers and the same
+ is applied to clients on a taxi driver's smartphone).
+ The same client is used on personal computers that customers use to make
+ requests and reservations.
 \end_layout
 
 \begin_layout Subsection
