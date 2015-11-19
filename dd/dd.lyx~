@@ -187,9 +187,32 @@ High level components and their interaction (L)
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Graphics
-	filename uml/HighLevel.png
-	width 15cm
+	filename uml/HIghComp.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+High level architecture of the system
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -314,7 +337,6 @@ Smartphones will be used by both taxi drivers and customers to use the system.
  is applied to clients on a taxi driver's smartphone).
  The same client is used on personal computers that customers use to make
  requests and reservations.
- In this way the system is 
 \end_layout
 
 \begin_layout Subsection
