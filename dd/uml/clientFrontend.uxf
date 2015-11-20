@@ -9,7 +9,7 @@
       <w>480</w>
       <h>310</h>
     </coordinates>
-    <panel_attributes>CustomerFrontend
+    <panel_attributes>Frontend (Customer)
 symbol=component
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -17,14 +17,14 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>0</x>
+      <x>140</x>
       <y>340</y>
       <w>260</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=()-[]
 m2=AcceptRefuseConfirmationMsg</panel_attributes>
-    <additional_attributes>140.0;10.0;240.0;10.0</additional_attributes>
+    <additional_attributes>80.0;10.0;240.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
@@ -44,133 +44,49 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>580</x>
-      <y>330</y>
-      <w>100</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=)-[]
-layer=100</panel_attributes>
-    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>660</x>
-      <y>340</y>
-      <w>80</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=-[]
-layer=100</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>710</x>
-      <y>330</y>
-      <w>130</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-(
-layer=100</panel_attributes>
-    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>320</x>
-      <y>340</y>
-      <w>80</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=()-[]
-layer=100</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>240</x>
-      <y>340</y>
-      <w>110</w>
-      <h>30</h>
+      <y>280</y>
+      <w>160</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=-
 layer=100</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+    <additional_attributes>140.0;10.0;80.0;70.0;10.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>70</x>
+      <x>210</x>
       <y>210</y>
       <w>190</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>lt=()-[]
+    <panel_attributes>lt=()-
 m2=PrestationSubmission</panel_attributes>
-    <additional_attributes>70.0;10.0;170.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>580</x>
-      <y>200</y>
-      <w>100</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=)-[]
-layer=100</panel_attributes>
-    <additional_attributes>70.0;20.0;10.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>660</x>
       <y>210</y>
-      <w>80</w>
-      <h>30</h>
+      <w>160</w>
+      <h>100</h>
     </coordinates>
-    <panel_attributes>lt=-[]
+    <panel_attributes>lt=-
 layer=100</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+    <additional_attributes>140.0;80.0;80.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>710</x>
-      <y>200</y>
+      <y>270</y>
       <w>130</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100</panel_attributes>
     <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>320</x>
-      <y>210</y>
-      <w>80</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=()-[]
-layer=100</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>240</x>
-      <y>210</y>
-      <w>110</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=-
-layer=100</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
