@@ -105,18 +105,6 @@ bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>648</x>
-      <y>104</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-(
-layer=100</panel_attributes>
-    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>552</x>
@@ -172,24 +160,12 @@ m2=TaxiInterface</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>648</x>
-      <y>192</y>
-      <w>120</w>
+      <y>224</y>
+      <w>112</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100</panel_attributes>
-    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>648</x>
-      <y>336</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-(
-layer=100</panel_attributes>
-    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
   </element>
 </diagram>
