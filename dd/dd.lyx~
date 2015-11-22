@@ -336,6 +336,7 @@ This client will contain the front end of the customer, so a user is able
  to submit a prestation (request or reservation) and to decide to accept
  or refuse a refusable message (this message is sent to the customer when
  the first taxi driver available is found outside the customer's zone).
+ 
 \end_layout
 
 \begin_layout Subsection
