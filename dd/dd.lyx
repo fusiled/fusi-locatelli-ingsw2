@@ -332,11 +332,55 @@ Client (Customer)
 \end_layout
 
 \begin_layout Standard
-This client will contain the front end of the customer, so a user is able
+This client contains the Frontend(Customer) component, so a user is able
  to submit a prestation (request or reservation) and to decide to accept
  or refuse a refusable message (this message is sent to the customer when
  the first taxi driver available is found outside the customer's zone).
- 
+ The customer's client is used on customer's smartphone or pcs, depending
+ on his choise to use the app or webapp version of the service.
+\end_layout
+
+\begin_layout Subsubsection
+Client (Taxi)
+\end_layout
+
+\begin_layout Standard
+This client contains the Frontend(Taxi) component and is used by the taxi
+ driver to access every functionality that is available to him, such as
+ accepting or refusing a request and appear available to the system.
+ This client will be installed on the taxi driver's smartphone and it's
+ important to focus on the fact that this version of the client will be
+ only available on taxi drivers' smartphone, in this way customers cannot
+ accept the services reserved to drivers.
+\end_layout
+
+\begin_layout Standard
+\noindent
+The two clients exchange data, by means of interfaces, with both the service
+ register (that allows them to retrieve the services they have access to)
+ and the service provider (that provides the two client with the services
+ they are able to access, previously specified by the service register).
+\end_layout
+
+\begin_layout Subsubsection
+Server
+\end_layout
+
+\begin_layout Standard
+The server contains two components: the core (responsible for the execution
+ of the main functionalities of the system) and the service provider (that
+ allows clients to access the services they need).
+ The service provider communicates with the service register to access the
+ services that the clients are enabled to use.
+\end_layout
+
+\begin_layout Subsubsection
+Web page
+\end_layout
+
+\begin_layout Standard
+The service register is located on a web page, so both the clients and the
+ server can access it at any time and know which services can be used.
 \end_layout
 
 \begin_layout Subsection
