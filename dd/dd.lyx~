@@ -311,9 +311,37 @@ Deployment view (L)
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename uml/deployment/deployment.png
-	width 15cm
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Deployment diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
 
 \end_inset
 
@@ -336,7 +364,6 @@ This client contains the Frontend(Customer) component, so a user is able
  to submit a prestation (request or reservation) and to decide to accept
  or refuse a refusable message (this message is sent to the customer when
  the first taxi driver available is found outside the customer's zone).
-<<<<<<< HEAD
  The customer's client is used on customer's smartphone or pcs, depending
  on his choise to use the app or webapp version of the service.
 \end_layout
@@ -380,10 +407,8 @@ Web page
 \end_layout
 
 \begin_layout Standard
-
-=======
- 
->>>>>>> f1a35f0991f82b3cdb771b8acbd369e7f2b60975
+The service register is located on a web page, so both the clients and the
+ server can access it at any time and know which services can be used.
 \end_layout
 
 \begin_layout Subsection

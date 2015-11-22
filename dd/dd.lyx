@@ -187,31 +187,10 @@ High level components and their interaction (L)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename uml/HIghComp.png
-	width 7cm
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-High level architecture of the system
-\end_layout
-
-\end_inset
-
-
-\end_layout
+	width 10cm
 
 \end_inset
 
@@ -233,12 +212,7 @@ The three main high level components of the system are the front end, the
 \end_layout
 
 \begin_layout Subsection
-Component view (F)
-\end_layout
-
-\begin_layout Standard
-Descrizione dettagliata dei componenti (client e server) con descrizione
- dei moduli al loro interno (gui, logica e servizi).
+Component view 
 \end_layout
 
 \begin_layout Subsubsection
@@ -247,63 +221,70 @@ Frontend
 
 \begin_layout Standard
 \noindent
-The client is the component that take the input of the user and sends it
- to the system.
- It also has the duty of gathering available services from the Service List
- through the Service Requestor.
- Presenting informations sent by the system is also requested.
+The frontend must takes the input of users and present the several responses
+ that the system generates for the user.
+ Two different kinds of frontends are proposed: one for customers and one
+ for taxi drivers.
 \end_layout
 
-\begin_layout Itemize
-GUI
-\end_layout
-
-\begin_layout Itemize
-Client Logic
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-GUI-Bridge
-\end_layout
-
-\begin_layout Itemize
-Service Requestor
-\end_layout
-
-\end_deeper
-\begin_layout Subsubsection
-Core
-\end_layout
-
-\begin_layout Itemize
-Database
-\end_layout
-
-\begin_layout Itemize
-Server Logic
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Core
-\end_layout
-
-\begin_layout Itemize
-Service Provider
-\end_layout
-
-\end_deeper
-\begin_layout Subsubsection
-Service List
+\begin_layout Paragraph
+Customer Frontend
 \end_layout
 
 \begin_layout Standard
-Service List is provided by the Server.
- It contains a list of all services that server can fulfill.
- Using this technique the client can know what services the system offers
- just making a simple lookup to the Service List.
- He can also gathers all the available services for the sake of using them.
+\align center
+\begin_inset Graphics
+	filename uml/component/clientFrontendCustomer.png
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Taxi Frontend
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/component/clientFrontendTaxi.png
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+ServiceComunicator
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/component/serviceComp.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Core
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/component/serverCore.png
+	width 12cm
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -311,37 +292,10 @@ Deployment view (L)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename uml/deployment/deployment.png
-	width 13cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Deployment diagram
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
+	width 15cm
 
 \end_inset
 

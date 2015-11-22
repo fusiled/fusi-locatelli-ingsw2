@@ -4,10 +4,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>225</x>
-      <y>72</y>
+      <x>90</x>
+      <y>36</y>
       <w>657</w>
-      <h>540</h>
+      <h>567</h>
     </coordinates>
     <panel_attributes>Core
 symbol=component
@@ -17,8 +17,8 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>369</x>
-      <y>144</y>
+      <x>234</x>
+      <y>135</y>
       <w>207</w>
       <h>36</h>
     </coordinates>
@@ -30,13 +30,14 @@ m2=SendConfirmationMessage</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>558</x>
+      <x>423</x>
       <y>108</y>
       <w>279</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>symbol=component
-ConfirmationMessageHandler
+Confirmation
+MessageHandler
 valign=center
 layer=1
 bg=white</panel_attributes>
@@ -45,8 +46,8 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>387</x>
-      <y>279</y>
+      <x>252</x>
+      <y>270</y>
       <w>189</w>
       <h>36</h>
     </coordinates>
@@ -58,13 +59,14 @@ m2=sendRefusableMessage</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>558</x>
+      <x>423</x>
       <y>243</y>
       <w>189</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>symbol=component
-RefusableMessageHadler
+RefusableMessage
+Handler
 valign=center
 layer=1
 bg=gray</panel_attributes>
@@ -73,7 +75,7 @@ bg=gray</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>558</x>
+      <x>423</x>
       <y>378</y>
       <w>279</w>
       <h>72</h>
@@ -87,7 +89,7 @@ bg=light_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>639</x>
+      <x>504</x>
       <y>171</y>
       <w>162</w>
       <h>189</h>
@@ -99,7 +101,7 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>639</x>
+      <x>504</x>
       <y>342</y>
       <w>27</w>
       <h>54</h>
@@ -111,7 +113,7 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
+      <x>495</x>
       <y>306</y>
       <w>45</w>
       <h>54</h>
@@ -123,7 +125,7 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
+      <x>531</x>
       <y>477</y>
       <w>27</w>
       <h>54</h>
@@ -135,7 +137,7 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>657</x>
+      <x>522</x>
       <y>441</y>
       <w>45</w>
       <h>54</h>
@@ -147,7 +149,7 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>765</x>
+      <x>630</x>
       <y>342</y>
       <w>27</w>
       <h>54</h>
@@ -159,7 +161,7 @@ layer=100</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>558</x>
+      <x>423</x>
       <y>513</y>
       <w>279</w>
       <h>72</h>
@@ -173,8 +175,8 @@ bg=black</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
-      <y>549</y>
+      <x>297</x>
+      <y>540</y>
       <w>144</w>
       <h>36</h>
     </coordinates>
@@ -186,13 +188,14 @@ m2=actionInputPrest</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>279</x>
+      <x>144</x>
       <y>108</y>
       <w>90</w>
       <h>477</h>
     </coordinates>
     <panel_attributes>symbol=component
-CoreFacade
+Core
+Facade
 valign=center
 layer=1
 bg=white</panel_attributes>
@@ -201,8 +204,8 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>270</y>
+      <x>225</x>
+      <y>261</y>
       <w>153</w>
       <h>45</h>
     </coordinates>
@@ -214,8 +217,8 @@ layer=100
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>135</y>
+      <x>225</x>
+      <y>126</y>
       <w>153</w>
       <h>45</h>
     </coordinates>
@@ -227,8 +230,8 @@ layer=100
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>540</y>
+      <x>225</x>
+      <y>531</y>
       <w>153</w>
       <h>45</h>
     </coordinates>
@@ -240,14 +243,40 @@ layer=100
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>333</y>
-      <w>117</w>
-      <h>36</h>
+      <x>171</x>
+      <y>0</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=()-[]
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>27</y>
+      <w>45</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+layer=100
+</panel_attributes>
+    <additional_attributes>20.0;10.0;20.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>171</x>
+      <y>72</y>
+      <w>27</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
   </element>
 </diagram>
