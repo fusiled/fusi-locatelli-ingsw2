@@ -433,11 +433,69 @@ Spiegare come funzionano i servizi delle interfacce di client e server (in
 Selected architectural styles and patterns (L)
 \end_layout
 
+\begin_layout Subsubsection
+Architectural styles
+\end_layout
+
 \begin_layout Standard
-Service Oriented Architecture.
- Service provider publishes type of services (request and reservation for
- clients).
- A future extension could be very simple
+To implement the mytaxi system, we decided to use two architectural styles
+ that are the most suitable for this system: the client-server architecture
+ and the service oriented architecture (SOA).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Client-server architecture: 
+\series default
+we decided to use this style to implement our system, customers and taxi
+ drivers are the clients that are able to connect to a server that can execute
+ the main functionalities of the service, such as the taxi queue menagement.
+ This is the simplest and at the same time the safest choice because other
+ styles may have not worked as well as the client-server architecture.
+ For example, a peer to peer architecture wouldn't be right for our system,
+ because the absence of peers in a certain moment would have compromised
+ the functionalities of the mytaxi system.
+ Another architecture we thought of was to install some stations in the
+ city at which the clients could connect and then each station could guarantee
+ the communication between clients and the server.
+ We decided not to choose this architecture because a malfunction in a single
+ station would have interrupt the functionalities of the system for some
+ clients and the cost could have been to high.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Service oriented architecture: 
+\series default
+our system is based on a service oriented architecture, this means that
+ clients use the services provided by a service provider.
+ In this way, the two type of clients (customer and taxi driver) can access
+ only the services they are able to use (for example, customers can access
+ the service to make request and reservation, but not the one to accept
+ a request that can only be used by taxi drivers).
+ Furthermore, in this way the system is extendible, because if some new
+ functionality must be added to the system, it's enough to just add the
+ corrisponding service.
+ The services provided by our system can also be sold to a third part system
+ if it needs them.
+\end_layout
+
+\begin_layout Subsubsection
+Design patterns
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Core facade: 
+\series default
+the core of our system communicates with the service provider by means of
+ a component, that is the Core facade.
+ In this way the access made by the service provider to the core is much
+ simpler and all the algorithms and functionalities of the core are hidden
+ and unaccessible from the outside.
 \end_layout
 
 \begin_layout Subsection
