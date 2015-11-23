@@ -9,7 +9,7 @@
       <w>790</w>
       <h>310</h>
     </coordinates>
-    <panel_attributes>Frontend (Taxi)
+    <panel_attributes>Taxi Frontend
 symbol=component
 bg=yellow</panel_attributes>
     <additional_attributes/>
@@ -97,7 +97,7 @@ valign=center</panel_attributes>
     </coordinates>
     <panel_attributes>lt=()-[]
 layer=100
-m1=appearAvailable</panel_attributes>
+m1=AppearAvailable</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
