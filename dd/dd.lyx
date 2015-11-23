@@ -183,7 +183,7 @@ The architecture we based our system on is the client-server architecture
 \end_layout
 
 \begin_layout Subsection
-High level components and their interaction (L)
+High level components and their interaction
 \end_layout
 
 \begin_layout Standard
@@ -310,24 +310,24 @@ Considering that a client-server architecture has been chosen to implement
 \end_layout
 
 \begin_layout Subsubsection
-Client (Customer)
+Customer Client
 \end_layout
 
 \begin_layout Standard
-This client contains the Frontend(Customer) component, so a user is able
+This client contains the Customer Frontend component, so a user is able
  to submit a prestation (request or reservation) and to decide to accept
  or refuse a refusable message (this message is sent to the customer when
  the first taxi driver available is found outside the customer's zone).
  The customer's client is used on customer's smartphone or pcs, depending
- on his choise to use the app or webapp version of the service.
+ on his choice to use the app or webapp version of the service.
 \end_layout
 
 \begin_layout Subsubsection
-Client (Taxi)
+Taxi Client
 \end_layout
 
 \begin_layout Standard
-This client contains the Frontend(Taxi) component and is used by the taxi
+This client contains the Taxi Frontend component and is used by the taxi
  driver to access every functionality that is available to him, such as
  accepting or refusing a request and appear available to the system.
  This client will be installed on the taxi driver's smartphone and it's
@@ -415,7 +415,7 @@ we decided to use this style to implement our system, customers and taxi
  the communication between clients and the server.
  We decided not to choose this architecture because a malfunction in a single
  station would have interrupt the functionalities of the system for some
- clients and the cost could have been to high.
+ clients and this solution could be quite expensive.
 \end_layout
 
 \begin_layout Itemize
