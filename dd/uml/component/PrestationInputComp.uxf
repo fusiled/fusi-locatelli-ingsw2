@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>150</x>
+      <y>60</y>
+      <w>310</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+PrestationInput
+layer=1
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>20</x>
+      <y>90</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=()-
+layer=100
+m2=actionInputPrest</panel_attributes>
+    <additional_attributes>70.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>20</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+QueueManagerInterface
+layer=100</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>150</x>
+      <y>60</y>
+      <w>310</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>layer=1
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
