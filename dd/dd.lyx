@@ -1254,7 +1254,7 @@ Service Communicator has the duty of connecting Frontend and core using
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/dd/uml/component/ServiceCompGen.png
+	filename uml/component/ServiceCompGen.png
 	width 5cm
 
 \end_inset
@@ -1377,7 +1377,7 @@ Description
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/dd/uml/component/ServiceRegister.png
+	filename uml/component/ServiceRegister.png
 	width 5cm
 
 \end_inset
@@ -1496,7 +1496,7 @@ Description
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/dd/uml/component/ServiceRequestor.png
+	filename uml/component/ServiceRequestor.png
 	width 5cm
 
 \end_inset
@@ -1608,7 +1608,7 @@ Description
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/dd/uml/component/ServiceProvider.png
+	filename uml/component/ServiceProvider.png
 	width 5cm
 
 \end_inset
@@ -1625,7 +1625,7 @@ Assembling the listed components we obtain the following diagram that reperesent
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename /home/fusiled/Desktop/fusi-locatelli-ingsw2/dd/uml/component/serviceComp.png
+	filename uml/component/serviceComp.png
 	width 10cm
 
 \end_inset
