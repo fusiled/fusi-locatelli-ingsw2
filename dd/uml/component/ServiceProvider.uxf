@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>525</x>
+      <y>266</y>
+      <w>126</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>525</x>
+      <y>196</y>
+      <w>112</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+layer=100
+m2=RequestorInterface</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>224</y>
+      <w>119</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+layer=100
+to Service Register</panel_attributes>
+    <additional_attributes>20.0;60.0;20.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>525</x>
+      <y>266</y>
+      <w>126</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+ServiceProvider
+valign=center
+layer=1
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>574</x>
+      <y>308</y>
+      <w>63</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=[]-(
+layer=100
+to Core</panel_attributes>
+    <additional_attributes>20.0;10.0;20.0;50.0</additional_attributes>
+  </element>
+</diagram>

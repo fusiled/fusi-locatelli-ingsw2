@@ -4,10 +4,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>296</x>
-      <y>48</y>
-      <w>408</w>
-      <h>480</h>
+      <x>464</x>
+      <y>192</y>
+      <w>344</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>ServiceComunicator
 symbol=component
@@ -17,23 +17,23 @@ bg=orange</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>232</x>
-      <y>112</y>
+      <x>416</x>
+      <y>216</y>
       <w>136</w>
-      <h>32</h>
+      <h>112</h>
     </coordinates>
-    <panel_attributes>lt=()-
+    <panel_attributes>lt=()-[]
 layer=100
-m2=CustomerInterface</panel_attributes>
-    <additional_attributes>40.0;10.0;150.0;10.0</additional_attributes>
+m1=CustomerInterface</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;120.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>352</x>
-      <y>80</y>
-      <w>104</w>
-      <h>304</h>
+      <x>488</x>
+      <y>272</y>
+      <w>112</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>symbol=component
 ServiceRequestor
@@ -45,20 +45,21 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>376</x>
-      <y>408</y>
-      <w>24</w>
+      <x>528</x>
+      <y>432</y>
+      <w>176</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=-()
-layer=100</panel_attributes>
+layer=100
+RegisterRequestorInterface</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>368</x>
-      <y>376</y>
+      <x>520</x>
+      <y>400</y>
       <w>40</w>
       <h>48</h>
     </coordinates>
@@ -69,20 +70,8 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>608</x>
-      <y>408</y>
-      <w>24</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>lt=-()
-layer=100</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>600</x>
-      <y>376</y>
+      <x>728</x>
+      <y>400</y>
       <w>40</w>
       <h>48</h>
     </coordinates>
@@ -93,10 +82,10 @@ layer=100</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>352</x>
-      <y>440</y>
-      <w>304</w>
-      <h>64</h>
+      <x>488</x>
+      <y>464</y>
+      <w>296</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>symbol=component
 ServiceRegister
@@ -107,10 +96,10 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>552</x>
-      <y>80</y>
+      <x>680</x>
+      <y>272</y>
       <w>104</w>
-      <h>304</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>symbol=component
 ServiceProvider
@@ -122,50 +111,88 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>232</y>
+      <x>632</x>
+      <y>320</y>
       <w>64</w>
-      <h>24</h>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=-()
-layer=100</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>448</x>
-      <y>224</y>
-      <w>72</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=)-
-layer=100</panel_attributes>
+layer=100
+</panel_attributes>
     <additional_attributes>60.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>248</x>
-      <y>352</y>
-      <w>120</w>
-      <h>32</h>
+      <x>592</x>
+      <y>320</y>
+      <w>56</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=()-
-layer=100
-m2=TaxiInterface</panel_attributes>
-    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+    <panel_attributes>lt=)-
+layer=100</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>224</y>
+      <x>392</x>
+      <y>304</y>
       <w>112</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=()-
+layer=100
+m1=TaxiInterface</panel_attributes>
+    <additional_attributes>10.0;80.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>776</x>
+      <y>320</y>
+      <w>72</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100</panel_attributes>
-    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>736</x>
+      <y>432</y>
+      <w>120</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+layer=100
+ProviderInterface
+</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>608</x>
+      <y>248</y>
+      <w>136</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>RequestorInterface
+layer=101</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>256</y>
+      <w>32</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;90.0;20.0;10.0</additional_attributes>
   </element>
 </diagram>
