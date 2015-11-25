@@ -4,8 +4,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>308</x>
-      <y>273</y>
+      <x>119</x>
+      <y>245</y>
       <w>350</w>
       <h>35</h>
     </coordinates>
@@ -18,8 +18,8 @@ bg=red</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>308</x>
-      <y>175</y>
+      <x>119</x>
+      <y>147</y>
       <w>350</w>
       <h>35</h>
     </coordinates>
@@ -32,8 +32,8 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>308</x>
-      <y>77</y>
+      <x>119</x>
+      <y>49</y>
       <w>350</w>
       <h>35</h>
     </coordinates>
@@ -46,8 +46,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>469</x>
-      <y>203</y>
+      <x>280</x>
+      <y>175</y>
       <w>35</w>
       <h>49</h>
     </coordinates>
@@ -57,8 +57,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>238</y>
+      <x>287</x>
+      <y>210</y>
       <w>21</w>
       <h>49</h>
     </coordinates>
@@ -68,8 +68,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>469</x>
-      <y>105</y>
+      <x>280</x>
+      <y>77</y>
       <w>35</w>
       <h>49</h>
     </coordinates>
@@ -79,8 +79,44 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>476</x>
-      <y>140</y>
+      <x>287</x>
+      <y>112</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=()-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>119</x>
+      <y>343</y>
+      <w>350</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>Database
+layer=0
+symbol=component
+bg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>273</y>
+      <w>35</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=-(</panel_attributes>
+    <additional_attributes>20.0;10.0;20.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>287</x>
+      <y>308</y>
       <w>21</w>
       <h>49</h>
     </coordinates>

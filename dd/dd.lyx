@@ -1744,7 +1744,7 @@ This component has the task to execute all the main functionalities of the
 \align center
 \begin_inset Graphics
 	filename uml/component/serverCoreComponentGen.png
-	width 5cm
+	width 7cm
 
 \end_inset
 
@@ -1867,7 +1867,7 @@ This component is used to guarantee an easy access to the core functionalities.
 \align center
 \begin_inset Graphics
 	filename uml/component/coreFacadeComponent.png
-	width 5cm
+	width 7cm
 
 \end_inset
 
@@ -1979,7 +1979,7 @@ This component manages the sending of the confirmation messages.
 \align center
 \begin_inset Graphics
 	filename uml/component/confirmMsgHandlerComp.png
-	width 5cm
+	width 7cm
 
 \end_inset
 
@@ -2091,7 +2091,7 @@ This component manages the sending of the refusable confirmation messages.
 \align center
 \begin_inset Graphics
 	filename uml/component/RefusableMsgHandlCom.png
-	width 5cm
+	width 7cm
 
 \end_inset
 
@@ -2216,7 +2216,7 @@ This component manages the taxi queue of every zone of the city and says
 \align center
 \begin_inset Graphics
 	filename uml/component/QueueManagerComp.png
-	width 5cm
+	width 7cm
 
 \end_inset
 
@@ -2338,7 +2338,7 @@ This component manages the input of any prestation sent by a customer.
 \align center
 \begin_inset Graphics
 	filename uml/component/PrestationInputComp.png
-	width 5cm
+	width 7cm
 
 \end_inset
 
@@ -2361,6 +2361,127 @@ Assembling all the core components previously described the complete Core
 \begin_inset Graphics
 	filename uml/component/serverCore.png
 	width 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Database
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Database
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Required interfaces
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+None.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Provided interfaces
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Enumerate
+
+\series bold
+\emph on
+DatabaseInterface: 
+\series default
+\emph default
+this interface allow the core and the database to communicate, so the core
+ can access all the required information to guarantee its functionalities.
+
+\series bold
+\emph on
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+This component contains all the data needed by the core, such as the zone
+ of the city and all the taxis available.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/component/databaseComp.png
+	width 5cm
 
 \end_inset
 
