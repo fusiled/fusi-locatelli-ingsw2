@@ -29,8 +29,8 @@ fontsize=23
     <id>Relation</id>
     <coordinates>
       <x>186</x>
-      <y>204</y>
-      <w>132</w>
+      <y>198</y>
+      <w>144</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=()-[]
@@ -42,7 +42,7 @@ m2=CustomerInterface</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>54</x>
-      <y>228</y>
+      <y>222</y>
       <w>276</w>
       <h>42</h>
     </coordinates>
@@ -57,8 +57,8 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>330</x>
-      <y>348</y>
-      <w>132</w>
+      <y>342</y>
+      <w>150</w>
       <h>78</h>
     </coordinates>
     <panel_attributes>lt=-()
@@ -70,7 +70,7 @@ m2=RequestorInterface</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>222</x>
-      <y>264</y>
+      <y>258</y>
       <w>30</w>
       <h>264</h>
     </coordinates>
@@ -82,8 +82,8 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>408</x>
-      <y>456</y>
-      <w>120</w>
+      <y>450</y>
+      <w>132</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-()
@@ -95,7 +95,7 @@ m2=providerInterface</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>402</x>
-      <y>504</y>
+      <y>498</y>
       <w>30</w>
       <h>84</h>
     </coordinates>
@@ -107,7 +107,7 @@ layer=100</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>312</x>
-      <y>414</y>
+      <y>408</y>
       <w>228</w>
       <h>48</h>
     </coordinates>
@@ -121,7 +121,7 @@ bg=orange</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>270</x>
-      <y>528</y>
+      <y>522</y>
       <w>18</w>
       <h>60</h>
     </coordinates>
@@ -133,7 +133,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>282</x>
-      <y>264</y>
+      <y>258</y>
       <w>30</w>
       <h>66</h>
     </coordinates>
@@ -145,20 +145,20 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>60</x>
-      <y>204</y>
+      <y>192</y>
       <w>144</w>
-      <h>36</h>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100
 TaxiInterface</panel_attributes>
-    <additional_attributes>10.0;10.0;220.0;40.0</additional_attributes>
+    <additional_attributes>10.0;20.0;220.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>54</x>
-      <y>144</y>
+      <y>138</y>
       <w>276</w>
       <h>42</h>
     </coordinates>
@@ -171,8 +171,8 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>78</x>
-      <y>78</y>
-      <w>204</w>
+      <y>72</y>
+      <w>228</w>
       <h>78</h>
     </coordinates>
     <panel_attributes>lt=()-[]
@@ -183,8 +183,8 @@ m1=AcceptRefuseConfirmationMsg</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>60</x>
-      <y>42</y>
-      <w>150</w>
+      <y>36</y>
+      <w>162</w>
       <h>114</h>
     </coordinates>
     <panel_attributes>lt=()-[]
@@ -195,7 +195,7 @@ m1=PrestationSubmission</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>180</x>
-      <y>180</y>
+      <y>174</y>
       <w>30</w>
       <h>36</h>
     </coordinates>
@@ -207,7 +207,7 @@ layer=100</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>354</x>
-      <y>144</y>
+      <y>138</y>
       <w>276</w>
       <h>42</h>
     </coordinates>
@@ -220,8 +220,8 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>360</x>
-      <y>6</y>
-      <w>162</w>
+      <y>0</y>
+      <w>180</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>lt=[]-()
@@ -233,8 +233,8 @@ m2=AcceptRefusePrestation</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>384</x>
-      <y>42</y>
-      <w>102</w>
+      <y>36</y>
+      <w>120</w>
       <h>114</h>
     </coordinates>
     <panel_attributes>lt=()-[]
@@ -246,8 +246,8 @@ m1=Authentication</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>408</x>
-      <y>78</y>
-      <w>114</w>
+      <y>72</y>
+      <w>126</w>
       <h>78</h>
     </coordinates>
     <panel_attributes>lt=()-[]
@@ -259,7 +259,7 @@ m1=appearAvailable</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>354</x>
-      <y>198</y>
+      <y>192</y>
       <w>168</w>
       <h>42</h>
     </coordinates>
@@ -272,7 +272,7 @@ CustomerInterface</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>354</x>
-      <y>228</y>
+      <y>222</y>
       <w>276</w>
       <h>42</h>
     </coordinates>
@@ -287,8 +287,8 @@ bg=yellow</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>504</x>
-      <y>204</y>
-      <w>96</w>
+      <y>198</y>
+      <w>108</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=-()
@@ -300,7 +300,7 @@ m1=TaxiInterface</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>42</x>
-      <y>120</y>
+      <y>114</y>
       <w>294</w>
       <h>156</h>
     </coordinates>
@@ -311,7 +311,7 @@ m1=TaxiInterface</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>354</x>
-      <y>228</y>
+      <y>222</y>
       <w>276</w>
       <h>42</h>
     </coordinates>
@@ -322,7 +322,7 @@ m1=TaxiInterface</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>54</x>
-      <y>228</y>
+      <y>222</y>
       <w>276</w>
       <h>42</h>
     </coordinates>
@@ -333,29 +333,29 @@ m1=TaxiInterface</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>90</x>
-      <y>552</y>
+      <y>546</y>
       <w>492</w>
       <h>288</h>
     </coordinates>
-    <panel_attributes>Server</panel_attributes>
+    <panel_attributes>Logic Server</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>276</x>
-      <y>384</y>
+      <y>378</y>
       <w>294</w>
       <h>90</h>
     </coordinates>
-    <panel_attributes>Webpage</panel_attributes>
+    <panel_attributes>Web Server</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>120</x>
-      <y>576</y>
+      <y>570</y>
       <w>438</w>
       <h>42</h>
     </coordinates>
@@ -366,7 +366,7 @@ m1=TaxiInterface</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>120</x>
-      <y>576</y>
+      <y>570</y>
       <w>438</w>
       <h>42</h>
     </coordinates>
@@ -381,7 +381,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>168</x>
-      <y>612</y>
+      <y>606</y>
       <w>30</w>
       <h>42</h>
     </coordinates>
@@ -393,7 +393,7 @@ layer=100</panel_attributes>
     <id>UMLGeneric</id>
     <coordinates>
       <x>120</x>
-      <y>666</y>
+      <y>660</y>
       <w>438</w>
       <h>54</h>
     </coordinates>
@@ -407,7 +407,7 @@ bg=red</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>174</x>
-      <y>642</y>
+      <y>636</y>
       <w>18</w>
       <h>36</h>
     </coordinates>
@@ -420,7 +420,7 @@ layer=100
     <id>UMLGeneric</id>
     <coordinates>
       <x>348</x>
-      <y>120</y>
+      <y>114</y>
       <w>300</w>
       <h>156</h>
     </coordinates>
@@ -431,7 +431,7 @@ layer=100
     <id>Relation</id>
     <coordinates>
       <x>360</x>
-      <y>264</y>
+      <y>258</y>
       <w>30</w>
       <h>66</h>
     </coordinates>
@@ -443,7 +443,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>336</x>
-      <y>318</y>
+      <y>312</y>
       <w>48</w>
       <h>48</h>
     </coordinates>
@@ -455,7 +455,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>612</x>
-      <y>264</y>
+      <y>258</y>
       <w>30</w>
       <h>204</h>
     </coordinates>
@@ -467,7 +467,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>276</x>
-      <y>456</y>
+      <y>450</y>
       <w>360</w>
       <h>90</h>
     </coordinates>
@@ -479,7 +479,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>228</x>
-      <y>516</y>
+      <y>510</y>
       <w>54</w>
       <h>30</h>
     </coordinates>
@@ -491,7 +491,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>288</x>
-      <y>312</y>
+      <y>306</y>
       <w>54</w>
       <h>54</h>
     </coordinates>
@@ -503,7 +503,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>498</x>
-      <y>180</y>
+      <y>174</y>
       <w>30</w>
       <h>36</h>
     </coordinates>
@@ -515,7 +515,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>168</x>
-      <y>714</y>
+      <y>708</y>
       <w>30</w>
       <h>42</h>
     </coordinates>
@@ -527,7 +527,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>174</x>
-      <y>744</y>
+      <y>738</y>
       <w>18</w>
       <h>36</h>
     </coordinates>
@@ -540,7 +540,7 @@ layer=100
     <id>UMLGeneric</id>
     <coordinates>
       <x>120</x>
-      <y>768</y>
+      <y>762</y>
       <w>438</w>
       <h>54</h>
     </coordinates>

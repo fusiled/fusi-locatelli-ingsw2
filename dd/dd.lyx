@@ -2601,6 +2601,35 @@ Considering that a client-server architecture has been chosen to implement
  installed.
 \end_layout
 
+\begin_layout Standard
+\noindent
+A 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+full-hardware
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ view is now proposed for proposing to the reader a complete overview of
+ the deployment structure.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/deployment/deplHw.png
+	width 12cm
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Customer Client
 \end_layout
@@ -2758,6 +2787,7 @@ Algorithm Design
 
 \begin_layout Standard
 \begin_inset listings
+lstparams "language=C,breaklines=true"
 inline false
 status open
 
