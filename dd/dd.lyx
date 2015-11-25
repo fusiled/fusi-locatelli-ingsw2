@@ -154,8 +154,8 @@ The Design Document (DD) contains a functional description of the mytaxi
  explaining all the sub-components every component is made of.
  In this way the connection between components is illustrated and every
  person that will look at this document will have a clear idea about its
- architecture, wether he wants to have a detailed description of the system
- or a more general one.
+ architecture both hardware and software, wether he wants to have a detailed
+ description of the system or a more general one.
 \end_layout
 
 \begin_layout Subsection
@@ -1188,6 +1188,14 @@ Assembling the subcomponents described we can observe the structure of Taxi
 
 \begin_layout Subsubsection
 ServiceComunicator
+\end_layout
+
+\begin_layout Standard
+The ServiceCommunicator component has the task to link the Frontend to the
+ Core component, by means of services that the service provider makes available
+ to the service requestor.
+ The service register contains all the services that are needed to the system
+ to run properly.
 \end_layout
 
 \begin_layout Standard
