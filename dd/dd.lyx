@@ -144,16 +144,67 @@ Document Overview
 Document Purpose
 \end_layout
 
+\begin_layout Standard
+The Design Document (DD) contains a functional description of the mytaxi
+ system.
+ This document explains every component that is inserted into the system,
+ the architectural styles used and the design patterns that are implemented
+ to guarantee the satisfaction of all the requirements The components will
+ be described both at high level and more specifically, illustrating and
+ explaining all the sub-components every component is made of.
+ In this way the connection between components is illustrated and every
+ person that will look at this document will have a clear idea about its
+ architecture, wether he wants to have a detailed description of the system
+ or a more general one.
+\end_layout
+
 \begin_layout Subsection
 Definitions, Acronyms, Abbreviations
+\end_layout
+
+\begin_layout Standard
+For the definitions, acronyms and abbreviations look to the 
+\begin_inset Quotes eld
+\end_inset
+
+Glossary
+\begin_inset Quotes erd
+\end_inset
+
+ section of the RASD document.
 \end_layout
 
 \begin_layout Subsection
 Reference Documents
 \end_layout
 
+\begin_layout Itemize
+RASD document previously delivered.
+\end_layout
+
 \begin_layout Subsection
 Document Structure 
+\end_layout
+
+\begin_layout Standard
+Section 1 describes the main purpose and the structure of this Design Document.
+ Section 2 contains the description of the components used in the system,
+ firstly a high level view is illustrated, then every component is explored
+ and each sub-component that composes it is described, highlighting the
+ connections between components and sub-components.
+ In the second section there are also the deployment view, that describes
+ the physical deployment of the system i.e.
+ which hardware the components are inserted into, the runtime view that
+ illustrates the behaviour of the system when it's running and, finally,
+ the architectural styles and the design patterns that are the most suitable
+ to be used for the system.
+ Section 3 contains the main algorithm that is implemented in the core of
+ the system, that manages the taxi queue and the sending of messages to
+ customers and taxi drivers.
+ Section 4 shows how every functional requirement described in the RASD
+ document is covered by the components of the system.
+ Lastly, section 5 contains all the references to external documents needed
+ to fully understand this paper.
 \end_layout
 
 \begin_layout Section
@@ -1334,14 +1385,22 @@ Provided interfaces
 
 \series bold
 \emph on
-RegisterRequestorInterface
+RegisterRequestorInterface: 
+\series default
+\emph default
+interface used by the service requestor to know the services it can access
+ and use.
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
 \emph on
-ProviderInterface
+ProviderInterface: 
+\series default
+\emph default
+interface used by the service provider to know the service that can be accessed
+ by the service requestor.
 \end_layout
 
 \end_inset
@@ -1361,7 +1420,8 @@ Description
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+This component contains all the services available that can be accessed
+ by the requestor, if made available by the provider.
 \end_layout
 
 \end_inset
@@ -1426,11 +1486,12 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to Service Register
+Interface to Service Register to know which services are available to the
+ requestor.
 \end_layout
 
 \begin_layout Enumerate
-Interface to Service Provider
+Interface to Service Provider to access the available services.
 \end_layout
 
 \end_inset
@@ -1453,14 +1514,22 @@ Provided interfaces
 
 \series bold
 \emph on
-CustomerCommunicatorInterface
+CustomerCommunicatorInterface: 
+\series default
+\emph default
+interface used by the Customer Frontend to access the services available
+ to the customer.
 \end_layout
 
 \begin_layout Enumerate
 
 \series bold
 \emph on
-TaxiCommunicatorInterface
+TaxiCommunicatorInterface: 
+\series default
+\emph default
+interface used by the Taxi Frontend to access the services available to
+ the taxi driver.
 \end_layout
 
 \end_inset
@@ -1480,7 +1549,9 @@ Description
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+This component is used by the Customer Frontend and the Taxi Frontend components
+ to access all the available services they need no guarantee the frontend
+ functionalities.
 \end_layout
 
 \end_inset
@@ -1545,11 +1616,14 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to Core
+Interface to Core that is used to communicate to the core when a customer
+ asks for a prestation and to know when to send a message to a customer
+ or to a taxi driver.
 \end_layout
 
 \begin_layout Enumerate
-Interface to Service Register
+Interface to Service Register to access the services stored in the service
+ register.
 \end_layout
 
 \end_inset
@@ -1572,7 +1646,15 @@ Provided interfaces
 
 \series bold
 \emph on
-RequestoInterface
+RequestorInterface: 
+\series default
+\emph default
+interface used by the service requestor to access the services available
+ to it.
+
+\series bold
+\emph on
+ 
 \end_layout
 
 \end_inset
@@ -1592,7 +1674,8 @@ Description
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+This component allow the service requestor to access all the services it
+ is able to access.
 \end_layout
 
 \end_inset
