@@ -90,6 +90,10 @@ Document Design
 Matteo Maria Fusi, Matteo Locatelli
 \end_layout
 
+\begin_layout Quote
+(quelli belli)
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
@@ -110,7 +114,7 @@ Time Spent
 \end_layout
 
 \begin_layout Standard
-5h
+15h
 \end_layout
 
 \begin_layout Standard
@@ -2773,16 +2777,12 @@ the core of our system communicates with the service provider by means of
  and unaccessible from the outside.
 \end_layout
 
-\begin_layout Subsection
-Other design decisions
-\end_layout
-
-\begin_layout Standard
-TUA MAMMA
-\end_layout
-
 \begin_layout Section
 Algorithm Design
+\end_layout
+
+\begin_layout Subsection
+Queue management algorithm
 \end_layout
 
 \begin_layout Standard
@@ -3126,6 +3126,45 @@ Requirements Traceability
 
 \begin_layout Section
 References
+\end_layout
+
+\begin_layout Subsection
+Used software
+\end_layout
+
+\begin_layout Standard
+For the production of this document the sofware elencated below has been
+ used:
+\end_layout
+
+\begin_layout Itemize
+Document production and layout: LyX 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.lyx.org
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+UML diagrams (component, sequence): UMLet 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.umlet.com
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
