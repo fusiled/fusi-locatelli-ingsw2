@@ -2761,6 +2761,18 @@ our system is based on a service oriented architecture, this means that
  if it needs them.
 \end_layout
 
+\begin_layout Itemize
+
+\series bold
+Message based point to point: 
+\series default
+this architectural style is used to make possible the communication between
+ the service requestor of the customer's frontend and the service provider.
+ In fact, the customer's frontend sends a message only to the core, that
+ has the task to process the user's request and answer him if it finds an
+ available taxi.
+\end_layout
+
 \begin_layout Subsubsection
 Design patterns
 \end_layout
