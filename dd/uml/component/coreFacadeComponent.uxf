@@ -63,12 +63,26 @@ layer=100
     <id>Relation</id>
     <coordinates>
       <x>110</x>
-      <y>250</y>
+      <y>210</y>
       <w>280</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=-(
 to PrestationInput
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>110</x>
+      <y>260</y>
+      <w>280</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+to TaxiManager
 layer=100
 </panel_attributes>
     <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>

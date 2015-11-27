@@ -1772,8 +1772,9 @@ Required interfaces
 <cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-None.
+\begin_layout Enumerate
+Interface to Database, that make possible to access every information in
+ the database such as the zones of the city and the taxis.
 \end_layout
 
 \end_inset
@@ -1899,6 +1900,11 @@ Interface to RefusableMessageHandler to make possible to external components
 \begin_layout Enumerate
 Interface to PrestationInput to make possible to external components to
  input a prestation.
+\end_layout
+
+\begin_layout Enumerate
+Interface to TaxiManager to make possible to modify the current information
+ about a taxi.
 \end_layout
 
 \end_inset
@@ -2074,7 +2080,7 @@ This component manages the sending of the confirmation messages.
 \align center
 \begin_inset Graphics
 	filename uml/component/confirmMsgHandlerComp.png
-	width 7cm
+	width 9cm
 
 \end_inset
 
@@ -2238,6 +2244,16 @@ Interface to PrestationInput that is needed by this component to know when
  a prestation is sent by a customer.
 \end_layout
 
+\begin_layout Enumerate
+Interface to TaxiManager to retrieve information about taxis, such as their
+ availability.
+\end_layout
+
+\begin_layout Enumerate
+Interface to accessDatabase to retrieve information useful to manage the
+ queues.
+\end_layout
+
 \end_inset
 </cell>
 </row>
@@ -2311,7 +2327,7 @@ This component manages the taxi queue of every zone of the city and says
 \align center
 \begin_inset Graphics
 	filename uml/component/QueueManagerComp.png
-	width 7cm
+	width 9cm
 
 \end_inset
 
@@ -2441,6 +2457,129 @@ This component manages the input of any prestation sent by a customer.
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+TaxiManager
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Required interfaces
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Enumerate
+Interface to accessDatabase, needed to retrieve information about taxis.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Provided interfaces
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Enumerate
+
+\series bold
+\emph on
+TaxiManagerInterface: 
+\series default
+\emph default
+used to communicate to the QueueManager the status of a taxi.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+\emph on
+manageTaxi: 
+\series default
+\emph default
+used to take in input an update of the status of a taxi or the credentials
+ used to log into the system.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Description
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+This component manages the status of every taxi and allow taxi drivers to
+ log into the system.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/component/taxiManager.png
+	width 9cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 \align left
 Assembling all the core components previously described the complete Core
@@ -2455,7 +2594,7 @@ Assembling all the core components previously described the complete Core
 \align center
 \begin_inset Graphics
 	filename uml/component/serverCore.png
-	width 12cm
+	width 15cm
 
 \end_inset
 

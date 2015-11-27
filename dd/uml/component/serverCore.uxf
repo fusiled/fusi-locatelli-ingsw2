@@ -4,9 +4,9 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>90</x>
+      <x>9</x>
       <y>36</y>
-      <w>657</w>
+      <w>882</w>
       <h>567</h>
     </coordinates>
     <panel_attributes>Core
@@ -17,20 +17,19 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>252</x>
+      <x>279</x>
       <y>135</y>
-      <w>189</w>
-      <h>36</h>
+      <w>144</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=()-
-layer=100
-m2=SendConfirmationMessage</panel_attributes>
-    <additional_attributes>130.0;10.0;190.0;10.0</additional_attributes>
+layer=100</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>423</x>
+      <x>405</x>
       <y>108</y>
       <w>279</w>
       <h>72</h>
@@ -46,21 +45,21 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>270</y>
-      <w>171</w>
+      <x>279</x>
+      <y>261</y>
+      <w>198</w>
       <h>36</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100
 m2=sendRefusableMessage</panel_attributes>
-    <additional_attributes>110.0;10.0;170.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>423</x>
-      <y>243</y>
+      <x>459</x>
+      <y>234</y>
       <w>189</w>
       <h>72</h>
     </coordinates>
@@ -75,8 +74,8 @@ bg=gray</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>423</x>
-      <y>378</y>
+      <x>477</x>
+      <y>369</y>
       <w>279</w>
       <h>72</h>
     </coordinates>
@@ -89,20 +88,20 @@ bg=light_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
+      <x>486</x>
       <y>171</y>
-      <w>162</w>
-      <h>189</h>
+      <w>225</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>lt=)-
 layer=100</panel_attributes>
-    <additional_attributes>150.0;180.0;150.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>220.0;150.0;220.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>342</y>
+      <x>558</x>
+      <y>333</y>
       <w>27</w>
       <h>54</h>
     </coordinates>
@@ -113,8 +112,8 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>495</x>
-      <y>306</y>
+      <x>549</x>
+      <y>297</y>
       <w>45</w>
       <h>54</h>
     </coordinates>
@@ -127,11 +126,11 @@ layer=100</panel_attributes>
     <coordinates>
       <x>531</x>
       <y>477</y>
-      <w>162</w>
+      <w>144</w>
       <h>54</h>
     </coordinates>
     <panel_attributes>lt=-()
-QueueManagerInterface
+TaxiManagerInterface
 layer=100</panel_attributes>
     <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
   </element>
@@ -139,58 +138,57 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>522</x>
-      <y>441</y>
+      <y>432</y>
       <w>45</w>
-      <h>54</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=)-
 layer=100</panel_attributes>
-    <additional_attributes>20.0;30.0;20.0;10.0</additional_attributes>
+    <additional_attributes>20.0;40.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>342</y>
+      <x>675</x>
+      <y>315</y>
       <w>198</w>
-      <h>54</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-()
 ConfirmationMessageInterface
 layer=100</panel_attributes>
-    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>423</x>
+      <x>342</x>
       <y>513</y>
       <w>279</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>symbol=component
-PrestationInput
+TaxiManager
 layer=1
-bg=black</panel_attributes>
+bg=dark_gray</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>306</x>
+      <x>279</x>
       <y>540</y>
-      <w>135</w>
-      <h>36</h>
+      <w>81</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=()-
-layer=100
-m2=actionInputPrest</panel_attributes>
-    <additional_attributes>70.0;10.0;130.0;10.0</additional_attributes>
+layer=100</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>144</x>
+      <x>36</x>
       <y>108</y>
       <w>90</w>
       <h>477</h>
@@ -206,46 +204,46 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
-      <y>261</y>
-      <w>153</w>
+      <x>117</x>
+      <y>252</y>
+      <w>180</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
+      <x>117</x>
       <y>126</y>
-      <w>153</w>
+      <w>180</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
+      <x>117</x>
       <y>531</y>
-      <w>153</w>
+      <w>180</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>171</x>
+      <x>63</x>
       <y>0</y>
       <w>27</w>
       <h>54</h>
@@ -258,7 +256,7 @@ layer=100
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>162</x>
+      <x>54</x>
       <y>27</y>
       <w>45</w>
       <h>63</h>
@@ -271,7 +269,7 @@ layer=100
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>171</x>
+      <x>63</x>
       <y>72</y>
       <w>99</w>
       <h>54</h>
@@ -285,13 +283,199 @@ layer=100
   <element>
     <id>Text</id>
     <coordinates>
-      <x>333</x>
-      <y>342</y>
+      <x>387</x>
+      <y>324</y>
       <w>189</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>RefusableMessageInterface
 layer=100</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>387</y>
+      <w>63</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+layer=100</panel_attributes>
+    <additional_attributes>20.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>117</x>
+      <y>387</y>
+      <w>63</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+layer=100</panel_attributes>
+    <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>162</x>
+      <y>396</y>
+      <w>72</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=()-
+layer=100</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>234</x>
+      <y>153</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>SendConfirmationMessage
+layer=100</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>396</y>
+      <w>63</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=()-
+layer=100</panel_attributes>
+    <additional_attributes>50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>396</x>
+      <y>414</y>
+      <w>153</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>QueueManagerInterface
+layer=100</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>117</x>
+      <y>432</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>actionInputPrestation
+layer=100</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>387</y>
+      <w>81</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=[]-(
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>216</x>
+      <y>369</y>
+      <w>180</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+layer=1
+PrestationInput
+bg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>243</x>
+      <y>558</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>manageTaxi
+layer=100</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>396</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=-()
+layer=100</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>810</x>
+      <y>378</y>
+      <w>171</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>accessDatabase
+layer=100</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>747</x>
+      <y>387</y>
+      <w>72</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>612</x>
+      <y>459</y>
+      <w>225</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;100.0;220.0;100.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>801</x>
+      <y>414</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

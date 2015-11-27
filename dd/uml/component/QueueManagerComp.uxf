@@ -44,7 +44,7 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>170</x>
+      <x>290</x>
       <y>170</y>
       <w>150</w>
       <h>80</h>
@@ -65,5 +65,31 @@ layer=100</panel_attributes>
     <panel_attributes>layer=1
 bg=red</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>30</x>
+      <y>170</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+to accessDatabase
+layer=100</panel_attributes>
+    <additional_attributes>20.0;50.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>170</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+to TaxiManager
+layer=100</panel_attributes>
+    <additional_attributes>20.0;50.0;20.0;10.0</additional_attributes>
   </element>
 </diagram>
