@@ -1,0 +1,41 @@
+PROC QueueManagement(AbstractPrestation pre)
+BEGIN
+	Request req = pre
+	Queue<Taxi> taxiQueue = getZoneQueueOfRequest(req)
+	Buffer buffer
+	Bool taxiFound = false
+	Taxi taxi
+	Response resp
+	OfferResponse offResp
+	WHILE(taxiQueue.length != 0)
+		taxi = taxiQueue.pop()
+		resp = contactTaxi(taxi, req)
+		IF(resp == Response.REFUSE)
+		THEN
+			moveTaxiToBuffer(taxi)
+		ELSE
+			restoreQueue(queue, buffer)
+			sendConfirmationMessage()
+			taxiFound = true
+		ENDIF
+	ENDWHILE
+	IF(!taxiFound)
+	THEN
+		FOR i FROM 1 TO 3
+			taxi = geti-thNearestTaxiInAnotherZone(i)
+			resp = contactTaxi(taxi, pre)
+			IF(resp == Response.ACCEPT)
+				offResp = sendPrestationOffer(taxi, ETA)
+				sendOfferResponseOfUser(taxi)
+				IF(offerResp == OfferResponse.ACCEPT)
+					taxi = storeAbstractPrestation(pre)
+					taxiFound = true
+				ENDIF
+			ENDIF
+		ENDFOR
+	ENDIF
+	IF(!taxiFound)
+	THEN
+		sendTaxiNotFoundMessage()
+	ENDIF
+END
