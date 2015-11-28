@@ -2833,9 +2833,97 @@ The service register is located on a web page, so both the clients and the
 Runtime view
 \end_layout
 
+\begin_layout Subsubsection
+Request for a prestation
+\end_layout
+
 \begin_layout Standard
-SEQUENCE DIAGRAM con più dettagli rispetto a quelli nel rasd, soprattutto
- riguardo alle interazioni con le interfacce e i servizi.
+\begin_inset Graphics
+	filename uml/runtime/reqbpmn.png
+	width 20cm
+	height 15cm
+	scaleBeforeRotation
+	rotateAngle -90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Queue Algorithm
+\end_layout
+
+\begin_layout Standard
+\align left
+\begin_inset Graphics
+	filename uml/runtime/algo.png
+	width 22cm
+	height 5cm
+	scaleBeforeRotation
+	rotateAngle -90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Contact selected taxi
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/runtime/contactTaxi.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Taxi driver authentication
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/runtime/bpmnTaxiLogin.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Taxi available operation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/runtime/bpmnTaxiAvailable.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Service list retrievement
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/runtime/serviceRegistry.png
+	width 15cm
+	height 10cm
+	keepAspectRatio
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -3311,6 +3399,21 @@ status open
 \begin_layout Plain Layout
 
 www.umlet.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+BPMN: Draw.io 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+www.draw.io
 \end_layout
 
 \end_inset
