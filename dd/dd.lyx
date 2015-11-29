@@ -2984,9 +2984,147 @@ Service list retrievement
 Component interfaces
 \end_layout
 
-\begin_layout Standard
-Spiegare come funzionano i servizi delle interfacce di client e server (in
- generale dato che vengono descritti nello specifico nei sequence diagrams).
+\begin_layout Subsubsection
+CustomerInterface
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+void(AbstractPrestation pre)
+\family default
+: sending the passed prestation to Core using ServiceCommunicator.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+void notify(Message msg)
+\family default
+: notify something to Customer Frontend using the passed msg.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+void (DecoratedAbstractPrestation pre, CustomerResponse resp)
+\family default
+: notify Core about his decision on pre with resp.
+ this method is used for accepting or refusing a prestation when a taxi
+ is contacted out of the zone of the customer.
+ DecoratedAbstracPrestation contains infos about the inquiring prestation
+ plus infos about taxi (id of taxi, ETA).
+\end_layout
+
+\begin_layout Subsubsection
+TaxiInterface
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+void sendTaxiResponse(Taxi taxi,AbstractPrestation pre, TaxiResponse resp):
+ 
+\family default
+notify Core about his decision on pre with resp.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+void login(Taxi taxi,string id, string hashPsw)
+\family default
+: log in the taxi driver into the system using the passed id and the hash
+ of the password inserted by the driver.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+void setAvailable(Taxi taxi, bool available)
+\family default
+: set the status of the inquiring taxi available or not as imposed as passed
+ available variable imposes.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+void notify(Message msg)
+\family default
+: notify something to Taxi Frontend using the passed msg.
+\end_layout
+
+\begin_layout Subsubsection
+RegisterRequestorInterface
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+ServiceRegistry retrieveServiceRegistry(User user)
+\family default
+: retrieve a ServiceRegistry.
+ the object returned will depend on the type of user that makes the request.
+ A customer's service registry will be different than a taxi driver's one
+ becuase they can access to different services.
+\end_layout
+
+\begin_layout Subsubsection
+ProviderInterface
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+void updateServiceRegistry(GlobalServiceRegistry newRegistry)
+\family default
+: replace the current serviceRegistry instance the the new passed one.
+\end_layout
+
+\begin_layout Subsubsection
+CoreInterface
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+changeTaxiStatus(Taxi taxi, bool available)
+\family default
+: ask Core to change the status of the inquiring taxi as available variable
+ imposes.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+login(Taxi taxi,string id, string hashPsw)
+\family default
+: validate login in the Core of the passed taxi with the passed id and hashPsw.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+notifyUser(User user, Message msg)
+\family default
+: notify a generic user with msg.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+contactTaxi(Taxi taxi, AbstractPrestation pre)
+\family default
+: contact taxi asking him if he wants to accept pre and wait for his response.
+\end_layout
+
+\begin_layout Enumerate
+
+\family typewriter
+forwardPrestationToCore(AbstractPrestation pre)
+\family default
+: send pre to Core with the purpose of handling it.
 \end_layout
 
 \begin_layout Subsection
