@@ -2727,10 +2727,19 @@ Deployment view
 \end_layout
 
 \begin_layout Standard
+In the first proposed diagram is proposed to the reader the interactions
+ between several components distributed of physical devices.
+ We can easily observe that the component Service Communicator is distributed
+ in three different devices: client, web server and logic server.
+\end_layout
+
+\begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename uml/deployment/deployment.png
 	width 15cm
+	height 20cm
+	keepAspectRatio
 
 \end_inset
 
@@ -2742,6 +2751,11 @@ Deployment view
 Considering that a client-server architecture has been chosen to implement
  the system, there are four elements in which the components have to be
  installed.
+\end_layout
+
+\begin_layout Standard
+In the second view the linkage between several devices has been emphasized.
+ DB-driver will depend on language and DB implementation.
 \end_layout
 
 \begin_layout Standard
@@ -2771,6 +2785,7 @@ full-hardware
 
  view is now proposed for proposing to the reader a complete overview of
  the deployment structure.
+ We can easily note a 2-tier client server architecture.
 \end_layout
 
 \begin_layout Standard
@@ -3192,6 +3207,22 @@ BEGIN
 \begin_layout Plain Layout
 
 			taxi = geti-thNearestTaxiInAnotherZone(i)
+\end_layout
+
+\begin_layout Plain Layout
+
+			IF (pre.type == reservation & taxi.timeDistanceFromPoint(pre.startPoint)
+ > minutes(10) )
+\end_layout
+
+\begin_layout Plain Layout
+
+				break; //all taxis are further than 10 minutes
+\end_layout
+
+\begin_layout Plain Layout
+
+			ENDIF
 \end_layout
 
 \begin_layout Plain Layout

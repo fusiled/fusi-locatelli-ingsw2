@@ -23,6 +23,9 @@ BEGIN
 	THEN
 		FOR i FROM 1 TO 3
 			taxi = geti-thNearestTaxiInAnotherZone(i)
+			IF (pre.type == reservation & taxi.timeDistanceFromPoint(pre.startPoint) > minutes(10) )
+				break; //all taxis are further than 10 minutes
+			ENDIF
 			resp = contactTaxi(taxi, pre)
 			IF(resp == Response.ACCEPT)
 				offResp = sendPrestationOffer(taxi, ETA)
