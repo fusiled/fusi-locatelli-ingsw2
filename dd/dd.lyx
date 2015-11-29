@@ -2745,6 +2745,17 @@ Considering that a client-server architecture has been chosen to implement
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/deployment/deplAlt.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 A 
 \begin_inset Quotes eld
@@ -2809,7 +2820,7 @@ The two clients exchange data, by means of interfaces, with both the service
 \end_layout
 
 \begin_layout Subsubsection
-Server
+Logic Server
 \end_layout
 
 \begin_layout Standard
@@ -2821,7 +2832,7 @@ The server contains two components: the core (responsible for the execution
 \end_layout
 
 \begin_layout Subsubsection
-Web page
+Web Server
 \end_layout
 
 \begin_layout Standard
@@ -2844,6 +2855,20 @@ Request for a prestation
 	height 15cm
 	scaleBeforeRotation
 	rotateAngle -90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Core Prestation Handling
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/runtime/handlePrestation.png
+	width 15cm
 
 \end_inset
 
@@ -2875,6 +2900,20 @@ Contact selected taxi
 \begin_layout Standard
 \begin_inset Graphics
 	filename uml/runtime/contactTaxi.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Check if taxi is valid for a prestation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/runtime/checkTaxi.png
 	width 15cm
 
 \end_inset
