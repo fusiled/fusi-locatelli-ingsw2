@@ -3336,6 +3336,146 @@ sendTaxiNotFoundMessage()
 Requirements Traceability
 \end_layout
 
+\begin_layout Subsection
+Allow customers to make a reservation
+\end_layout
+
+\begin_layout Standard
+Using the interface provided by the Prestation Handler allocated in Customer
+ Frontend a customer can easily book for a ride at the desired hour.
+ The interaction between components of the system that pursues this requirement
+ can be viewed at subsection 
+\emph on
+2.5.1 Request for a prestation.
+\end_layout
+
+\begin_layout Subsection
+Allow customers to make a request
+\end_layout
+
+\begin_layout Standard
+The process for making a request it's the same of the reservation's one.
+ The subsection 
+\emph on
+2.5.1 Request for a prestation 
+\emph default
+gives and overview of components communication and interaction.
+ The distinction between request and reservation takes act in the Prestatinon
+ Input modules (see subsection 
+\emph on
+2.5.2 Core prestation handling
+\emph default
+), where the request is immediatly forwarded to Queue Manager component
+ as specified in RASD document.
+ 
+\end_layout
+
+\begin_layout Subsection
+Allow customers to use the system via the web-app version
+\end_layout
+
+\begin_layout Standard
+The second diagram in subsection 
+\emph on
+2.4 Deployment view 
+\emph default
+shows that different type of physical clients have been developed.
+ Devices 
+\emph on
+Customer Smarthpone Browser
+\emph default
+ and 
+\emph on
+Customer Desktop Browser 
+\emph default
+allow the usage of the web-app version of mytaxy only for customers.
+\end_layout
+
+\begin_layout Subsection
+Allow customers to use the system via the smartphone app version
+\end_layout
+
+\begin_layout Standard
+Just like in the section above, the second diagram of the deployment view
+ gives a clear idea of what clients can be used to access the service.
+ Devices 
+\emph on
+Customer Smarthphone App
+\emph default
+ and 
+\emph on
+Taxi Smartphone App 
+\emph default
+are utilized by user for accessing the service.
+ Customer will only use the 
+\emph on
+Customer Smartphone App 
+\emph default
+for making every type of request and taxi drivers will use Taxi Smarthpone
+ App for logging into system, accepting or refusing ride offers and setting
+ their availability status.
+\end_layout
+
+\begin_layout Subsection
+Guarantee a fair management of taxi queues for each taxi zone
+\end_layout
+
+\begin_layout Standard
+The management of the queue in a fair way is ensured by the algorithm showed
+ in subsection 
+\emph on
+3.1 Queue management algorithm.
+ 
+\emph default
+The same algorithm can be viewed in form of BPMN diagram in subsection 2.5.3
+ 
+\emph on
+Queue algorithm
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Allow taxi drivers to use a mobile application to access to the system
+\end_layout
+
+\begin_layout Standard
+This point has been already explained in section 4.4.
+\end_layout
+
+\begin_layout Subsection
+Allow taxi drivers to accept a request
+\end_layout
+
+\begin_layout Standard
+A taxi driver can accept a request using the interface provided by the Ride
+ Handler component contained in Taxi Frontend component.
+ The interaction between the several components can be observed in subsection
+ 
+\emph on
+2.5.4 Contact selected taxi
+\emph default
+.
+\end_layout
+
+\begin_layout Subsection
+Allow taxi drivers to refuse a request
+\end_layout
+
+\begin_layout Standard
+In the same way as explained in section 4.7 a taxi driver can refuse a request.
+\end_layout
+
+\begin_layout Subsection
+The service must be extendible
+\end_layout
+
+\begin_layout Standard
+With the chosen SOA architecture the service can be easily extended.
+ Also the high modularity of the system allows an easily development of
+ new components.
+\end_layout
+
 \begin_layout Section
 References
 \end_layout
