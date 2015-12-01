@@ -167,7 +167,11 @@ Document version
 \end_layout
 
 \begin_layout Standard
-Current version is 1.0 .
+Current version is 1.0.1 - fixed 10 minutes problem on reservations
+\end_layout
+
+\begin_layout Standard
+v1.0 : initial
 \end_layout
 
 \begin_layout Section
@@ -406,6 +410,10 @@ A taxi can arrive at the origin of a reservation with a tolerance of 5 minutes,
  this mean 5 minutes before or after the scheduled time.
 \end_layout
 
+\begin_layout Enumerate
+Every path contained in a single zone can be covered in at most 10 minutes.
+\end_layout
+
 \begin_layout Subsection
 Functional Requirements
 \end_layout
@@ -640,6 +648,12 @@ Internet connection is required for accessing the service.
 
 \begin_layout Enumerate
 The reservation must be made at least 2 hours before the time of the ride.
+\end_layout
+
+\begin_layout Enumerate
+If a taxi is called for an out of the zone reservation he must be far at
+ most 10 minutes from the starting point of the ride.
+ In this way the taxi can arrive in time at the meeting point.
 \end_layout
 
 \begin_layout Enumerate

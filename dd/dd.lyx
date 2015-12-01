@@ -2687,6 +2687,21 @@ Check if taxi is valid for a prestation
 \end_layout
 
 \begin_layout Subsubsection
+Send Taxi out of the zone offer
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/runtime/informcustomer.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
 Taxi driver authentication
 \end_layout
 

@@ -24,14 +24,14 @@ fontsize=13
 
 
 // This text will be stored with each diagram;  use it for notes.</help_text>
-  <zoom_level>8</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>368</x>
-      <y>16</y>
-      <w>80</w>
-      <h>24</h>
+      <x>288</x>
+      <y>126</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>_System_</panel_attributes>
     <additional_attributes/>
@@ -39,22 +39,22 @@ fontsize=13
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>32</y>
-      <w>24</w>
-      <h>48</h>
+      <x>324</x>
+      <y>144</y>
+      <w>27</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=.
 layer=0</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>640</x>
-      <y>16</y>
-      <w>80</w>
-      <h>24</h>
+      <x>594</x>
+      <y>126</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>_Taxi_</panel_attributes>
     <additional_attributes/>
@@ -62,10 +62,10 @@ layer=0</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>400</x>
-      <y>64</y>
-      <w>16</w>
-      <h>520</h>
+      <x>324</x>
+      <y>198</y>
+      <w>18</w>
+      <h>630</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=0
@@ -75,10 +75,10 @@ bg=white</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>176</x>
-      <y>16</y>
-      <w>80</w>
-      <h>24</h>
+      <x>72</x>
+      <y>126</y>
+      <w>90</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>_Customer_</panel_attributes>
     <additional_attributes/>
@@ -86,32 +86,32 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>32</y>
-      <w>24</w>
-      <h>344</h>
+      <x>108</x>
+      <y>144</y>
+      <w>27</w>
+      <h>450</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;410.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;480.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>32</y>
-      <w>24</w>
-      <h>176</h>
+      <x>630</x>
+      <y>144</y>
+      <w>27</w>
+      <h>261</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;270.0</additional_attributes>
   </element>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>144</x>
-      <y>88</y>
-      <w>632</w>
-      <h>480</h>
+      <x>36</x>
+      <y>207</y>
+      <w>711</w>
+      <h>603</h>
     </coordinates>
     <panel_attributes>loop
 layer=-2</panel_attributes>
@@ -120,10 +120,10 @@ layer=-2</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>424</x>
-      <y>88</y>
-      <w>192</w>
-      <h>16</h>
+      <x>351</x>
+      <y>207</y>
+      <w>216</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>[ i: 1..3 ]
 fontsize=13
@@ -133,10 +133,10 @@ layer=3</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>408</x>
-      <y>88</y>
-      <w>16</w>
-      <h>72</h>
+      <x>333</x>
+      <y>207</y>
+      <w>18</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=3
@@ -146,10 +146,10 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>104</y>
-      <w>272</w>
-      <h>48</h>
+      <x>342</x>
+      <y>225</y>
+      <w>306</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 taxi: getI-thNearestTaxiInAnotherZone( i )</panel_attributes>
@@ -158,10 +158,10 @@ taxi: getI-thNearestTaxiInAnotherZone( i )</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>408</x>
-      <y>160</y>
-      <w>16</w>
-      <h>32</h>
+      <x>333</x>
+      <y>351</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=3
@@ -171,10 +171,10 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
-      <y>176</y>
-      <w>288</w>
-      <h>40</h>
+      <x>333</x>
+      <y>369</y>
+      <w>324</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 contactTaxi( taxi, pre)
@@ -184,10 +184,10 @@ contactTaxi( taxi, pre)
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>672</x>
-      <y>192</y>
-      <w>24</w>
-      <h>56</h>
+      <x>630</x>
+      <y>387</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -195,10 +195,10 @@ contactTaxi( taxi, pre)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>232</y>
-      <w>272</w>
-      <h>32</h>
+      <x>342</x>
+      <y>432</y>
+      <w>306</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 incomingResp=sendResponse(resp)</panel_attributes>
@@ -207,10 +207,10 @@ incomingResp=sendResponse(resp)</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>424</x>
-      <y>256</y>
-      <w>224</w>
-      <h>16</h>
+      <x>351</x>
+      <y>459</y>
+      <w>252</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>[ incomingResp == Response.ACCEPT ]
 fontsize=13
@@ -220,10 +220,10 @@ layer=3</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>408</x>
-      <y>248</y>
-      <w>16</w>
-      <h>72</h>
+      <x>333</x>
+      <y>450</y>
+      <w>18</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=2
@@ -233,10 +233,10 @@ bg=white</panel_attributes>
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>160</x>
-      <y>256</y>
-      <w>592</w>
-      <h>304</h>
+      <x>54</x>
+      <y>459</y>
+      <w>666</w>
+      <h>342</h>
     </coordinates>
     <panel_attributes>alt
 layer=0</panel_attributes>
@@ -245,10 +245,10 @@ layer=0</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>408</x>
-      <y>320</y>
-      <w>16</w>
-      <h>40</h>
+      <x>333</x>
+      <y>531</y>
+      <w>18</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=2
@@ -258,10 +258,10 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>344</y>
-      <w>224</w>
-      <h>32</h>
+      <x>108</x>
+      <y>558</y>
+      <w>252</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 sendPrestationOffer( taxi, ETA)</panel_attributes>
@@ -270,10 +270,10 @@ sendPrestationOffer( taxi, ETA)</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>208</x>
-      <y>360</y>
-      <w>16</w>
-      <h>32</h>
+      <x>108</x>
+      <y>576</y>
+      <w>18</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=3
@@ -283,10 +283,10 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>376</y>
-      <w>224</w>
-      <h>40</h>
+      <x>108</x>
+      <y>594</y>
+      <w>252</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 offerResp=sendOfferResponse()
@@ -296,10 +296,10 @@ offerResp=sendOfferResponse()
   <element>
     <id>UMLFrame</id>
     <coordinates>
-      <x>176</x>
-      <y>456</y>
-      <w>544</w>
-      <h>96</h>
+      <x>72</x>
+      <y>684</y>
+      <w>612</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>alt</panel_attributes>
     <additional_attributes/>
@@ -307,10 +307,10 @@ offerResp=sendOfferResponse()
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>408</x>
-      <y>392</y>
-      <w>16</w>
-      <h>48</h>
+      <x>333</x>
+      <y>612</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=2
@@ -320,10 +320,10 @@ bg=white</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>432</x>
-      <y>456</y>
-      <w>224</w>
-      <h>16</h>
+      <x>360</x>
+      <y>684</y>
+      <w>252</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>[ offerResp == OfferResponse.ACCEPT ]
 fontsize=13
@@ -333,10 +333,10 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>672</x>
-      <y>240</y>
-      <w>24</w>
-      <h>392</h>
+      <x>630</x>
+      <y>441</y>
+      <w>27</w>
+      <h>441</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;470.0</additional_attributes>
@@ -344,10 +344,10 @@ layer=3</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>424</y>
-      <w>280</w>
-      <h>32</h>
+      <x>342</x>
+      <y>648</y>
+      <w>315</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 sendOfferResponseOfuser( taxi )</panel_attributes>
@@ -356,10 +356,10 @@ sendOfferResponseOfuser( taxi )</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>408</x>
-      <y>440</y>
-      <w>16</w>
-      <h>88</h>
+      <x>333</x>
+      <y>666</y>
+      <w>18</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>transparency=0
 layer=2
@@ -369,10 +369,10 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>576</y>
-      <w>24</w>
-      <h>56</h>
+      <x>324</x>
+      <y>819</y>
+      <w>27</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -380,10 +380,10 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>384</y>
-      <w>24</w>
-      <h>248</h>
+      <x>108</x>
+      <y>603</y>
+      <w>27</w>
+      <h>279</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
@@ -391,10 +391,10 @@ bg=white</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>408</x>
-      <y>528</y>
-      <w>16</w>
-      <h>16</h>
+      <x>333</x>
+      <y>765</y>
+      <w>18</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>type=termination
 layer=5</panel_attributes>
@@ -403,10 +403,10 @@ layer=5</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>568</y>
-      <w>216</w>
-      <h>32</h>
+      <x>108</x>
+      <y>810</y>
+      <w>243</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 sendTaxiNotFoundMessage()</panel_attributes>
@@ -415,13 +415,75 @@ sendTaxiNotFoundMessage()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>472</y>
-      <w>232</w>
-      <h>48</h>
+      <x>342</x>
+      <y>702</y>
+      <w>261</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 taxi: storeAbstracPrestation( pre )</panel_attributes>
     <additional_attributes>10.0;40.0;50.0;40.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>333</x>
+      <y>288</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>transparency=0
+layer=3
+bg=white</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLFrame</id>
+    <coordinates>
+      <x>54</x>
+      <y>288</y>
+      <w>684</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>alt
+layer=-1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>333</x>
+      <y>324</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>type=termination
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>360</x>
+      <y>288</y>
+      <w>216</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>[ taxi if further than 10 minutes ]
+fontsize=13
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>306</y>
+      <w>243</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+sendTaxiNotFoundMessage()</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
   </element>
 </diagram>

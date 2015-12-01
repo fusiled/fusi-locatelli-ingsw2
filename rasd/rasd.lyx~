@@ -406,6 +406,10 @@ A taxi can arrive at the origin of a reservation with a tolerance of 5 minutes,
  this mean 5 minutes before or after the scheduled time.
 \end_layout
 
+\begin_layout Enumerate
+Every path contained in a single zone can be covered in at most 10 minutes.
+\end_layout
+
 \begin_layout Subsection
 Functional Requirements
 \end_layout
@@ -640,6 +644,12 @@ Internet connection is required for accessing the service.
 
 \begin_layout Enumerate
 The reservation must be made at least 2 hours before the time of the ride.
+\end_layout
+
+\begin_layout Enumerate
+If a taxi is called for an out of the zone reservation he must be far at
+ most 10 minutes from the starting point of the ride.
+ In this way the taxi can arrive in time at the meeting point.
 \end_layout
 
 \begin_layout Enumerate
@@ -3202,7 +3212,7 @@ The second world is generated to show how the system is modeled with multiple
 Mockups
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection*
 Main Menu
 \end_layout
 
@@ -3216,7 +3226,7 @@ Main Menu
 
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection*
 Info Page
 \end_layout
 
@@ -3230,7 +3240,7 @@ Info Page
 
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection*
 Request mockup
 \end_layout
 
@@ -3244,12 +3254,8 @@ Request mockup
 
 \end_layout
 
-\begin_layout Subparagraph*
+\begin_layout Subsection*
 Reservation mockups
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Subparagraph*
@@ -3262,11 +3268,11 @@ Reservation mockups
 
 \end_layout
 
-\begin_layout Subparagraph*
+\begin_layout Subsection*
 Taxi Requests
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection*
 \begin_inset Graphics
 	filename mocks/taxiOfferTot.png
 	width 15cm
