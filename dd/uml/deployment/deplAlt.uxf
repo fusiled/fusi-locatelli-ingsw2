@@ -130,7 +130,7 @@ bg=yellow</panel_attributes>
       <h>160</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Device&gt;&gt;
-Customer Smarthphone Browser</panel_attributes>
+Customer Desktop Browser</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -380,7 +380,7 @@ bg=gray</panel_attributes>
     <coordinates>
       <x>328</x>
       <y>552</y>
-      <w>104</w>
+      <w>96</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=-
@@ -392,7 +392,7 @@ bg=gray</panel_attributes>
     <coordinates>
       <x>504</x>
       <y>544</y>
-      <w>120</w>
+      <w>112</w>
       <h>88</h>
     </coordinates>
     <panel_attributes>lt=-
