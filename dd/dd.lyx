@@ -2930,6 +2930,21 @@ we decided to use this style to implement our system, customers and taxi
 \begin_layout Itemize
 
 \series bold
+Layered structure: 
+\series default
+the mytaxi system is based on a layered structure, in this way every layer
+ that composes the system is highly indipendent.
+ For future extensions of the system, new layers can be added to implements
+ new functionalities or guarantee non functional requirements, and to make
+ the system work is enough to make the new layers communicate with the old
+ ones.
+ The system way of working will remain the same, but with the added layers
+ that will execute their tasks.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
 Service oriented architecture: 
 \series default
 our system is based on a service oriented architecture, this means that
