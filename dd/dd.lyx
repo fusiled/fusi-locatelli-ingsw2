@@ -1888,16 +1888,6 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to ConfirmationMessageHandler to make possible to external components
- to access the functionality of the confirmation message.
-\end_layout
-
-\begin_layout Enumerate
-Interface to RefusableMessageHandler to make possible to external components
- to access the functionality of the refusable message.
-\end_layout
-
-\begin_layout Enumerate
 Interface to PrestationInput to make possible to external components to
  input a prestation.
 \end_layout
@@ -1996,230 +1986,6 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-ConfirmationMessageHandler
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Required interfaces
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Enumerate
-Interface to QueueManager that is needed by this component to know when
- (and if) it must send a confirmation message.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Provided interfaces
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Enumerate
-
-\series bold
-\emph on
-SendConfirmationMessage: 
-\series default
-\emph default
-used to send to the costumer a confirmation message.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Description
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-This component manages the sending of the confirmation messages.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/component/confirmMsgHandlerComp.png
-	width 9cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="left" valignment="top" width="10cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Name
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-RefusableMessageHandler
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Required interfaces
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Enumerate
-Interface to QueueManager that is needed by this component to know when
- (and if) it must send a refusable confirmation message.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Provided interfaces
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Enumerate
-
-\series bold
-\emph on
-SendRefusableMessage: 
-\series default
-\emph default
-used to send to the costumer a refusable confirmation message.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Description
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-This component manages the sending of the refusable confirmation messages.
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/component/RefusableMsgHandlCom.png
-	width 7cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
-<column alignment="left" valignment="top" width="10cm">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Name
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
 QueueManager
 \end_layout
 
@@ -2270,26 +2036,8 @@ Provided interfaces
 <cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Enumerate
-
-\series bold
-\emph on
-RefusableMessageInterface: 
-\series default
-\emph default
-used to communicate to the RefusableMessageHandler component when to send
- a refusable message to the customer.
-\end_layout
-
-\begin_layout Enumerate
-
-\series bold
-\emph on
-ConfirmationMessageInterface: 
-\series default
-\emph default
-used to communicate to the ConfirmationMessageHandler component when to
- send a confirmation message to the customer.
+\begin_layout Plain Layout
+None.
 \end_layout
 
 \end_inset
@@ -2374,8 +2122,9 @@ Required interfaces
 <cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-None.
+\begin_layout Enumerate
+Interface to accessDatabase, needed to retrieve information about taxis
+ and prestations.
 \end_layout
 
 \end_inset
@@ -2432,7 +2181,8 @@ Description
 \begin_inset Text
 
 \begin_layout Plain Layout
-This component manages the input of any prestation sent by a customer.
+This component manages the input of any prestation sent by a customer and
+ the sending of messages to both customers and taxi drivers.
 \end_layout
 
 \end_inset
@@ -3355,7 +3105,7 @@ BEGIN
 
 \begin_layout Plain Layout
 
-				break; //all taxis are further than 10 minutes
+				break //all taxis are further than 10 minutes
 \end_layout
 
 \begin_layout Plain Layout
