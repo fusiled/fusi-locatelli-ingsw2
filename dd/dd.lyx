@@ -90,10 +90,6 @@ Document Design
 Matteo Maria Fusi, Matteo Locatelli
 \end_layout
 
-\begin_layout Quote
-(quelli belli)
-\end_layout
-
 \begin_layout Standard
 \begin_inset Newpage pagebreak
 \end_inset
@@ -113,8 +109,13 @@ Current version is 1.0 .
 Time Spent
 \end_layout
 
-\begin_layout Standard
-15h
+\begin_layout Itemize
+Matteo M.
+ Fusi: ~22h
+\end_layout
+
+\begin_layout Itemize
+Matteo Locatelli: ~22h
 \end_layout
 
 \begin_layout Standard
@@ -2614,6 +2615,28 @@ Request for a prestation
 \end_layout
 
 \begin_layout Standard
+When a customer submit a prestation to the system Customer Frontend does
+ a raw check of the validity of attributes of the submitted element.
+ After that the prestation is sent to the Service Requestor component attached
+ to the inquiring Customer Frontend.
+ The last mentioned component has the duty of checking that the requested
+ service is available (the type of service requested depends by the type
+ of prestation submitted).
+ If the service is unavailable the customer is notified with an error the
+ process terminates else the correct flow of the process , which means that
+ the prestation request is forwarded to the Core through Service Provider.
+ The prestation request is received by Core Facade, then the PrestationInput
+ component checks again the prestation request and handles it (see the subsectio
+n below for further details), then the prestation is forwarded to Queue
+ Manager component that search for a taxi that can takes in charge of the
+ prestation.
+ In the end the Core elaborates a response that sends to Customer.
+ The response can be positive (a taxi has been found and so the response
+ contains details about the chosen taxi and ETA) or negative (a simple message
+ that the service is not available).
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename uml/runtime/reqbpmn.png
 	width 20cm
@@ -2631,6 +2654,15 @@ Core Prestation Handling
 \end_layout
 
 \begin_layout Standard
+If the type of the prestation is a request is immediatly forwarded to Queue
+ Manager.
+ If the type of the prestation is a reservation, this one is moved in a
+ waiting buffer.
+ The reservation will be resumed and forwarded to Queue Manager only 10
+ minutes before the meeting hour indicated in the reservation.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename uml/runtime/handlePrestation.png
 	width 15cm
@@ -2642,6 +2674,28 @@ Core Prestation Handling
 
 \begin_layout Subsubsection
 Queue Algorithm
+\end_layout
+
+\begin_layout Standard
+The processing of a prestation in the Queue Manager starts with retrieving
+ the zone where the ride of the prestation will start, In this way is possible
+ to get the queue of taxis available in the zone.
+ The Queue Manager will start to sequentally contact all the taxis in the
+ queue asking them if they want to accept the ride until the queue is empty
+ or when a taxi driver accepts the prestation.
+ If the queue is empty and a taxi has not been found yet then Queue Manager
+ begins to contact taxis out of the specified zone.
+ Queue Manager can contact at most 3 taxis out of the zone and it will contact
+ sequentally the first, the second and then the third nearest taxi out of
+ the zone, but if and only if they're far at most 10 minutes from the meeting
+ point because they must arrive in time.
+ For every taxi is sent a message if they want accept the prestation just
+ like done with the taxis in the queue.
+ If a taxi accepts the request an offer of the ride is sent to the customer.
+ The customer can accept or refuse the offer.
+ If the customer accept the process terminates else Queue Manager contact
+ the next nearest taxi.
+ If a suitable taxi has not been found an error signal is thrown.
 \end_layout
 
 \begin_layout Standard
@@ -2663,6 +2717,14 @@ Contact selected taxi
 \end_layout
 
 \begin_layout Standard
+This process just send an offer to a specific taxi driver through Service
+ Communicator.
+ When the offer is received by Taxi Frontend the system verifies that is
+ the correct taxi and wait for the response of the taxi driver.
+ When the input is taken the response is sent back to Core.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename uml/runtime/contactTaxi.png
 	width 15cm
@@ -2674,6 +2736,12 @@ Contact selected taxi
 
 \begin_layout Subsubsection
 Check if taxi is valid for a prestation
+\end_layout
+
+\begin_layout Standard
+This process just calculate the distance of a taxi driver from a specified
+ meeting point.
+ If the taxi is further than 10 miunutes an error signal is thrown.
 \end_layout
 
 \begin_layout Standard
