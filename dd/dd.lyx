@@ -2759,6 +2759,13 @@ Send Taxi out of the zone offer
 \end_layout
 
 \begin_layout Standard
+When a taxi out of the zone accepts a prestation an offer message is sent
+ to customer.
+ The customer can accept or refuse the offer using Confirmation Handler
+ component.
+\end_layout
+
+\begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename uml/runtime/informcustomer.png
@@ -2771,6 +2778,28 @@ Send Taxi out of the zone offer
 
 \begin_layout Subsubsection
 Taxi driver authentication
+\end_layout
+
+\begin_layout Standard
+To complete his authentication, the taxi driver must insert his credentials
+ using the Taxi Frontend.
+ Then the authentication engine sends the credentials to the Service Requestor,
+ asking for the service that allows the taxi driver to log into the system.
+ The Service Requestor retrieves the service registry and check if the service
+ is available to the taxi driver: if the service is not available a message
+ is sent to the Authentication Engine informing the Taxi Frontend (and thus
+ the taxi driver) that the service is unavailable to him; if the service
+ is instead available the execution of the log in operation continues.
+ The credentials are sent to the Service Provider that forwards them to
+ the Core Facade that in turn sends them to the Login Manager.
+ The Login Manager component checks if the taxi driver's credentials are
+ correct and then sends a message that contains the result of the login
+ operation.
+ The message is sent to the Service Provider via the Core Facade, which
+ forwards it to the Service Requestor that sends the response to the Taxi
+ Frontend.
+ Depending on the content of the message, the taxi driver is notified if
+ the login operation has been successful or not.
 \end_layout
 
 \begin_layout Standard
@@ -2788,6 +2817,19 @@ Taxi available operation
 \end_layout
 
 \begin_layout Standard
+When a taxi driver wants to change his current status (from available to
+ unavailable or vice versa), the Available component of the Taxi Frontend
+ is used.
+ It sends the new desired status to the Service Requestor, that checks if
+ the service requested by the Taxi Frontend is available to the driver:
+ if it isn't, an error message is sent to the Taxi Frontend saying that
+ the service is unavailable, otherwise the operation continues.
+ The new status is sent to the Service Provider, that forwards it to the
+ Queue Manager component of the Core using the Core Facade.
+ The Queue Manger then updates the status of the taxi.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename uml/runtime/bpmnTaxiAvailable.png
 	width 15cm
@@ -2799,6 +2841,14 @@ Taxi available operation
 
 \begin_layout Subsubsection
 Service list retrievement
+\end_layout
+
+\begin_layout Standard
+When a Frontend asks for a service to be accessed, a service request is
+ sent to the Service Requestor.
+ It forwards this request to the Service Register, which, upon the receiving
+ of the request, sends the service list back to the Service Requestor that
+ receives the list.
 \end_layout
 
 \begin_layout Standard
@@ -2922,7 +2972,7 @@ CoreInterface
 \begin_layout Enumerate
 
 \family typewriter
-changeTaxiStatus(Taxi taxi, bool available)
+void changeTaxiStatus(Taxi taxi, bool available)
 \family default
 : ask Core to change the status of the inquiring taxi as available variable
  imposes.
@@ -2931,7 +2981,7 @@ changeTaxiStatus(Taxi taxi, bool available)
 \begin_layout Enumerate
 
 \family typewriter
-login(Taxi taxi,string id, string hashPsw)
+void login(Taxi taxi,string id, string hashPsw)
 \family default
 : validate login in the Core of the passed taxi with the passed id and hashPsw.
 \end_layout
@@ -2939,7 +2989,7 @@ login(Taxi taxi,string id, string hashPsw)
 \begin_layout Enumerate
 
 \family typewriter
-notifyUser(User user, Message msg)
+void notifyUser(User user, Message msg)
 \family default
 : notify a generic user with msg.
 \end_layout
@@ -2947,7 +2997,7 @@ notifyUser(User user, Message msg)
 \begin_layout Enumerate
 
 \family typewriter
-contactTaxi(Taxi taxi, AbstractPrestation pre)
+void contactTaxi(Taxi taxi, AbstractPrestation pre)
 \family default
 : contact taxi asking him if he wants to accept pre and wait for his response.
 \end_layout
@@ -2955,7 +3005,7 @@ contactTaxi(Taxi taxi, AbstractPrestation pre)
 \begin_layout Enumerate
 
 \family typewriter
-forwardPrestationToCore(AbstractPrestation pre)
+void forwardPrestationToCore(AbstractPrestation pre)
 \family default
 : send pre to Core with the purpose of handling it.
 \end_layout
@@ -3413,6 +3463,21 @@ sendTaxiNotFoundMessage()
 : if any taxi isn't found to take the customer to his destination, either
  in the customer zone nor in another zone, a message is sent to the customer
  saying that there isn't any available taxi at the moment.
+\end_layout
+
+\begin_layout Section
+User Interface Design
+\end_layout
+
+\begin_layout Standard
+For mockups of the application see RASD document mentioned in the 
+\emph on
+Introduction
+\emph default
+ section.
+ Mockups gives a quick overview of what a user can do with mytaxy: Basically,
+ if the user is a customer he can submit prestation request to the system,
+ if it's a taxi driver ha can login and accept or refuse prestation offer.
 \end_layout
 
 \begin_layout Section
