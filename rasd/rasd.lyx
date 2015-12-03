@@ -166,12 +166,12 @@ Appendix B contains the amount of time spent for the creation of this document.
 Document version
 \end_layout
 
-\begin_layout Standard
-Current version is 1.0.1 - fixed 10 minutes problem on reservations
+\begin_layout Itemize
+1.0.1 - 4/12/2015: fixed 10 minutes problem on reservations
 \end_layout
 
-\begin_layout Standard
-v1.0 : initial
+\begin_layout Itemize
+1.0 - 6/11/2015: initial
 \end_layout
 
 \begin_layout Section

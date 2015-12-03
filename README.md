@@ -5,7 +5,8 @@ Students:
 * Matteo Locatelli
 
 ## Documents Released
-* RASD v1.0
+* RASD 1.0.1
+* Design Document 1.0
 
 
 ## Project schedule
