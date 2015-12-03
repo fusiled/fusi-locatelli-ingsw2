@@ -55,7 +55,7 @@ bg=white</panel_attributes>
     <coordinates>
       <x>330</x>
       <y>140</y>
-      <w>210</w>
+      <w>190</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -80,7 +80,7 @@ bg=white</panel_attributes>
     <coordinates>
       <x>330</x>
       <y>180</y>
-      <w>240</w>
+      <w>220</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -96,7 +96,7 @@ insertName(String name)</panel_attributes>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-sendPrestation()</panel_attributes>
+sendPerformance()</panel_attributes>
     <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
@@ -117,7 +117,7 @@ bg=white</panel_attributes>
     <coordinates>
       <x>330</x>
       <y>230</y>
-      <w>160</w>
+      <w>150</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -154,7 +154,7 @@ bg=white</panel_attributes>
     <coordinates>
       <x>330</x>
       <y>280</y>
-      <w>200</w>
+      <w>180</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -179,7 +179,7 @@ bg=white</panel_attributes>
     <coordinates>
       <x>330</x>
       <y>330</y>
-      <w>200</w>
+      <w>180</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;-

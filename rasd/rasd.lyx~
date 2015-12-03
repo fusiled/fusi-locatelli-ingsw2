@@ -167,7 +167,11 @@ Document version
 \end_layout
 
 \begin_layout Standard
-Current version is 1.0 .
+Current version is 1.0.1 - fixed 10 minutes problem on reservations
+\end_layout
+
+\begin_layout Standard
+v1.0 : initial
 \end_layout
 
 \begin_layout Section
@@ -271,7 +275,8 @@ mytaxy: is the service proposed in this document.
 \end_layout
 
 \begin_layout Description
-Performance: (Taxi related) in this paper is synonym of the term Ride.
+Performance: (Taxi related) used to refer to ageneric performance made by
+ a taxi driver, that can be a request or a reservation.
  
 \end_layout
 
@@ -2334,7 +2339,7 @@ sig Zone{
 
 \begin_layout Plain Layout
 
-//when a prestation takes place a ride is generated 
+//when a performance takes place a ride is generated 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2364,7 +2369,7 @@ sig Ride{
 
 \begin_layout Plain Layout
 
-	executes: one AbstractPrestation //prestation that a ride executes
+	executes: one AbstractPerformance //performance that a ride executes
 \end_layout
 
 \begin_layout Plain Layout
@@ -2378,7 +2383,7 @@ sig Ride{
 
 \begin_layout Plain Layout
 
-//who requests prestations 
+//who requests performances 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2392,7 +2397,7 @@ sig Customer{}
 
 \begin_layout Plain Layout
 
-//it manages zones, rides and prestations 
+//it manages zones, rides and performances 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2407,7 +2412,7 @@ sig System{
 
 \begin_layout Plain Layout
 
-	handles: set AbstractPrestation,
+	handles: set AbstractPerformance,
 \end_layout
 
 \begin_layout Plain Layout
@@ -2426,17 +2431,17 @@ sig System{
 
 \begin_layout Plain Layout
 
-//prestations 
+//performances 
 \end_layout
 
 \begin_layout Plain Layout
 
-abstract sig AbstractPrestation{ 
+abstract sig AbstractPerformance{ 
 \end_layout
 
 \begin_layout Plain Layout
 
-	invokes: one Customer //who requests the prestation 
+	invokes: one Customer //who requests the performance 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2455,7 +2460,7 @@ abstract sig AbstractPrestation{
 
 \begin_layout Plain Layout
 
-sig Request extends AbstractPrestation{}
+sig Request extends AbstractPerformance{}
 \end_layout
 
 \begin_layout Plain Layout
@@ -2469,7 +2474,7 @@ sig Request extends AbstractPrestation{}
 
 \begin_layout Plain Layout
 
-sig Reservation extends AbstractPrestation{ 
+sig Reservation extends AbstractPerformance{ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2632,50 +2637,12 @@ fact allTaxisBelongsToAZone{
 
 \begin_layout Plain Layout
 
-fact allAbstractPrestationsHaveCustomer{
+fact allAbstractPerformancesHaveCustomer{
 \end_layout
 
 \begin_layout Plain Layout
 
-	all p:AbstractPrestation | one c: Customer  | c in p.invokes 
-\end_layout
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-fact allCustomersHaveAPrestation{ 	
-\end_layout
-
-\begin_layout Plain Layout
-
-	all c:Customer | some p:AbstractPrestation | c in p.invokes 
-\end_layout
-
-\begin_layout Plain Layout
-
-} 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-fact AllAbstractPrestationsAreLinkedToSystem{
-\end_layout
-
-\begin_layout Plain Layout
-
-	all p: AbstractPrestation | p in System.handles 
+	all p:AbstractPerformance | one c: Customer  | c in p.invokes 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2689,12 +2656,12 @@ fact AllAbstractPrestationsAreLinkedToSystem{
 
 \begin_layout Plain Layout
 
-fact allRideMustHaveAPrestation{ 
+fact allCustomersHaveAPerformance{ 	
 \end_layout
 
 \begin_layout Plain Layout
 
-	all r : Ride | one p : AbstractPrestation | p in r.executes 
+	all c:Customer | some p:AbstractPerformance | c in p.invokes 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2704,7 +2671,45 @@ fact allRideMustHaveAPrestation{
 
 \begin_layout Plain Layout
 
-/** NOTE As said above, all rides must have an AbstractPrestation
+\end_layout
+
+\begin_layout Plain Layout
+
+fact AllAbstractPerformancesAreLinkedToSystem{
+\end_layout
+
+\begin_layout Plain Layout
+
+	all p: AbstractPerformance | p in System.handles 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+fact allRideMustHaveAPerformance{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+	all r : Ride | one p : AbstractPerformance | p in r.executes 
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+/** NOTE As said above, all rides must have an AbstractPerformance
 \end_layout
 
 \begin_layout Plain Layout
@@ -2714,7 +2719,7 @@ instance associated, but the inverse is not necessary true.
 
 \begin_layout Plain Layout
 
-For instance, when an AbstractPrestation doesn't take place
+For instance, when an AbstractPerformance doesn't take place
 \end_layout
 
 \begin_layout Plain Layout
