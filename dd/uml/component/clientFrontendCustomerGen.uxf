@@ -31,11 +31,11 @@ m1=AcceptRefuseConfirmationMsg</panel_attributes>
     <coordinates>
       <x>290</x>
       <y>190</y>
-      <w>180</w>
+      <w>200</w>
       <h>130</h>
     </coordinates>
     <panel_attributes>lt=()-
-m1=PrestationSubmission</panel_attributes>
+m1=PerformanceSubmission</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>

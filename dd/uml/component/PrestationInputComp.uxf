@@ -4,12 +4,13 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>150</x>
-      <y>60</y>
+      <x>220</x>
+      <y>310</y>
       <w>310</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>symbol=component
+valign=center
 PrestationInput
 layer=1
 bg=black</panel_attributes>
@@ -18,22 +19,22 @@ bg=black</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>20</x>
-      <y>90</y>
-      <w>150</w>
-      <h>40</h>
+      <x>210</x>
+      <y>220</y>
+      <w>140</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100
-m2=actionInputPrest</panel_attributes>
-    <additional_attributes>70.0;10.0;130.0;10.0</additional_attributes>
+m1=actionInputPerf</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>20</y>
-      <w>180</w>
+      <x>230</x>
+      <y>270</y>
+      <w>200</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>lt=-()
@@ -44,8 +45,8 @@ layer=100</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>150</x>
-      <y>60</y>
+      <x>220</x>
+      <y>310</y>
       <w>310</w>
       <h>80</h>
     </coordinates>
@@ -56,15 +57,15 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>260</x>
-      <y>130</y>
-      <w>160</w>
-      <h>100</h>
+      <x>330</x>
+      <y>380</y>
+      <w>170</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=-(
 to accessDatabase
 layer=100
 </panel_attributes>
-    <additional_attributes>20.0;10.0;20.0;70.0</additional_attributes>
+    <additional_attributes>20.0;10.0;20.0;50.0</additional_attributes>
   </element>
 </diagram>

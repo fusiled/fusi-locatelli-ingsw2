@@ -18,13 +18,13 @@ bg=light_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
+      <x>180</x>
       <y>110</y>
-      <w>150</w>
+      <w>180</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=)-
-to PrestationInput
+m2=to PerformanceInput
 layer=100</panel_attributes>
     <additional_attributes>20.0;50.0;20.0;10.0</additional_attributes>
   </element>
@@ -43,27 +43,27 @@ bg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>20</x>
+      <x>30</x>
       <y>110</y>
-      <w>160</w>
+      <w>170</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=)-
-to accessDatabase
+m2=to accessDatabase
 layer=100</panel_attributes>
     <additional_attributes>20.0;50.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
+      <x>10</x>
       <y>110</y>
-      <w>140</w>
-      <h>80</h>
+      <w>150</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=)-
-to TaxiManager
+m1=to TaxiManager
 layer=100</panel_attributes>
-    <additional_attributes>20.0;50.0;20.0;10.0</additional_attributes>
+    <additional_attributes>20.0;100.0;20.0;10.0</additional_attributes>
   </element>
 </diagram>

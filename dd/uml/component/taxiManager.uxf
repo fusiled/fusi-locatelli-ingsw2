@@ -4,8 +4,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>120</x>
-      <y>80</y>
+      <x>370</x>
+      <y>160</y>
       <w>310</w>
       <h>80</h>
     </coordinates>
@@ -18,9 +18,9 @@ bg=dark_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
-      <y>30</y>
-      <w>160</w>
+      <x>480</x>
+      <y>110</y>
+      <w>180</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=-()
@@ -31,35 +31,35 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>100</y>
-      <w>180</w>
-      <h>50</h>
+      <x>510</x>
+      <y>230</y>
+      <w>170</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=-(
 to accessDatabase
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+    <additional_attributes>20.0;10.0;20.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>10</x>
-      <y>100</y>
-      <w>130</w>
-      <h>40</h>
+      <x>360</x>
+      <y>70</y>
+      <w>110</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=()-
-manageTaxi
+m1=manageTaxi
 layer=100</panel_attributes>
-    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>120</x>
-      <y>80</y>
+      <x>370</x>
+      <y>160</y>
       <w>310</w>
       <h>80</h>
     </coordinates>

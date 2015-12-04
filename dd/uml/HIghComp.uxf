@@ -23,7 +23,7 @@ bg=red</panel_attributes>
       <w>350</w>
       <h>35</h>
     </coordinates>
-    <panel_attributes>ServiceComunicator
+    <panel_attributes>ServiceCommunicator
 layer=0
 symbol=component
 bg=orange</panel_attributes>

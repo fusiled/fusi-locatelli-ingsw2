@@ -20,7 +20,7 @@ bg=red</panel_attributes>
     <coordinates>
       <x>80</x>
       <y>20</y>
-      <w>110</w>
+      <w>120</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=()-[]
@@ -32,15 +32,15 @@ layer=100
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>110</y>
-      <w>150</w>
-      <h>50</h>
+      <x>130</x>
+      <y>140</y>
+      <w>120</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=[]-(
 to Database
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+    <additional_attributes>20.0;10.0;20.0;50.0</additional_attributes>
   </element>
 </diagram>

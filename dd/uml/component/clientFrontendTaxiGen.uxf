@@ -4,7 +4,7 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>350</x>
+      <x>340</x>
       <y>160</y>
       <w>210</w>
       <h>80</h>
@@ -17,20 +17,20 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>340</x>
+      <x>330</x>
       <y>40</y>
-      <w>190</w>
+      <w>210</w>
       <h>140</h>
     </coordinates>
     <panel_attributes>lt=-()
 layer=100
-m2=AcceptRefusePrestation</panel_attributes>
+m2=AcceptRefusePerformance</panel_attributes>
     <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
+      <x>350</x>
       <y>90</y>
       <w>130</w>
       <h>90</h>
@@ -43,7 +43,7 @@ m1=Authentication</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
+      <x>470</x>
       <y>90</y>
       <w>140</w>
       <h>90</h>
@@ -56,7 +56,7 @@ m1=appearAvailable</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>410</x>
+      <x>400</x>
       <y>230</y>
       <w>210</w>
       <h>60</h>

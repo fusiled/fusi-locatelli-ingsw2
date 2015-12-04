@@ -4,8 +4,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>190</x>
-      <y>20</y>
+      <x>440</x>
+      <y>220</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
@@ -20,34 +20,34 @@ bg=gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>20</x>
-      <y>50</y>
+      <x>500</x>
+      <y>180</y>
       <w>190</w>
-      <h>40</h>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100
 m2=sendRefusableMessage</panel_attributes>
-    <additional_attributes>110.0;10.0;170.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>90</y>
-      <w>150</w>
-      <h>110</h>
+      <x>490</x>
+      <y>290</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=)-
 to QueueManager
 layer=100</panel_attributes>
-    <additional_attributes>20.0;80.0;20.0;10.0</additional_attributes>
+    <additional_attributes>20.0;50.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>190</x>
-      <y>20</y>
+      <x>440</x>
+      <y>220</y>
       <w>210</w>
       <h>80</h>
     </coordinates>

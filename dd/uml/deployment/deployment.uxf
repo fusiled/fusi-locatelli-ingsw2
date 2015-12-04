@@ -185,11 +185,11 @@ m1=AcceptRefuseConfirmationMsg</panel_attributes>
     <coordinates>
       <x>21</x>
       <y>42</y>
-      <w>189</w>
+      <w>210</w>
       <h>133</h>
     </coordinates>
     <panel_attributes>lt=()-[]
-m1=PrestationSubmission</panel_attributes>
+m1=PerformanceSubmission</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
   </element>
   <element>
@@ -222,12 +222,12 @@ bg=yellow</panel_attributes>
     <coordinates>
       <x>371</x>
       <y>0</y>
-      <w>210</w>
+      <w>231</w>
       <h>175</h>
     </coordinates>
     <panel_attributes>lt=[]-()
 layer=100
-m2=AcceptRefusePrestation</panel_attributes>
+m2=AcceptRefusePerformance</panel_attributes>
     <additional_attributes>10.0;230.0;10.0;10.0</additional_attributes>
   </element>
   <element>

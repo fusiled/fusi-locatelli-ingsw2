@@ -4,10 +4,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>18</x>
-      <y>36</y>
-      <w>747</w>
-      <h>567</h>
+      <x>9</x>
+      <y>45</y>
+      <w>639</w>
+      <h>531</h>
     </coordinates>
     <panel_attributes>Core
 symbol=component
@@ -17,9 +17,9 @@ bg=red</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>279</x>
-      <y>333</y>
-      <w>279</w>
+      <x>270</x>
+      <y>306</y>
+      <w>180</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>symbol=component
@@ -31,34 +31,34 @@ bg=light_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>468</y>
-      <w>144</w>
-      <h>63</h>
+      <x>387</x>
+      <y>423</y>
+      <w>162</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-()
 TaxiManagerInterface
 layer=100</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>387</x>
-      <y>396</y>
+      <x>378</x>
+      <y>369</y>
       <w>45</w>
-      <h>90</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=)-
 layer=100</panel_attributes>
-    <additional_attributes>20.0;70.0;20.0;10.0</additional_attributes>
+    <additional_attributes>20.0;50.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>279</x>
-      <y>513</y>
-      <w>279</w>
+      <x>270</x>
+      <y>477</y>
+      <w>180</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>symbol=component
@@ -70,8 +70,8 @@ bg=dark_gray</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>540</y>
+      <x>207</x>
+      <y>495</y>
       <w>81</w>
       <h>27</h>
     </coordinates>
@@ -82,10 +82,10 @@ layer=100</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>45</x>
-      <y>108</y>
+      <x>36</x>
+      <y>126</y>
       <w>90</w>
-      <h>477</h>
+      <h>432</h>
     </coordinates>
     <panel_attributes>symbol=component
 Core
@@ -98,8 +98,8 @@ bg=white</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
-      <y>531</y>
+      <x>117</x>
+      <y>486</y>
       <w>108</w>
       <h>45</h>
     </coordinates>
@@ -111,21 +111,21 @@ layer=100
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
+      <x>63</x>
       <y>0</y>
       <w>27</w>
-      <h>54</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=()-[]
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>63</x>
-      <y>27</y>
+      <x>54</x>
+      <y>36</y>
       <w>45</w>
       <h>63</h>
     </coordinates>
@@ -137,22 +137,22 @@ layer=100
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>72</x>
-      <y>72</y>
-      <w>99</w>
-      <h>54</h>
+      <x>63</x>
+      <y>81</y>
+      <w>108</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=()-
 CoreInterface
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>387</x>
-      <y>279</y>
+      <y>252</y>
       <w>45</w>
       <h>72</h>
     </coordinates>
@@ -163,8 +163,8 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>126</x>
-      <y>189</y>
+      <x>117</x>
+      <y>162</y>
       <w>63</w>
       <h>45</h>
     </coordinates>
@@ -175,8 +175,8 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>171</x>
-      <y>198</y>
+      <x>162</x>
+      <y>171</y>
       <w>126</w>
       <h>27</h>
     </coordinates>
@@ -188,7 +188,7 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>396</x>
-      <y>234</y>
+      <y>207</y>
       <w>27</w>
       <h>63</h>
     </coordinates>
@@ -199,10 +199,10 @@ layer=100</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>423</x>
-      <y>261</y>
-      <w>153</w>
-      <h>18</h>
+      <x>225</x>
+      <y>234</y>
+      <w>189</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>QueueManagerInterface
 layer=100</panel_attributes>
@@ -211,8 +211,8 @@ layer=100</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>135</x>
-      <y>171</y>
+      <x>126</x>
+      <y>144</y>
       <w>171</w>
       <h>27</h>
     </coordinates>
@@ -223,21 +223,21 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>756</x>
-      <y>351</y>
-      <w>99</w>
+      <x>639</x>
+      <y>324</y>
+      <w>81</w>
       <h>45</h>
     </coordinates>
     <panel_attributes>lt=[]-(
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>279</x>
-      <y>171</y>
+      <x>270</x>
+      <y>144</y>
       <w>180</w>
       <h>72</h>
     </coordinates>
@@ -250,8 +250,8 @@ bg=black</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>189</x>
-      <y>558</y>
+      <x>180</x>
+      <y>522</y>
       <w>171</w>
       <h>27</h>
     </coordinates>
@@ -262,103 +262,103 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>702</x>
-      <y>360</y>
-      <w>72</w>
+      <x>576</x>
+      <y>333</y>
+      <w>90</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>lt=-()
 layer=100</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>441</x>
+      <y>324</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>441</x>
+      <y>432</y>
+      <w>153</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;100.0;140.0;100.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>351</y>
+      <w>45</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;90.0;30.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>324</y>
+      <w>72</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>441</x>
+      <y>162</y>
+      <w>135</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0;120.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>243</y>
+      <w>63</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>774</x>
-      <y>378</y>
+      <x>657</x>
+      <y>360</y>
       <w>171</w>
       <h>27</h>
     </coordinates>
     <panel_attributes>accessDatabase
 layer=100</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>549</x>
-      <y>351</y>
-      <w>72</w>
-      <h>45</h>
-    </coordinates>
-    <panel_attributes>lt=-(
-layer=100
-</panel_attributes>
-    <additional_attributes>10.0;20.0;50.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>549</x>
-      <y>459</y>
-      <w>189</w>
-      <h>108</h>
-    </coordinates>
-    <panel_attributes>lt=-(
-layer=100
-</panel_attributes>
-    <additional_attributes>10.0;100.0;180.0;100.0;180.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>702</x>
-      <y>378</y>
-      <w>27</w>
-      <h>99</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-layer=100
-</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>603</x>
-      <y>351</y>
-      <w>108</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-layer=100
-</panel_attributes>
-    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>450</x>
-      <y>189</y>
-      <w>288</w>
-      <h>108</h>
-    </coordinates>
-    <panel_attributes>lt=-(
-layer=100
-</panel_attributes>
-    <additional_attributes>10.0;20.0;290.0;20.0;290.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>702</x>
-      <y>279</y>
-      <w>27</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=.&gt;
-layer=100
-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
 </diagram>

@@ -111,11 +111,11 @@ Time Spent
 
 \begin_layout Itemize
 Matteo M.
- Fusi: ~22h
+ Fusi: ~25h
 \end_layout
 
 \begin_layout Itemize
-Matteo Locatelli: ~22h
+Matteo Locatelli: ~25h
 \end_layout
 
 \begin_layout Standard
@@ -157,10 +157,10 @@ The Design Document (DD) contains a functional description of the mytaxi
  to guarantee the satisfaction of all the requirements The components will
  be described both at high level and more specifically, illustrating and
  explaining all the sub-components every component is made of.
- In this way the connection between components is illustrated and every
- person that will look at this document will have a clear idea about its
- architecture both hardware and software, wether he wants to have a detailed
- description of the system or a more general one.
+ In this way, the connection between components is illustrated; every person
+ that will read this document will have a clear idea about its architecture
+ both hardware and software, whether he wants to have a detailed description
+ of the system or a more general one.
 \end_layout
 
 \begin_layout Subsection
@@ -195,17 +195,17 @@ Document Structure
 Section 1 describes the main purpose and the structure of this Design Document.
  Section 2 contains the description of the components used in the system,
  firstly a high level view is illustrated, then every component is explored
- and each sub-component that composes it is described, highlighting the
- connections between components and sub-components.
- In the second section there are also the deployment view, that describes
- the physical deployment of the system i.e.
+ and each sub-component is described, highlighting the connections between
+ components and sub-components.
+ The second section includes also the deployment view, that describes the
+ physical deployment of the system i.e.
  which hardware the components are inserted into, the runtime view that
  illustrates the behaviour of the system when it's running and, finally,
  the architectural styles and the design patterns that are the most suitable
  to be used for the system.
- Section 3 contains the main algorithm that is implemented in the core of
- the system, that manages the taxi queue and the sending of messages to
- customers and taxi drivers.
+ Section 3 contains the main algorithm implemented in the core of the system,
+ that manages the taxi queue and the sending of messages to customers and
+ taxi drivers.
  Section 4 shows how every functional requirement described in the RASD
  document is covered by the components of the system.
  Lastly, section 5 contains all the references to external documents needed
@@ -225,17 +225,17 @@ The architecture we based our system on is the client-server architecture
  with two tiers.
  One tier (the server tier) is composed by the server logic and the database,
  the other tier (the client tier) is composed by the client logic and the
- GUI that allows the user to intract with the system.
- The fact that both the server and the client tiers have an aplication logic
- means that the application is distributed; this, added to the fact that
- we decided to use a service oriented architure, allows our system to be
- scalable, so other services can be added without modifying the structure
+ GUI that allows the user to interact with the system.
+ The fact that both the server and the client tiers have an application
+ logic means that the application is distributed; this, added to the fact
+ that we decided to use a service oriented architure, allows our system
+ to be scalable, so other services can be added without modifying the structure
  of the system.
  For example, if a future implementation of the system needs a different
  type of client, the new client can use the same services provided by the
- server without modifying the implementation of its logic.
+ server, without modifying the implementation of its logic.
  Furthermore, using a two tier architecture allows our system to be easy
- to maintain and to repair if some of its components break.
+ to maintain and repair if one of its components breaks.
 \end_layout
 
 \begin_layout Subsection
@@ -255,16 +255,41 @@ High level components and their interaction
 
 \begin_layout Standard
 \noindent
-The three main high level components of the system are the front end, the
- service comunicator and the core of the system.
- The front end is used to allow customers and taxi drivers to interact with
- the system, so every customer can make requests and reservations and every
+The main high level components of the system are:
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Frontend
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Service Communicator
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Core
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Database.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Frontend is used to allow customers and taxi drivers to interact with the
+ system, so every customer can make requests and reservations and every
  taxi driver can accept or refuse a ride, appear available or not to the
  system etc.
- The core has the task to manage taxi queues and manage the comunication
- between customers and taxi drivers, by means of messages.
- Finally, the service comunicator has to ensure the comunication between
- the front end and the core, providing services to both the components.
+ Core has the task to manage taxi queues and manage the comunication between
+ customers and taxi drivers, by means of messages.
+ Service Communicator has to ensure the comunication between the front end
+ and the core, providing services to both the components.
+ Database trivially must store data that system generates and exploits.
 \end_layout
 
 \begin_layout Subsection
@@ -277,7 +302,7 @@ Frontend
 
 \begin_layout Standard
 \noindent
-The frontend must takes the input of users and present the several responses
+The frontend must take the input of users and present the several responses
  that the system generates for the user.
  Two different kinds of frontends are proposed: one for customers and one
  for taxi drivers.
@@ -355,7 +380,7 @@ Provided interfaces
 AcceptRefuseConfirmation
 \series default
 \emph default
-: handles offers of prestations when there are no available taxis in the
+: handles offers of performances when there are no available taxis in the
  zone.
 \end_layout
 
@@ -363,10 +388,10 @@ AcceptRefuseConfirmation
 
 \series bold
 \emph on
-PrestationSubmission
+PerformanceSubmission
 \series default
 \emph default
-: handles request of generic prestations made by customers (for example
+: handles request of generic performances made by customers (for example
  request or reservations)
 \end_layout
 
@@ -390,14 +415,14 @@ Description
 This component must interface the customer with the system.
  A customer can submit generic requests using the 
 \emph on
-PrestationSubmission
+PerformanceSubmission
 \emph default
  interface.
  The 
 \emph on
 AcceptRefuseConfirmation
 \emph default
- is used from customer for accepting or reject the offers of generic prestation
+ is used from customer for accepting or reject the offers of generic performance
  proposed by the system if there aren't available taxis in the zone where
  the customer is.
 \end_layout
@@ -449,7 +474,7 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-Prestation Handler
+Performance Handler
 \end_layout
 
 \end_inset
@@ -492,11 +517,11 @@ Provided interfaces
 
 \series bold
 \emph on
-PrestationCustomerInterface
+PerformanceCustomerInterface
 \series default
 \emph default
 : Interface which purpose is dialogate with the user and informing him about
- the prestation that he submits to the sytem.
+ the performance that he submits to the sytem.
 \end_layout
 
 \end_inset
@@ -516,7 +541,7 @@ Description
 \begin_inset Text
 
 \begin_layout Plain Layout
-The duty of PrestationHandler is to present generic requests made by the
+The duty of performanceHandler is to present generic requests made by the
  customer using the ServiceCommunicator.
 \end_layout
 
@@ -582,8 +607,8 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to ServiceCommunicator for informing the system about the confirmation
- or rejection made by the customer.
+Interface to ServiceCommunicator to inform the system about the confirmation
+ or rejection by the customer.
 \end_layout
 
 \end_inset
@@ -658,7 +683,7 @@ He links the system with the customer using the ServiceCommunicator in terms
 \begin_layout Standard
 \noindent
 Using the 2 components listed above the Customer Frontend is structured
- as indicate in the diagram below.
+ as indicated in the diagram below.
 \end_layout
 
 \begin_layout Standard
@@ -740,7 +765,7 @@ Provided interfaces
 
 \series bold
 \emph on
-AcceptRefusePrestation: 
+AcceptRefusePerformance: 
 \series default
 \emph default
 interface provided for accept or reject ride offers proposed by the system.
@@ -856,7 +881,7 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to ServiceCommunicator for informing the system of the availability
+Interface to ServiceCommunicator to inform the system about the availability
  of the taxi driver.
 \end_layout
 
@@ -974,7 +999,7 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to ServiceCommunicator for validate authentication.
+Interface to ServiceCommunicator to validate authentication.
 \end_layout
 
 \end_inset
@@ -1098,8 +1123,8 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to ServiceCommunicator for informing the system about the driver
- response about a generic request.
+Interface to ServiceCommunicator to inform the system about the driver response
+ about a generic request.
 \end_layout
 
 \begin_layout Enumerate
@@ -1328,10 +1353,10 @@ Service Communicator has the duty of connecting Frontend and core using
 
 \begin_layout Standard
 \noindent
-As said in the previous description a Service Oriented Architecture has
+As said in the previous description, a Service Oriented Architecture has
  been used for develop Service Communicator module.
- Now will be discussed the composition and the sub-components of the inquiring
- module.
+ Now the composition and the sub-components of the inquiring module will
+ be discussed.
 \end_layout
 
 \begin_layout Standard
@@ -1630,7 +1655,7 @@ Required interfaces
 
 \begin_layout Enumerate
 Interface to Core that is used to communicate to the core when a customer
- asks for a prestation and to know when to send a message to a customer
+ asks for a performance and to know when to send a message to a customer
  or to a taxi driver.
 \end_layout
 
@@ -1714,7 +1739,7 @@ This component allow the service requestor to access all the services it
 
 \begin_layout Standard
 \noindent
-Assembling the listed components we obtain the following diagram that reperesent
+Assembling the listed components we obtain the following diagram that represents
  the composite structure of the Service Communicator.
 \end_layout
 
@@ -1889,8 +1914,8 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to PrestationInput to make possible to external components to
- input a prestation.
+Interface to PerformanceInput to make possible to external components to
+ input a performance.
 \end_layout
 
 \begin_layout Enumerate
@@ -2007,8 +2032,8 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to PrestationInput that is needed by this component to know when
- a prestation is sent by a customer.
+Interface to PerformanceInput that is needed by this component to know when
+ a performance is sent by a customer.
 \end_layout
 
 \begin_layout Enumerate
@@ -2058,7 +2083,7 @@ Description
 \begin_inset Text
 
 \begin_layout Plain Layout
-This component manages the taxi queue of every zone of the city and says
+This component manages the taxi queue of any zone of the city and communicates
  to other components when to send a message to a customer.
 \end_layout
 
@@ -2104,7 +2129,7 @@ Name
 \begin_inset Text
 
 \begin_layout Plain Layout
-PrestationInput
+PerformanceInput
 \end_layout
 
 \end_inset
@@ -2125,7 +2150,7 @@ Required interfaces
 
 \begin_layout Enumerate
 Interface to accessDatabase, needed to retrieve information about taxis
- and prestations.
+ and performances.
 \end_layout
 
 \end_inset
@@ -2148,10 +2173,10 @@ Provided interfaces
 
 \series bold
 \emph on
-actionInputPrest: 
+actionInputPerf: 
 \series default
 \emph default
-used to take in input any prestation sent by a customer.
+used to take in input any performance sent by a customer.
 \end_layout
 
 \begin_layout Enumerate
@@ -2161,8 +2186,8 @@ used to take in input any prestation sent by a customer.
 QueueManagerInterface: 
 \series default
 \emph default
-used to communicate to the QueueManager component when a prestation is sent
- by a customer.
+used to communicate to the QueueManager component when a performance is
+ sent by a customer.
 \end_layout
 
 \end_inset
@@ -2182,7 +2207,7 @@ Description
 \begin_inset Text
 
 \begin_layout Plain Layout
-This component manages the input of any prestation sent by a customer and
+This component manages the input of any performance sent by a customer and
  the sending of messages to both customers and taxi drivers.
 \end_layout
 
@@ -2481,7 +2506,19 @@ Deployment view
 In the first proposed diagram is proposed to the reader the interactions
  between several components distributed of physical devices.
  We can easily observe that the component Service Communicator is distributed
- in three different devices: client, web server and logic server.
+ in three different devices:
+\end_layout
+
+\begin_layout Enumerate
+Client
+\end_layout
+
+\begin_layout Enumerate
+Web server
+\end_layout
+
+\begin_layout Enumerate
+Logic server.
 \end_layout
 
 \begin_layout Standard
@@ -2505,6 +2542,7 @@ Considering that a client-server architecture has been chosen to implement
 \end_layout
 
 \begin_layout Standard
+\noindent
 In the second view the linkage between several devices has been emphasized.
  DB-driver will depend on language and DB implementation.
 \end_layout
@@ -2534,8 +2572,8 @@ full-hardware
 \begin_inset Quotes erd
 \end_inset
 
- view is now proposed for proposing to the reader a complete overview of
- the deployment structure.
+ view is now proposed to suggest to the reader a complete overview of the
+ deployment structure.
  We can easily note a 2-tier client server architecture.
 \end_layout
 
@@ -2556,7 +2594,7 @@ Customer Client
 
 \begin_layout Standard
 This client contains the Customer Frontend component, so a user is able
- to submit a prestation (request or reservation) and to decide to accept
+ to submit a performance (request or reservation) and to decide to accept
  or refuse a refusable message (this message is sent to the customer when
  the first taxi driver available is found outside the customer's zone).
  The customer's client is used on customer's smartphone or pcs, depending
@@ -2568,21 +2606,13 @@ Taxi Client
 \end_layout
 
 \begin_layout Standard
-This client contains the Taxi Frontend component and is used by the taxi
- driver to access every functionality that is available to him, such as
+This client contains the Taxi Frontend component and it's used by the taxi
+ driver to access every available functionality that he can do, such as
  accepting or refusing a request and appear available to the system.
  This client will be installed on the taxi driver's smartphone and it's
- important to focus on the fact that this version of the client will be
- only available on taxi drivers' smartphone, in this way customers cannot
- accept the services reserved to drivers.
-\end_layout
-
-\begin_layout Standard
-\noindent
-The two clients exchange data, by means of interfaces, with both the service
- register (that allows them to retrieve the services they have access to)
- and the service provider (that provides the two client with the services
- they are able to access, previously specified by the service register).
+ important to underline that this version of the client will be only available
+ on taxi drivers' smartphone, in this way customers cannot accept the services
+ reserved to drivers.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2590,11 +2620,11 @@ Logic Server
 \end_layout
 
 \begin_layout Standard
-The server contains two components: the core (responsible for the execution
- of the main functionalities of the system) and the service provider (that
- allows clients to access the services they need).
- The service provider communicates with the service register to access the
- services that the clients are enabled to use.
+The server contains two components: Core (responsible for the execution
+ of the main functionalities of the system) and Service Provider (that allows
+ clients to access the services they need).
+ Service Provider communicates with the service register to access the services
+ that the clients are enabled to use.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2603,7 +2633,7 @@ Web Server
 
 \begin_layout Standard
 The service register is located on a web page, so both the clients and the
- server can access it at any time and know which services can be used.
+ server can access it at any time and are ifnormed about the services used.
 \end_layout
 
 \begin_layout Subsection
@@ -2611,25 +2641,26 @@ Runtime view
 \end_layout
 
 \begin_layout Subsubsection
-Request for a prestation
+Request for a performance
 \end_layout
 
 \begin_layout Standard
-When a customer submit a prestation to the system Customer Frontend does
+When a customer submits a performance to the system, Customer Frontend does
  a raw check of the validity of attributes of the submitted element.
- After that the prestation is sent to the Service Requestor component attached
+ After that the performance is sent to the Service Requestor component attached
  to the inquiring Customer Frontend.
  The last mentioned component has the duty of checking that the requested
  service is available (the type of service requested depends by the type
- of prestation submitted).
- If the service is unavailable the customer is notified with an error the
- process terminates else the correct flow of the process , which means that
- the prestation request is forwarded to the Core through Service Provider.
- The prestation request is received by Core Facade, then the PrestationInput
- component checks again the prestation request and handles it (see the subsectio
-n below for further details), then the prestation is forwarded to Queue
+ of performance submitted).
+ If the service is unavailable then the customer is notified with an error
+ and the process terminates else the correct flow of the process continues,
+ which means that the performance request is forwarded to the Core through
+ Service Provider.
+ The performance request is received by Core Facade, then PerformanceInput
+ checks again the performance request and handles it (see the subsection
+ below for further details), then the performance is forwarded to Queue
  Manager component that search for a taxi that can takes in charge of the
- prestation.
+ performance.
  In the end the Core elaborates a response that sends to Customer.
  The response can be positive (a taxi has been found and so the response
  contains details about the chosen taxi and ETA) or negative (a simple message
@@ -2650,13 +2681,13 @@ n below for further details), then the prestation is forwarded to Queue
 \end_layout
 
 \begin_layout Subsubsection
-Core Prestation Handling
+Core Performance Handling
 \end_layout
 
 \begin_layout Standard
-If the type of the prestation is a request is immediatly forwarded to Queue
+If the type of the performance is a request is immediatly forwarded to Queue
  Manager.
- If the type of the prestation is a reservation, this one is moved in a
+ If the type of the performance is a reservation, this one is moved in a
  waiting buffer.
  The reservation will be resumed and forwarded to Queue Manager only 10
  minutes before the meeting hour indicated in the reservation.
@@ -2677,19 +2708,19 @@ Queue Algorithm
 \end_layout
 
 \begin_layout Standard
-The processing of a prestation in the Queue Manager starts with retrieving
- the zone where the ride of the prestation will start, In this way is possible
- to get the queue of taxis available in the zone.
+The processing of a performance in the Queue Manager starts with retrieving
+ the zone where the ride indicated by the performance will start.
+ In this way is possible to get the queue of taxis available in the zone.
  The Queue Manager will start to sequentally contact all the taxis in the
  queue asking them if they want to accept the ride until the queue is empty
- or when a taxi driver accepts the prestation.
+ or when a taxi driver accepts the performance.
  If the queue is empty and a taxi has not been found yet then Queue Manager
  begins to contact taxis out of the specified zone.
  Queue Manager can contact at most 3 taxis out of the zone and it will contact
  sequentally the first, the second and then the third nearest taxi out of
  the zone, but if and only if they're far at most 10 minutes from the meeting
  point because they must arrive in time.
- For every taxi is sent a message if they want accept the prestation just
+ For every taxi is sent a message if they want accept the performance just
  like done with the taxis in the queue.
  If a taxi accepts the request an offer of the ride is sent to the customer.
  The customer can accept or refuse the offer.
@@ -2735,13 +2766,13 @@ This process just send an offer to a specific taxi driver through Service
 \end_layout
 
 \begin_layout Subsubsection
-Check if taxi is valid for a prestation
+Check if taxi is valid for a performance
 \end_layout
 
 \begin_layout Standard
 This process just calculate the distance of a taxi driver from a specified
  meeting point.
- If the taxi is further than 10 miunutes an error signal is thrown.
+ If the taxi is further than 10 minutes an error signal is thrown.
 \end_layout
 
 \begin_layout Standard
@@ -2759,7 +2790,7 @@ Send Taxi out of the zone offer
 \end_layout
 
 \begin_layout Standard
-When a taxi out of the zone accepts a prestation an offer message is sent
+When a taxi out of the zone accepts a performance an offer message is sent
  to customer.
  The customer can accept or refuse the offer using Confirmation Handler
  component.
@@ -2783,7 +2814,7 @@ Taxi driver authentication
 \begin_layout Standard
 To complete his authentication, the taxi driver must insert his credentials
  using the Taxi Frontend.
- Then the authentication engine sends the credentials to the Service Requestor,
+ Then Authentication Engine sends the credentials to the Service Requestor,
  asking for the service that allows the taxi driver to log into the system.
  The Service Requestor retrieves the service registry and check if the service
  is available to the taxi driver: if the service is not available a message
@@ -2874,9 +2905,9 @@ CustomerInterface
 \begin_layout Enumerate
 
 \family typewriter
-void(AbstractPrestation pre)
+void(AbstractPerformance pre)
 \family default
-: sending the passed prestation to Core using ServiceCommunicator.
+: sending the passed performance to Core using ServiceCommunicator.
 \end_layout
 
 \begin_layout Enumerate
@@ -2890,12 +2921,12 @@ void notify(Message msg)
 \begin_layout Enumerate
 
 \family typewriter
-void (DecoratedAbstractPrestation pre, CustomerResponse resp)
+void (DecoratedAbstractPerformance pre, CustomerResponse resp)
 \family default
 : notify Core about his decision on pre with resp.
- this method is used for accepting or refusing a prestation when a taxi
+ this method is used for accepting or refusing a performance when a taxi
  is contacted out of the zone of the customer.
- DecoratedAbstracPrestation contains infos about the inquiring prestation
+ DecoratedAbstracPerformance contains infos about the inquiring performance
  plus infos about taxi (id of taxi, ETA).
 \end_layout
 
@@ -2906,7 +2937,7 @@ TaxiInterface
 \begin_layout Enumerate
 
 \family typewriter
-void sendTaxiResponse(Taxi taxi,AbstractPrestation pre, TaxiResponse resp):
+void sendTaxiResponse(Taxi taxi,Abstractperformance pre, TaxiResponse resp):
  
 \family default
 notify Core about his decision on pre with resp.
@@ -2997,7 +3028,7 @@ void notifyUser(User user, Message msg)
 \begin_layout Enumerate
 
 \family typewriter
-void contactTaxi(Taxi taxi, AbstractPrestation pre)
+void contactTaxi(Taxi taxi, AbstractPerformance pre)
 \family default
 : contact taxi asking him if he wants to accept pre and wait for his response.
 \end_layout
@@ -3005,7 +3036,7 @@ void contactTaxi(Taxi taxi, AbstractPrestation pre)
 \begin_layout Enumerate
 
 \family typewriter
-void forwardPrestationToCore(AbstractPrestation pre)
+void forwardPerformanceToCore(AbstractPerformance pre)
 \family default
 : send pre to Core with the purpose of handling it.
 \end_layout
@@ -3019,12 +3050,11 @@ Architectural styles
 \end_layout
 
 \begin_layout Standard
-To implement the mytaxi system, we decided to use two architectural styles
- that are the most suitable for this system: the client-server architecture
- and the service oriented architecture (SOA).
+To implement the mytaxi system the following architecural styles have been
+ used:
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Client-server architecture: 
@@ -3041,11 +3071,11 @@ we decided to use this style to implement our system, customers and taxi
  city at which the clients could connect and then each station could guarantee
  the communication between clients and the server.
  We decided not to choose this architecture because a malfunction in a single
- station would have interrupt the functionalities of the system for some
- clients and this solution could be quite expensive.
+ station would interrupt the functionalities of the system for some clients
+ and this solution could be quite expensive.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Layered structure: 
@@ -3060,7 +3090,7 @@ the mytaxi system is based on a layered structure, in this way every layer
  that will execute their tasks.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Service oriented architecture: 
@@ -3072,13 +3102,13 @@ our system is based on a service oriented architecture, this means that
  the service to make request and reservation, but not the one to accept
  a request that can only be used by taxi drivers).
  Furthermore, in this way the system is extendible, because if some new
- functionality must be added to the system, it's enough to just add the
- corrisponding service.
+ functionality must be added to the system, it's sufficient to add the corrispon
+ding service.
  The services provided by our system can also be sold to a third part system
  if it needs them.
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Message based point to point: 
@@ -3094,7 +3124,7 @@ this architectural style is used to make possible the communication between
 Design patterns
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Enumerate
 
 \series bold
 Core facade: 
@@ -3122,7 +3152,7 @@ status open
 
 \begin_layout Plain Layout
 
-PROC QueueManagement(AbstractPrestation pre)
+PROC QueueManagement(AbstractPerformance pre)
 \end_layout
 
 \begin_layout Plain Layout
@@ -3273,7 +3303,7 @@ BEGIN
 
 \begin_layout Plain Layout
 
-				offResp = sendPrestationOffer(taxi, ETA)
+				offResp = sendPerformanceOffer(taxi, ETA)
 \end_layout
 
 \begin_layout Plain Layout
@@ -3288,7 +3318,7 @@ BEGIN
 
 \begin_layout Plain Layout
 
-					taxi = storeAbstractPrestation(pre)
+					taxi = storeAbstractPerformance(pre)
 \end_layout
 
 \begin_layout Plain Layout
@@ -3348,8 +3378,8 @@ END
 
 \begin_layout Standard
 \noindent
-Here follows a brief explanation of the main functionalities of the functions
- used in this piece of code:
+Here a brief explanation of the main functionalities of the functions used
+ in this piece of code follows:
 \end_layout
 
 \begin_layout Itemize
@@ -3428,13 +3458,13 @@ geti-thNearestTaxiInAnotherZone(i)
 \begin_layout Itemize
 
 \series bold
-sendPrestationOffer(taxi, ETA)
+sendPerformanceOffer(taxi, ETA)
 \series default
 : if the system finds an available taxi outside the customer's zone, it
  sends a message to the customer with the code of the taxi and the estimated
  time of its arrival.
  This function then returns the response of the user (who can accept or
- refuse the prestation).
+ refuse the performance).
 \end_layout
 
 \begin_layout Itemize
@@ -3449,10 +3479,10 @@ sendOfferResponseOfUser(taxi)
 \begin_layout Itemize
 
 \series bold
-storeAbstractPrestation(pre)
+storeAbstractPerformance(pre)
 \series default
-: this function takes as input the prestation that will be made by the taxi
- that the function returns.
+: this function takes as input the performance that will be made by the
+ taxi that the function returns.
 \end_layout
 
 \begin_layout Itemize
@@ -3476,8 +3506,8 @@ Introduction
 \emph default
  section.
  Mockups gives a quick overview of what a user can do with mytaxy: Basically,
- if the user is a customer he can submit prestation request to the system,
- if it's a taxi driver ha can login and accept or refuse prestation offer.
+ if the user is a customer he can submit performance request to the system,
+ if it's a taxi driver ha can login and accept or refuse performance offer.
 \end_layout
 
 \begin_layout Section
@@ -3489,12 +3519,12 @@ Allow customers to make a reservation
 \end_layout
 
 \begin_layout Standard
-Using the interface provided by the Prestation Handler allocated in Customer
+Using the interface provided by the Performance Handler allocated in Customer
  Frontend a customer can easily book for a ride at the desired hour.
  The interaction between components of the system that pursues this requirement
  can be viewed at subsection 
 \emph on
-2.5.1 Request for a prestation.
+2.5.1 Request for a performance.
 \end_layout
 
 \begin_layout Subsection
@@ -3505,13 +3535,13 @@ Allow customers to make a request
 The process for making a request it's the same of the reservation's one.
  The subsection 
 \emph on
-2.5.1 Request for a prestation 
+2.5.1 Request for a performance 
 \emph default
 gives and overview of components communication and interaction.
  The distinction between request and reservation takes act in the Prestatinon
  Input modules (see subsection 
 \emph on
-2.5.2 Core prestation handling
+2.5.2 Core performance handling
 \emph default
 ), where the request is immediatly forwarded to Queue Manager component
  as specified in RASD document.
