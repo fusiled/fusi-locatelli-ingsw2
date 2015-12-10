@@ -1,0 +1,88 @@
+public void preInvoke(EjbInvocation inv) {
+
+        if( _logger.isLoggable(Level.FINE) ) {
+            _logger.log(Level.FINE, "Entering BaseContainer::preInvoke : " + inv);
+        }
+
+        try {
+            if (containerState != CONTAINER_STARTED) {
+                throw new EJBException(localStrings.getLocalString(
+                        "ejb.container_not_started", 
+                        "Attempt to invoke when container is in {0}", 
+                        containerStateToString(containerState)));
+            }
+            
+            if( inv.method == null ) {
+                throw new EJBException(localStrings.getLocalString(
+                        "ejb.null_invocation_method", 
+                        "Attempt to invoke container with null invocation method"));
+            }
+
+            if( inv.invocationInfo == null ) {
+                inv.invocationInfo = getInvocationInfo(inv);
+                if( inv.invocationInfo == null ) {
+                    throw new EJBException(localStrings.getLocalString(
+                        "ejb.null_invocation_info", 
+                        "EjbInvocation Info lookup failed for method {0}", inv.method));
+                }
+            }
+
+            inv.transactionAttribute = inv.invocationInfo.txAttr;
+            inv.container = this;
+
+            if (inv.mustInvokeAsynchronously()) {
+                return;
+            }
+
+            if ( doPreInvokeAuthorization(inv) ) {
+                if (! authorize(inv)) {
+                    throw new AccessLocalException(localStrings.getLocalString(
+                            "ejb.client_not_authorized",
+                            "Client not authorized for this invocation"));
+                }
+            }
+
+            // Cache value of txManager.getStatus() in invocation to avoid
+            // multiple thread-local accesses of that value during pre-invoke
+            // stage.
+            inv.setPreInvokeTxStatus(transactionManager.getStatus());
+
+            ComponentContext ctx = getContext(inv);
+            inv.context = ctx;
+            
+            inv.instance = inv.ejb = ctx.getEJB();
+            InvocationInfo info = inv.invocationInfo;
+            
+            inv.useFastPath = (info.isTxRequiredLocalCMPField) && (inv.foundInTxCache);
+            //    _logger.log(Level.INFO, "Use fastPath() ==> " + info.method);
+            
+            if (!inv.useFastPath) {
+                // Sets thread-specific state for Transaction, Naming, Security,
+                // etc
+                invocationManager.preInvoke(inv);
+
+                // Do Tx machinery
+                preInvokeTx(inv);
+
+                // null out invocation preInovkeTxStatus since the cache value
+                // is obsolete
+                inv.setPreInvokeTxStatus(null);
+
+                enlistExtendedEntityManagers(ctx);
+            }
+            
+        }
+        catch ( Exception ex ) {
+            _logger.log(Level.FINE, "Exception while running pre-invoke : ejbName = [{0}]", logParams);
+            _logger.log(Level.FINE, "", ex);
+            
+            EJBException ejbEx;
+            if ( ex instanceof EJBException ) {
+                ejbEx = (EJBException)ex;
+            } else {
+                ejbEx = new EJBException(ex);
+            }
+            
+            throw new PreInvokeException(ejbEx);
+        }
+    }

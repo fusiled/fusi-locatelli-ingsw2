@@ -1,0 +1,38 @@
+/**
+     * Return the EJBObject/EJBHome Proxy for the given ejbId and instanceKey.
+     * Called from the ProtocolManager when a remote invocation arrives.
+     * @exception NoSuchObjectLocalException if the target object does not exist
+     */
+    public java.rmi.Remote getTargetObject(byte[] instanceKey, 
+                                          String generatedRemoteBusinessIntf) {
+               
+        externalPreInvoke();
+        boolean remoteHomeView = (generatedRemoteBusinessIntf == null);
+        if ( instanceKey.length == 1 && instanceKey[0] == HOME_KEY ) {
+            return remoteHomeView ? 
+                ejbHomeImpl.getEJBHome() :
+                ejbRemoteBusinessHomeImpl.getEJBHome();
+        } else {
+
+            java.rmi.Remote targetObject = null;
+            EJBObjectImpl ejbObjectImpl  = null;
+
+
+            if( remoteHomeView ) {
+                ejbObjectImpl = getEJBObjectImpl(instanceKey);
+                // In rare cases for sfsbs and entity beans, this can be null.
+                if( ejbObjectImpl != null ) {
+                    targetObject = ejbObjectImpl.getEJBObject();
+                }
+            } else {
+                ejbObjectImpl = getEJBRemoteBusinessObjectImpl(instanceKey);
+                // In rare cases for sfsbs and entity beans, this can be null.
+                if( ejbObjectImpl != null ) {
+                    targetObject = ejbObjectImpl.
+                        getEJBObject(generatedRemoteBusinessIntf);
+                }
+            }
+            
+            return targetObject;
+        }
+    }

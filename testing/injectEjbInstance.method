@@ -1,0 +1,39 @@
+protected void injectEjbInstance(EJBContextImpl context) throws Exception {
+
+        EjbBundleDescriptorImpl ejbBundle = ejbDescriptor.getEjbBundleDescriptor();
+
+        Object[] interceptorInstances = null;
+
+        if( (jcdiService != null) && jcdiService.isJCDIEnabled(ejbBundle)) {
+
+	        jcdiService.injectEJBInstance(context.getJCDIInjectionContext());
+
+            Class[] interceptorClasses = interceptorManager.getInterceptorClasses();
+
+            interceptorInstances = new Object[interceptorClasses.length];
+
+            for(int i = 0; i < interceptorClasses.length; i++) {
+                // 299 impl will instantiate and inject the instance, but PostConstruct
+                // is still our responsibility
+                interceptorInstances[i] =
+                            jcdiService.createInterceptorInstance(interceptorClasses[i], ejbBundle);
+            }
+
+            interceptorManager.initializeInterceptorInstances(interceptorInstances);
+
+        } else {
+            if (context.getEJB() != null) {
+                injectionManager.injectInstance(context.getEJB(), ejbDescriptor, false);
+            }
+
+            interceptorInstances = interceptorManager.createInterceptorInstances();
+
+            for (Object interceptorInstance : interceptorInstances) {
+				injectionManager.injectInstance(interceptorInstance,
+						ejbDescriptor, false);
+			}
+        }
+
+        context.setInterceptorInstances(interceptorInstances);
+
+    }
