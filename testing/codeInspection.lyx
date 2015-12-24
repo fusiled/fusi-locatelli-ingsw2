@@ -103,11 +103,11 @@ Time Spent
 
 \begin_layout Itemize
 Matteo M.
- Fusi: ~h
+ Fusi: ~10h
 \end_layout
 
 \begin_layout Itemize
-Matteo Locatelli: ~h
+Matteo Locatelli: ~10h
 \end_layout
 
 \begin_layout Standard
@@ -562,8 +562,7 @@ setcounter{enumi}{25}
 
 \end_inset
 
-The class or interface declarations shall be in the following order: 5108
- 5120
+The class or interface declarations shall be in the following order:
 \end_layout
 
 \begin_deeper
@@ -995,7 +994,7 @@ Blank lines and optional comments are used to separate sections (beginning
 
 \begin_deeper
 \begin_layout Itemize
-In this method, there shoudn't be the blank line at lines 1684 and 1687,
+In this method, there shouldn't be the blank line at lines 1684 and 1687,
  but there should be one at line 1690 separating the variables declaration
  section of the method from the following section.
  Other blank lines are used correctly.
@@ -2875,7 +2874,7 @@ Blank lines and optional comments are used to separate sections (beginning
 
 \begin_deeper
 \begin_layout Itemize
-In this method, there shoudn't be the blank line at lines 1804, 1807, 1808
+In this method, there shouldn't be the blank line at lines 1804, 1807, 1808
  and 1823, but there should be one at line 1798 separating the variables
  declaration section of the method from the following section.
  Optional comments are not used.
@@ -3972,12 +3971,14 @@ Declarations appear at the beginning of blocks (A block is any code surrounded
  The exception is a variable can be declared in a ‘for’ loop.
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 Declarations are done after a serie of exception checking for the sake of
  saving memory.
  In this way memory is not allocated if it will not be used.
 \end_layout
 
+\end_deeper
 \begin_layout Subsubsection*
 Method calls
 \end_layout
