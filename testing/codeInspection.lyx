@@ -364,6 +364,69 @@ setJCDIInjectionContext
 injectEjbInstance
 \end_layout
 
+\begin_layout Standard
+This method has the task to inject an instance of an EJB inside another
+ bean.
+ Firstly, the method checks if the bean that is been injected has another
+ bean inside itself (
+\emph on
+if
+\emph default
+ statement at line 1746), in this case this method is also called for the
+ bean that is injected (this method is called recursively for each bean
+ injected, statement at line 1748).
+ Then interceptor instances are created corrisponding to the classes that
+ can be intercepted by the bean when a request is made (lines 1750 - 1761).
+ Otherwise, if the condition of the
+\emph on
+ if
+\emph default
+ statement at line 1746 is false, the method checks if the context contains
+ an EJB (
+\emph on
+if
+\emph default
+ statement at line 1764), if so a new instance is injected (statement at
+ line 1765).
+ Then interceptor instances are created and injected (statements at lines
+ 1768 - 1773).
+ Finally, the interceptor instances of the context are inizialized.
+\end_layout
+
+\begin_layout Subsection
+getTargetObject
+\end_layout
+
+\begin_layout Standard
+This method returns an EJB when a remote invocation arrives.
+ Firstly, the method checks if the invocation is local or remote (line 1798).
+ If it's local (
+\emph on
+if
+\emph default
+ statement at line 1809) the implementation of the EJB is returned, otherwise
+ the remote EJB implementation is returned.
+\end_layout
+
+\begin_layout Subsection
+preInvoke
+\end_layout
+
+\begin_layout Standard
+This method firstly checks if the container is ready to accept the request
+ from a client (line 1929 - 1934).
+ Then if the invocation is missing some information, this method tries to
+ provide it (or throws an exception if it is impossible, lines 1942 - 1949).
+ After that, the container is associated to the invocation (line 1952) and
+ if the invocation has to be done synchronously, the method checks if the
+ user has the privileges to access the information he requested (lines 1958
+ - 1964).
+ Then the invocation attributes are set (lines 1969 - 1977).
+ If one of the previous operations generates an exception, it is caught,
+ the error is shown using a logger and a new unchecked exception is thrown
+ (lines 1996 - 2008).
+\end_layout
+
 \begin_layout Section
 List of issues found
 \end_layout
@@ -3291,12 +3354,11 @@ Check the liberal use of parenthesis is used to avoid operator precedence
 
 \begin_deeper
 \begin_layout Itemize
-This condition is respected in this method.
- Maybe 
+This condition is not respected in this method because the statement 
 \emph on
-boolean remoteHomeView = (generatedRemoteBusinessIntf == null);
+boolean remoteHomeView = (generatedRemoteBusinessIntf == null); 
 \emph default
-?
+at line 1798 doesn't need the parathesis.
 \end_layout
 
 \end_deeper
