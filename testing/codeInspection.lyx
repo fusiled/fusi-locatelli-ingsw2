@@ -1,0 +1,3523 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Quote
+\noindent
+\align center
+
+\size larger
+Code Inspection
+\end_layout
+
+\begin_layout Quote
+\noindent
+\align center
+Matteo Maria Fusi, Matteo Locatelli
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Document version
+\end_layout
+
+\begin_layout Itemize
+1.0 - 5/1/2016: first release
+\end_layout
+
+\begin_layout Subsection
+Time Spent
+\end_layout
+
+\begin_layout Itemize
+Matteo M.
+ Fusi: ~h
+\end_layout
+
+\begin_layout Itemize
+Matteo Locatelli: ~h
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Classes assigned
+\end_layout
+
+\begin_layout Standard
+Four methods have been assigned to us, all belonging to the BaseContainer
+ class, located at 
+\emph on
+appserver/ejb/ejb-container/src/main/java/com/sun/ejb/containers/BaseContainer.ja
+va.
+ 
+\emph default
+The methods that we analyzed are the following:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Name: 
+\series default
+createEjbInstanceAndContext( )
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Start line: 
+\series default
+1682
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+End line: 
+\series default
+1729
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Name: 
+\series default
+injectEjbInstance( EJBContextImpl context )
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Start line: 
+\series default
+1740
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+End line: 
+\series default
+1778
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Name: 
+\series default
+getTargetObject( byte [ ] instanceKey , String generatedRemoteBusinessIntf
+ )
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Start line: 
+\series default
+1794
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+End line: 
+\series default
+1826
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Name: 
+\series default
+preInvoke( EjbInvocation inv )
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Start line: 
+\series default
+1922
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+End line: 
+\series default
+2009
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Functional role of the assigned set of classes
+\end_layout
+
+\begin_layout Subsection
+createEjbInstanceAndContext
+\end_layout
+
+\begin_layout Standard
+This method, as its name explains, has the task to create an EJB (Enterprise
+ Java Bean) instance and its context.
+ When an EJB is needed the 
+\emph on
+invocationManager
+\emph default
+ calls the 
+\emph on
+preInvoke
+\emph default
+ method, that manages all the tasks that have to be done before the EJB
+ is actually created 
+\emph on
+(invocationManager.preInvoke(ejbInv);
+\emph default
+ statement at line 1693).
+ After that, the method checks if the java beans needs another bean injected
+ (the 
+\emph on
+if
+\emph default
+ statement at line 1695), in this case an EJB with injection is created
+ (the 
+\emph on
+then
+\emph default
+ block at lines 1696-1697), otherwise a 
+\begin_inset Quotes eld
+\end_inset
+
+normal
+\begin_inset Quotes erd
+\end_inset
+
+ java bean is created without any beans injected into it (the 
+\emph on
+else
+\emph default
+ block at lines 1699-1701).
+ If the invocation has not been done correctly an exception is generated
+ and it is caught by the catch block at lines 1705-1706 and an 
+\emph on
+InvocationTargetException
+\emph default
+ is thrown.
+ Then, if the invocation has been done correctly (if statement at line 1709)
+ the method 
+\emph on
+postInvoke
+\emph default
+ is called (line 1711) and it manages all the tasks that have to be done
+ after the invocation of the EJB.
+ If the calling of the 
+\emph on
+postInvoke
+\emph default
+ method has not been done right, an exception is thrown and caught by the
+ 
+\emph on
+catch
+\emph default
+ block at lines 1713-1719.
+ Inside this 
+\emph on
+catch
+\emph default
+ block, if the variable 
+\emph on
+success
+\emph default
+ has value true (meaning that the invocation of the EJB was correct) an
+ 
+\emph on
+InvocationTargetException
+\emph default
+ is thrown (line 1715), otherwise a log is shown (line 1717) to evidence
+ the presence of an error of the 
+\emph on
+postInovke
+\emph default
+ calling.
+ After that, the context of the EJB is created using the method 
+\emph on
+constructEJBContextImpl 
+\emph default
+(line 1723) and if the java bean has another bean injected (
+\emph on
+if
+\emph default
+ statement at line 1724) the injection context is created using the method
+ 
+\emph on
+setJCDIInjectionContext 
+\emph default
+(line 1725).
+ Finally the context of the EJB is returned (line 1728).
+\end_layout
+
+\begin_layout Subsection
+injectEjbInstance
+\end_layout
+
+\begin_layout Section
+List of issues found
+\end_layout
+
+\begin_layout Standard
+In this section the issues found in the method that were assigned to us
+ are reported, following the checklist in the assignment track.
+ Firstly there is an analysis concerning the hole class, then the issues
+ of every method are described.
+\end_layout
+
+\begin_layout Subsection
+Class general analysis
+\end_layout
+
+\begin_layout Subsubsection*
+Java Source Files
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[20.]
+\backslash
+setcounter{enumi}{20}
+\end_layout
+
+\end_inset
+
+Each Java source file contains a single public class or interface.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is not respected because there are three public classes inside
+ the analyzed source files: the 
+\emph on
+BaseContainer
+\emph default
+ class defined at line 182, the 
+\emph on
+PreInvokeException
+\emph default
+ class defined at line 4998 and the 
+\emph on
+ContainerInfo
+\emph default
+ class defined at line 5010.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+The public class is the first class or interface in the file.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected because the first class in the file is a public
+ class, but, as said in the previous point, there are multiple public classes
+ inside this file.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the external program interfaces are implemented consistently
+ with what is described in the javadoc.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected beacuse every method of the used external interfaces
+ is implemented correctly.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the javadoc is complete (i.e., it covers all classes and files
+ part of the set of classes assigned to you).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is not respected, because a lot of methods implemented in
+ this file are missing the javadoc.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Package and Import Statements
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[24.]
+\backslash
+setcounter{enumi}{24}
+\end_layout
+
+\end_inset
+
+If any package statements are needed, they should be the first non-comment
+ statements.
+ Import statements follow.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Class and Interface Declarations
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[25.]
+\backslash
+setcounter{enumi}{25}
+\end_layout
+
+\end_inset
+
+The class or interface declarations shall be in the following order: 5108
+ 5120
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+A.
+ class/interface documentation comment 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+B.
+ class or interface statement 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+C.
+ class/interface implementation comment, if necessary 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+D.
+ class (static) variables 
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+a.
+ first public class variables 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+b.
+ next protected class variables 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+c.
+ next package level (no access modifier) 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+d.
+ last private class variables 
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+E.
+ instance variables 
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+a.
+ first public instance variables 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+e.
+ next protected instance variables 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+f.
+ next package level (no access modifier) 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+g.
+ last private instance variables 
+\end_layout
+
+\end_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+F.
+ constructors 
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+G.
+ methods
+\end_layout
+
+\begin_layout Itemize
+There are eight classes in this file:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+BaseContainer
+\emph default
+: point C is not respected because there isn't an implementation comment.
+ Points D and E are not respected because class variables are not defined
+ in that order.
+ Other points are respected.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+JndiInfo
+\emph default
+: points A and C are not respected because there aren't comments explaining
+ the functionalities of this class.
+ Point from D to G are not respected because the constructor and the methods
+ are declared before the variables.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+PreInvokeException
+\emph default
+: point C is not respected because there isn't an implementation comment.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+ContainerInfo
+\emph default
+: point C is not respected because there isn't an implementation comment.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+BeanContext
+\emph default
+: points A and C are not respected.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+CallFlowInfoImpl
+\emph default
+: points A and C are not respected.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+RemoteBusinessIntfInfo
+\emph default
+: points A and C are not respected.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+SafeProperties
+\emph default
+: points A and C are not respected.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Methods are grouped by functionality rather than by scope or accessibility.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the code is free of duplicates, long methods, big classes, breaking
+ encapsulation, as well as if coupling and cohesion are adequate.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The main issue about this point is that the classes and the mothods are
+ too long, for example the BaseContainer class is almost 5000 lines long
+ and its constructor is almost 300 lines long.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+createEjbInstanceAndContext
+\end_layout
+
+\begin_layout Subsubsection*
+Naming Conventions
+\end_layout
+
+\begin_layout Enumerate
+All class names, interface names, method names, class variables, method
+ variables, and constants used should have meaningful names and do what
+ the name suggests.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+throws Exception (line 1682): 
+\emph on
+Exception
+\emph default
+ is not a meaningful name, the exception should have a name that represents
+ what type of exception the method throws.
+\end_layout
+
+\begin_layout Itemize
+Object instance (line 1686): this Object variable should have a name that
+ explains its functionalities, 
+\emph on
+instance 
+\emph default
+is a too much generic word.
+\end_layout
+
+\begin_layout Itemize
+boolean success (line 1690): 
+\emph on
+success
+\emph default
+ is too generic, it would be useful to know what success is about.
+\end_layout
+
+\begin_layout Itemize
+Throwable th (line 1705): 
+\emph on
+th
+\emph default
+ isn't a meaningful name, the throwable object should have a name that represent
+s the functionality of the object.
+\end_layout
+
+\begin_layout Itemize
+Throwable t (line 1713): 
+\emph on
+t
+\emph default
+ isn't a meaningful name, the throwable object should have a name that represent
+s the functionality of the object.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If one character variables are used, they are used only for temporary “throwaway
+” variables, such as those used in for loops.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Throwable t (line 1713): 
+\emph on
+t
+\emph default
+ is a name for a Throwable variable that is only used twice, but should
+ have a meaningful name as explained in the point above.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Class names are nouns, in mixed case, with the first letter of each word
+ in capitalized.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Interface names should be capitalized like classes.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Method names should be verbs, with the first letter of each addition word
+ capitalized.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Class variables, also called attributes, are mixed case, but might begin
+ with an underscore (‘_’) followed by a lowercase first letter.
+ All the remaining words in the variable name have their first letter capitalize
+d.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Constants are declared using all uppercase with words separated by an underscore.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Indention
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[8.]
+\backslash
+setcounter{enumi}{8}
+\end_layout
+
+\end_inset
+
+Three or four spaces are used for indentation and done so consistently.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind, because always four spaces
+ are used for indentation.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No tabs are used to indent.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind, because only spaces are
+ used for indentation.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Braces
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[10.]
+\backslash
+setcounter{enumi}{10}
+\end_layout
+
+\end_inset
+
+Consistent bracing style is used, either the preferred “Allman” style (first
+ brace goes underneath the opening block) or the “Kernighan and Ritchie”
+ style (first brace is on the same line of the instruction that opens the
+ new block).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind, because the “Kernighan
+ and Ritchie” style is always used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+All if, while, do-while, try-catch, and for statements that have only one
+ statement to execute are surrounded by curly braces.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+File Organization
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[12.]
+\backslash
+setcounter{enumi}{12}
+\end_layout
+
+\end_inset
+
+Blank lines and optional comments are used to separate sections (beginning
+ comments, package/import statements, class/interface declarations which
+ include class variable/attributes declarations, constructors, and methods).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method, there shoudn't be the blank line at lines 1684 and 1687,
+ but there should be one at line 1690 separating the variables declaration
+ section of the method from the following section.
+ Other blank lines are used correctly.
+ Optional comments are not used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Where practical, line length does not exceed 80 characters.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method, each line is shorter than 80 characters.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+When line length must exceed 80 characters, it does NOT exceed 120 characters.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There isn't any error of this kind because the previous point is respected.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Wrapping Lines
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[15.]
+\backslash
+setcounter{enumi}{15}
+\end_layout
+
+\end_inset
+
+Line break occurs after a comma or an operator.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Higher-level breaks are used.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A new statement is aligned with the beginning of the expression at the same
+ level as the previous line.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Comments
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[18.]
+\backslash
+setcounter{enumi}{18}
+\end_layout
+
+\end_inset
+
+Comments are used to adequately explain what the class, interface, methods,
+ and blocks of code are doing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is not respected at all, because this method lacks comments
+ useful to understand the general functionality of the method and what blacks
+ of code (that aren't easy to understand) are doing.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Commented out code contains a reason for being commented out and a date
+ it can be removed from the source file if determined it is no longer needed
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected because there isn't commented out code in this
+ method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Inizialization and declarations
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[28.]
+\backslash
+setcounter{enumi}{28}
+\end_layout
+
+\end_inset
+
+Check that variables and class members are of the correct type.
+ Check that they have the right visibility (public/private/protected).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method, because all the variables declared
+ are of the correct type.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that variables are declared in the proper scope.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The 
+\emph on
+ejbBundle
+\emph default
+ variable declared at line 1683 should be declared inside the scope of the
+ try block that starts at line 1691, because the 
+\emph on
+ejbBundle
+\emph default
+ variable is used only inside this try block.
+\end_layout
+
+\begin_layout Itemize
+The 
+\emph on
+ctx
+\emph default
+ variable declared at line 1688 should be declared inside the scope of the
+ try block that starts at line 1691, because the 
+\emph on
+ctx
+\emph default
+ variable is used only inside this try block.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that constructors are called when a new object is desired.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all object references are initialized before use.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Variables are initialized where they are declared, unless dependent upon
+ a computation.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Declarations appear at the beginning of blocks (A block is any code surrounded
+ by curly braces “{“ and “}” ).
+ The exception is a variable can be declared in a ‘for’ loop.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The variable 
+\emph on
+contextImpl 
+\emph default
+isn't declared at the beginning of the block, so it should be declared at
+ the begginning of the method where other variables such as 
+\emph on
+ejbBundle
+\emph default
+ and 
+\emph on
+jcdiCtx
+\emph default
+ are declared.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Method calls
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[34.]
+\backslash
+setcounter{enumi}{34}
+\end_layout
+
+\end_inset
+
+Check that parameters are presented in the correct order.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because all the methods are called
+ correctly.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the correct method is being called, or should it be a different
+ method with a similar name.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The method 
+\emph on
+setJCDIInjectionContext(jcdiCtx); 
+\emph default
+at line 1725 doesn't seem to exist in the javadoc of the used version of
+ Glassfish.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that method returned values are used properly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Arrays
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[37.]
+\backslash
+setcounter{enumi}{37}
+\end_layout
+
+\end_inset
+
+Check that there are no off-by-one errors in array indexing (that is, all
+ required array elements are correctly accessed through the index).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no array is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all array (or other collection) indexes have been prevented from
+ going out-of-bounds.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no array is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that constructors are called when a new array item is desired.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no array is used.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Object Comparison
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[40.]
+\backslash
+setcounter{enumi}{40}
+\end_layout
+
+\end_inset
+
+Check that all objects (including Strings) are compared with 
+\begin_inset Quotes eld
+\end_inset
+
+equals
+\begin_inset Quotes erd
+\end_inset
+
+ and not with 
+\begin_inset Quotes eld
+\end_inset
+
+==
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because the 
+\begin_inset Quotes eld
+\end_inset
+
+==
+\begin_inset Quotes erd
+\end_inset
+
+ operator isn't used.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Output format
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[41.]
+\backslash
+setcounter{enumi}{41}
+\end_layout
+
+\end_inset
+
+Check that displayed output is free of spelling and grammatical errors.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because the only output is 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ produced by the logger at line 1717
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that error messages are comprehensive and provide guidance as to how
+ to correct the problem.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is not respected, because the logger 
+\emph on
+_logger.log(Level.WARNING, "", t)
+\emph default
+ at line 1717 should explain what has generated a warning, so instead of
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ output there should be a message describing what type of error occured.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the output is formatted correctly in terms of line stepping and
+ spacing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because the only output is 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ produced by the logger at line 1717
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Computation, Comparisons and Assignments
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[44.]
+\backslash
+setcounter{enumi}{44}
+\end_layout
+
+\end_inset
+
+Check that the implementation avoids 
+\begin_inset Quotes eld
+\end_inset
+
+brutish programming
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because the method doesn't contain
+ any 
+\begin_inset Quotes eld
+\end_inset
+
+brutish
+\begin_inset Quotes erd
+\end_inset
+
+ block of code.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check order of computation/evaluation, operator precedence and parenthesizing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check the liberal use of parenthesis is used to avoid operator precedence
+ problems.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+in the istruction 
+\emph on
+if( (jcdiService != null) && jcdiService.isJCDIEnabled(ejbBundle)) 
+\emph default
+at line 1695 the paranthesis sorrounding the condition 
+\emph on
+jcdiService != null 
+\emph default
+aren't necessary.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all denominators of a division are prevented from being zero.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there aren't divisions.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that integer arithmetic, especially division, are used appropriately
+ to avoid causing unexpected truncation/rounding.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there aren't arithmetic
+ operations
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the comparison and Boolean operators are correct.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check throw-catch expressions, and check that the error condition is actually
+ legitimate.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the code is free of any implicit type conversions.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The instruction 
+\emph on
+EjbBundleDescriptorImpl
+\emph default
+ 
+\emph on
+ejbBundle = ejbDescriptor.getEjbBundleDescriptor();
+\emph default
+ at line 1683 contains an implicit type conversion from type 
+\emph on
+EjbBundleDescriptor
+\emph default
+ to type 
+\emph on
+EjbBundleDescriptorImpl
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Exceptions
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[52.]
+\backslash
+setcounter{enumi}{52}
+\end_layout
+
+\end_inset
+
+Check that the relevant exceptions are caught.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the appropriate action are taken for each catch block.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because every catch block is
+ corrected.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Flow of Control
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[54.]
+\backslash
+setcounter{enumi}{54}
+\end_layout
+
+\end_inset
+
+In a switch statement, check that all cases are addressed by break or return.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there is no switch statement.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all switch statements have a default branch.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there is no switch statement.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all loops are correctly formed, with the appropriate initialization,
+ increment and termination expressions.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there are no loops.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Files
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[57.]
+\backslash
+setcounter{enumi}{57}
+\end_layout
+
+\end_inset
+
+Check that all files are properly declared and opened.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all files are closed properly, even in the case of an error.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that EOF conditions are detected and handled correctly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all file exceptions are caught and dealt with accordingly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+injectEjbInstance
+\end_layout
+
+\begin_layout Subsubsection*
+Naming Conventions
+\end_layout
+
+\begin_layout Enumerate
+All class names, interface names, method names, class variables, method
+ variables, and constants used should have meaningful names and do what
+ the name suggests.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+throws Exception (line 1740): 
+\emph on
+Exception
+\emph default
+ is not a meaningful name, the exception should have a name that represents
+ what type of exception the method throws.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If one character variables are used, they are used only for temporary “throwaway
+” variables, such as those used in for loops.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Class names are nouns, in mixed case, with the first letter of each word
+ in capitalized.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Interface names should be capitalized like classes.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Method names should be verbs, with the first letter of each addition word
+ capitalized.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Class variables, also called attributes, are mixed case, but might begin
+ with an underscore (‘_’) followed by a lowercase first letter.
+ All the remaining words in the variable name have their first letter capitalize
+d.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Constants are declared using all uppercase with words separated by an underscore.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind, because constants aren't
+ used.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Indention
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[8.]
+\backslash
+setcounter{enumi}{8}
+\end_layout
+
+\end_inset
+
+Three or four spaces are used for indentation and done so consistently.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method this condition is not respected, because the indentation
+ is not correct, for example at line 1742 the instruction should be indented
+ with 4 spaces but it is indented with 8 spaces and at line 1758 too much
+ spaces are used.
+ Furthermore, at lines 1748, 1771, 1772 and 1773 tabs are used to indent
+ instructions.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No tabs are used to indent.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method this condition is not respected because at lines 1748, 1771,
+ 1772 and 1773 tabs are used to indent instructions.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Braces
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[10.]
+\backslash
+setcounter{enumi}{10}
+\end_layout
+
+\end_inset
+
+Consistent bracing style is used, either the preferred “Allman” style (first
+ brace goes underneath the opening block) or the “Kernighan and Ritchie”
+ style (first brace is on the same line of the instruction that opens the
+ new block).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind, because the “Kernighan
+ and Ritchie” style is always used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+All if, while, do-while, try-catch, and for statements that have only one
+ statement to execute are surrounded by curly braces.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+File Organization
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[12.]
+\backslash
+setcounter{enumi}{12}
+\end_layout
+
+\end_inset
+
+Blank lines and optional comments are used to separate sections (beginning
+ comments, package/import statements, class/interface declarations which
+ include class variable/attributes declarations, constructors, and methods).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method this condition is not respected because a blank line is used
+ to separate almost every instruction from the next one.
+ All these blank lines should be removed, the only correct one is the one
+ at line 1745 that is used to separate the declaration block from the rest
+ of the code.
+ Optional comments are not used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Where practical, line length does not exceed 80 characters.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method, each line is shorter than 80 characters.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+When line length must exceed 80 characters, it does NOT exceed 120 characters.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There isn't any error of this kind because the previous point is respected.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Wrapping Lines
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[15.]
+\backslash
+setcounter{enumi}{15}
+\end_layout
+
+\end_inset
+
+Line break occurs after a comma or an operator.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Higher-level breaks are used.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A new statement is aligned with the beginning of the expression at the same
+ level as the previous line.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Comments
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[18.]
+\backslash
+setcounter{enumi}{18}
+\end_layout
+
+\end_inset
+
+Comments are used to adequately explain what the class, interface, methods,
+ and blocks of code are doing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is not respected at all, because this method lacks comments
+ useful to understand the general functionality of the method and what blacks
+ of code (that aren't easy to understand) are doing.
+ The only comments at lines 1755 and 1756 are not helpful to understand
+ what the next block of code does.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Commented out code contains a reason for being commented out and a date
+ it can be removed from the source file if determined it is no longer needed
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected because there isn't commented out code in this
+ method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Inizialization and declarations
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[28.]
+\backslash
+setcounter{enumi}{28}
+\end_layout
+
+\end_inset
+
+Check that variables and class members are of the correct type.
+ Check that they have the right visibility (public/private/protected).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method, because all the variables declared
+ are of the correct type.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that variables are declared in the proper scope.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method, because all the variables are
+ declared in the proper scope.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that constructors are called when a new object is desired.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all object references are initialized before use.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Variables are initialized where they are declared, unless dependent upon
+ a computation.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Declarations appear at the beginning of blocks (A block is any code surrounded
+ by curly braces “{“ and “}” ).
+ The exception is a variable can be declared in a ‘for’ loop.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The declaration of the 
+\emph on
+interceptorClasses
+\emph default
+ variable at line 1750 should be moved to the beginning of the block at
+ line 1747.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Method calls
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[34.]
+\backslash
+setcounter{enumi}{34}
+\end_layout
+
+\end_inset
+
+Check that parameters are presented in the correct order.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because all the methods are called
+ correctly.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the correct method is being called, or should it be a different
+ method with a similar name.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The method 
+\emph on
+setInterceptorInstances 
+\emph default
+at line 1776 doesn't seem to exist in the javadoc of the used version of
+ Glassfish.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that method returned values are used properly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Arrays
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[37.]
+\backslash
+setcounter{enumi}{37}
+\end_layout
+
+\end_inset
+
+Check that there are no off-by-one errors in array indexing (that is, all
+ required array elements are correctly accessed through the index).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all array (or other collection) indexes have been prevented from
+ going out-of-bounds.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that constructors are called when a new array item is desired.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Object Comparison
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[40.]
+\backslash
+setcounter{enumi}{40}
+\end_layout
+
+\end_inset
+
+Check that all objects (including Strings) are compared with 
+\begin_inset Quotes eld
+\end_inset
+
+equals
+\begin_inset Quotes erd
+\end_inset
+
+ and not with 
+\begin_inset Quotes eld
+\end_inset
+
+==
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because the 
+\begin_inset Quotes eld
+\end_inset
+
+==
+\begin_inset Quotes erd
+\end_inset
+
+ operator isn't used.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Output format
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[41.]
+\backslash
+setcounter{enumi}{41}
+\end_layout
+
+\end_inset
+
+Check that displayed output is free of spelling and grammatical errors.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because it doesn't have any displayed
+ output.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that error messages are comprehensive and provide guidance as to how
+ to correct the problem.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because it doesn't have any displayed
+ output.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the output is formatted correctly in terms of line stepping and
+ spacing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because it doesn't have any displayed
+ output.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Computation, Comparisons and Assignments
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[44.]
+\backslash
+setcounter{enumi}{44}
+\end_layout
+
+\end_inset
+
+Check that the implementation avoids 
+\begin_inset Quotes eld
+\end_inset
+
+brutish programming
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because the method doesn't contain
+ any 
+\begin_inset Quotes eld
+\end_inset
+
+brutish
+\begin_inset Quotes erd
+\end_inset
+
+ block of code.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check order of computation/evaluation, operator precedence and parenthesizing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check the liberal use of parenthesis is used to avoid operator precedence
+ problems.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+in the istruction 
+\emph on
+if( (jcdiService != null) && jcdiService.isJCDIEnabled(ejbBundle)) 
+\emph default
+at line 1746 the paranthesis sorrounding the condition 
+\emph on
+jcdiService != null 
+\emph default
+aren't necessary.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all denominators of a division are prevented from being zero.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there aren't divisions.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that integer arithmetic, especially division, are used appropriately
+ to avoid causing unexpected truncation/rounding.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there aren't arithmetic
+ operations.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the comparison and Boolean operators are correct.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check throw-catch expressions, and check that the error condition is actually
+ legitimate.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there isn't any throw-catch
+ expression.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the code is free of any implicit type conversions.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The instruction 
+\emph on
+EjbBundleDescriptorImpl
+\emph default
+ 
+\emph on
+ejbBundle = ejbDescriptor.getEjbBundleDescriptor();
+\emph default
+ at line 1742 contains an implicit type conversion from type 
+\emph on
+EjbBundleDescriptor
+\emph default
+ to type 
+\emph on
+EjbBundleDescriptorImpl
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+The instruction 
+\emph on
+interceptorInstances[i] = jcdiService.createInterceptorInstance(interceptorClasse
+s[i], ejbBundle);
+\emph default
+ at lines 1757 and 1758 contains an implicit type conversion from type 
+\emph on
+EjbBundleDescriptor
+\emph default
+ to type 
+\emph on
+BundleDescriptor
+\emph default
+ of the variable 
+\emph on
+ejbBundle
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+The instruction 
+\emph on
+injectionManager.injectInstance(context.getEJB(), ejbDescriptor, false);
+\emph default
+ at line 1765 contains an implicit type conversion from type 
+\emph on
+EjbDescriptor
+\emph default
+ to type 
+\emph on
+JndiNameEnvironment
+\emph default
+ of the variable 
+\emph on
+ejbDescriptor
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+The instruction 
+\emph on
+injectionManager.injectInstance(interceptorInstance, ejbDescriptor, false);
+\emph default
+ at lines 1771 and 1772 contains an implicit type conversion from type 
+\emph on
+EjbDescriptor
+\emph default
+ to type 
+\emph on
+JndiNameEnvironment
+\emph default
+ of the variable 
+\emph on
+ejbDescriptor
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Exceptions
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[52.]
+\backslash
+setcounter{enumi}{52}
+\end_layout
+
+\end_inset
+
+Check that the relevant exceptions are caught.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the appropriate action are taken for each catch block.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there isn't any catch
+ block.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Flow of Control
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[54.]
+\backslash
+setcounter{enumi}{54}
+\end_layout
+
+\end_inset
+
+In a switch statement, check that all cases are addressed by break or return.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there is no switch statement.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all switch statements have a default branch.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there is no switch statement.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all loops are correctly formed, with the appropriate initialization,
+ increment and termination expressions.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Files
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[57.]
+\backslash
+setcounter{enumi}{57}
+\end_layout
+
+\end_inset
+
+Check that all files are properly declared and opened.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all files are closed properly, even in the case of an error.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that EOF conditions are detected and handled correctly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all file exceptions are caught and dealt with accordingly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+getTargetObject
+\end_layout
+
+\begin_layout Subsubsection*
+Naming Conventions
+\end_layout
+
+\begin_layout Enumerate
+All class names, interface names, method names, class variables, method
+ variables, and constants used should have meaningful names and do what
+ the name suggests.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If one character variables are used, they are used only for temporary “throwaway
+” variables, such as those used in for loops.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Class names are nouns, in mixed case, with the first letter of each word
+ in capitalized.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Interface names should be capitalized like classes.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Method names should be verbs, with the first letter of each addition word
+ capitalized.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Class variables, also called attributes, are mixed case, but might begin
+ with an underscore (‘_’) followed by a lowercase first letter.
+ All the remaining words in the variable name have their first letter capitalize
+d.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Constants are declared using all uppercase with words separated by an underscore.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Indention
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[8.]
+\backslash
+setcounter{enumi}{8}
+\end_layout
+
+\end_inset
+
+Three or four spaces are used for indentation and done so consistently.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind, because always four spaces
+ are used for indentation.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+No tabs are used to indent.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind, because only spaces are
+ used for indentation.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Braces
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[10.]
+\backslash
+setcounter{enumi}{10}
+\end_layout
+
+\end_inset
+
+Consistent bracing style is used, either the preferred “Allman” style (first
+ brace goes underneath the opening block) or the “Kernighan and Ritchie”
+ style (first brace is on the same line of the instruction that opens the
+ new block).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind, because the “Kernighan
+ and Ritchie” style is always used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+All if, while, do-while, try-catch, and for statements that have only one
+ statement to execute are surrounded by curly braces.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method there isn't any error of this kind.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+File Organization
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[12.]
+\backslash
+setcounter{enumi}{12}
+\end_layout
+
+\end_inset
+
+Blank lines and optional comments are used to separate sections (beginning
+ comments, package/import statements, class/interface declarations which
+ include class variable/attributes declarations, constructors, and methods).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method, there shoudn't be the blank line at lines 1804, 1807, 1808
+ and 1823, but there should be one at line 1798 separating the variables
+ declaration section of the method from the following section.
+ Optional comments are not used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Where practical, line length does not exceed 80 characters.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+In this method, each line is shorter than 80 characters.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+When line length must exceed 80 characters, it does NOT exceed 120 characters.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+There isn't any error of this kind because the previous point is respected.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Wrapping Lines
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[15.]
+\backslash
+setcounter{enumi}{15}
+\end_layout
+
+\end_inset
+
+Line break occurs after a comma or an operator.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The line break at line 1819 should not be used.
+ If the instructions at lines 1819 and 1820 were written on a single line
+ the length of the line would be less than 80 characters so it would be
+ right.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Higher-level breaks are used.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A new statement is aligned with the beginning of the expression at the same
+ level as the previous line.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Comments
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[18.]
+\backslash
+setcounter{enumi}{18}
+\end_layout
+
+\end_inset
+
+Comments are used to adequately explain what the class, interface, methods,
+ and blocks of code are doing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is not completely respected, because this method lacks comments
+ useful to understand what some blacks of code are doing.
+ The only two comments used are at lines 1811 and 1817; they help to understand
+ the next statements but other lines of code are unexplained.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Commented out code contains a reason for being commented out and a date
+ it can be removed from the source file if determined it is no longer needed
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected because there isn't commented out code in this
+ method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Inizialization and declarations
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[28.]
+\backslash
+setcounter{enumi}{28}
+\end_layout
+
+\end_inset
+
+Check that variables and class members are of the correct type.
+ Check that they have the right visibility (public/private/protected).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method, because all the variables declared
+ are of the correct type.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that variables are declared in the proper scope.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that constructors are called when a new object is desired.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all object references are initialized before use.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Variables are initialized where they are declared, unless dependent upon
+ a computation.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Declarations appear at the beginning of blocks (A block is any code surrounded
+ by curly braces “{“ and “}” ).
+ The exception is a variable can be declared in a ‘for’ loop.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The variable 
+\emph on
+remoteHomeView 
+\emph default
+isn't declared at the beginning of the block, so it should be declared at
+ the begginning of the method before the 
+\emph on
+externalPreInvoke();
+\emph default
+ statement.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Method calls
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[34.]
+\backslash
+setcounter{enumi}{34}
+\end_layout
+
+\end_inset
+
+Check that parameters are presented in the correct order.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because all the methods are called
+ correctly.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the correct method is being called, or should it be a different
+ method with a similar name.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Controllare 
+\emph on
+ejbObjectImpl = getEJBObjectImpl(instanceKey); 
+\emph default
+e 
+\emph on
+ejbObjectImpl = getEJBRemoteBusinessObjectImpl(instanceKey);
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that method returned values are used properly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Arrays
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[37.]
+\backslash
+setcounter{enumi}{37}
+\end_layout
+
+\end_inset
+
+Check that there are no off-by-one errors in array indexing (that is, all
+ required array elements are correctly accessed through the index).
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all array (or other collection) indexes have been prevented from
+ going out-of-bounds.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that constructors are called when a new array item is desired.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Object Comparison
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[40.]
+\backslash
+setcounter{enumi}{40}
+\end_layout
+
+\end_inset
+
+Check that all objects (including Strings) are compared with 
+\begin_inset Quotes eld
+\end_inset
+
+equals
+\begin_inset Quotes erd
+\end_inset
+
+ and not with 
+\begin_inset Quotes eld
+\end_inset
+
+==
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is not respected in this method because the 
+\begin_inset Quotes eld
+\end_inset
+
+==
+\begin_inset Quotes erd
+\end_inset
+
+ operator is used at lines 1798 (
+\emph on
+boolean remoteHomeView = (generatedRemoteBusinessIntf == null);
+\emph default
+ statement) and 1799 (
+\emph on
+if ( instanceKey.length == 1 && instanceKey[0] == HOME_KEY )
+\emph default
+ statement).
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Output format
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[41.]
+\backslash
+setcounter{enumi}{41}
+\end_layout
+
+\end_inset
+
+Check that displayed output is free of spelling and grammatical errors.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected because this method doesn't produce any output.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that error messages are comprehensive and provide guidance as to how
+ to correct the problem.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected because this method doesn't produce any output.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the output is formatted correctly in terms of line stepping and
+ spacing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected because this method doesn't produce any output.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Computation, Comparisons and Assignments
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[44.]
+\backslash
+setcounter{enumi}{44}
+\end_layout
+
+\end_inset
+
+Check that the implementation avoids 
+\begin_inset Quotes eld
+\end_inset
+
+brutish programming
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because the method doesn't contain
+ any 
+\begin_inset Quotes eld
+\end_inset
+
+brutish
+\begin_inset Quotes erd
+\end_inset
+
+ block of code.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check order of computation/evaluation, operator precedence and parenthesizing.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check the liberal use of parenthesis is used to avoid operator precedence
+ problems.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+ Maybe 
+\emph on
+boolean remoteHomeView = (generatedRemoteBusinessIntf == null);
+\emph default
+?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all denominators of a division are prevented from being zero.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there aren't divisions.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that integer arithmetic, especially division, are used appropriately
+ to avoid causing unexpected truncation/rounding.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there aren't arithmetic
+ operations
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the comparison and Boolean operators are correct.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check throw-catch expressions, and check that the error condition is actually
+ legitimate.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there isn't any throw-catch
+ expression.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the code is free of any implicit type conversions.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The instructions 
+\emph on
+ejbHomeImpl.getEJBHome()
+\emph default
+ at line 1801 and 
+\emph on
+ejbRemoteBusinessHomeImpl.getEJBHome()
+\emph default
+ at line 1802 contain an implicit type conversion from type 
+\emph on
+EJBHomeImpl 
+\emph default
+(the type returned by the method 
+\emph on
+getEJBHome()
+\emph default
+) to type 
+\emph on
+Remote
+\emph default
+ (the type returned by the currently inspected method).
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Exceptions
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[52.]
+\backslash
+setcounter{enumi}{52}
+\end_layout
+
+\end_inset
+
+Check that the relevant exceptions are caught.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is not respected in this method because the 
+\emph on
+NoSuchObjectLocalException
+\emph default
+ exception specified in the JavaDoc of the mothod isn't neither caught nor
+ thrown.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that the appropriate action are taken for each catch block.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there isn't any catch
+ block.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Flow of Control
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[54.]
+\backslash
+setcounter{enumi}{54}
+\end_layout
+
+\end_inset
+
+In a switch statement, check that all cases are addressed by break or return.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there is no switch statement.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all switch statements have a default branch.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there is no switch statement.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all loops are correctly formed, with the appropriate initialization,
+ increment and termination expressions.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because there are no loops.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection*
+Files
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+[57.]
+\backslash
+setcounter{enumi}{57}
+\end_layout
+
+\end_inset
+
+Check that all files are properly declared and opened.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all files are closed properly, even in the case of an error.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that EOF conditions are detected and handled correctly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Check that all file exceptions are caught and dealt with accordingly.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This condition is respected in this method because no file is used.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
