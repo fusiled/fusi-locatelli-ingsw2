@@ -2618,6 +2618,204 @@ This component contains all the data needed by the core, such as the zone
 \end_layout
 
 \begin_layout Subsection
+Database structure
+\end_layout
+
+\begin_layout Standard
+The mytaxi service uses a database to store data, in order to be able to
+ retrieve all the needed information during the execution of the service
+ and to guarantee its right functionality.
+ The database of our application contains three tables:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+TaxiDriver:
+\series default
+ this table contains all the useful information about taxi drivers.
+ It's important to notice that in this table there is also the current zone
+ in which the taxi driver is located; this information is used by the system
+ core to know the taxi driver's position when a customer makes a request.
+ The fields of this table are:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+ID
+\emph default
+: the identification code of the taxi driver (this is the primary key of
+ the table).
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Name
+\emph default
+: the name of the taxi driver.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Surname
+\emph default
+: the surname of the taxi driver.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+BirthDate
+\emph default
+: the birthdate of the taxi driver.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Address
+\emph default
+: the address of the taxi driver.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+License
+\emph default
+: contains information about the type of driving license tha taxi driver
+ has.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+TaxiNumberPlate
+\emph default
+: the numberplate of the taxi associated to the taxi driver.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+CurrentZone
+\emph default
+: the zone in which the taxi driver is located at the moment.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Zone: 
+\series default
+this table contains all the zones in which the city is divided.
+ In this way if a zone is added or deleted it is only necessary to change
+ the content of this table to guarantee the right functionality of the applicati
+on.
+ The fields of this table are:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+ZoneID
+\emph default
+: the identification code of the zone (this is the primary key of the table).
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Width
+\emph default
+: the (approximated) width of the zone in kilometres.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Height
+\emph default
+: the (approximated height of the zone in kilometres.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Performance: 
+\series default
+this table contains all the information of the performances made by taxi
+ drivers.
+ A new performance is added to this table only when the ride is completed.
+ The fields of this table are:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\emph on
+TaxiDriverID
+\emph default
+: the ID of the taxi driver that made the performance.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Date
+\emph default
+: the date in which the performance is made.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+StartingTime
+\emph default
+: the hour at which the performance started (this field, with the 
+\emph on
+TaxiDriverID
+\emph default
+ and 
+\emph on
+Date
+\emph default
+ fields are the primary key of this table).
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+FinishTime
+\emph default
+: the hour at which the performance finished.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+StartingZone
+\emph default
+: the zone in which the performance is started.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+FinishZone
+\emph default
+: the zone in which the performance is finished.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
 Deployment view
 \end_layout
 
