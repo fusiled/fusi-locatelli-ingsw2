@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
   <help_text>// Uncomment the following line to change the fontsize and font:
 fontsize=10
 // fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
@@ -313,12 +314,12 @@ layer=100
       <x>416</x>
       <y>416</y>
       <w>136</w>
-      <h>96</h>
+      <h>72</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;100.0;140.0;100.0;140.0;20.0</additional_attributes>
+    <additional_attributes>10.0;70.0;140.0;70.0;140.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -375,14 +376,14 @@ layer=100</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>480</x>
-      <y>328</y>
+      <y>312</y>
       <w>64</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;30.0;60.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;60.0;30.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -401,32 +402,32 @@ layer=100
     <id>Relation</id>
     <coordinates>
       <x>480</x>
-      <y>216</y>
+      <y>344</y>
       <w>128</w>
-      <h>120</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100</panel_attributes>
-    <additional_attributes>10.0;130.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>592</x>
-      <y>208</y>
-      <w>72</w>
+      <y>408</y>
+      <w>80</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=[]-(
 layer=100
 </panel_attributes>
-    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>712</x>
-      <y>192</y>
+      <x>720</x>
+      <y>392</y>
       <w>160</w>
       <h>64</h>
     </coordinates>
@@ -439,8 +440,8 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>648</x>
-      <y>216</y>
+      <x>656</x>
+      <y>416</y>
       <w>80</w>
       <h>24</h>
     </coordinates>
@@ -451,13 +452,38 @@ layer=100</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>608</x>
-      <y>184</y>
+      <x>616</x>
+      <y>432</y>
       <w>152</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>useMapsService
 layer=100</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>416</y>
+      <w>88</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=()-
+layer=100</panel_attributes>
+    <additional_attributes>10.0;100.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>416</x>
+      <y>480</y>
+      <w>128</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-(
+layer=100
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
   </element>
 </diagram>

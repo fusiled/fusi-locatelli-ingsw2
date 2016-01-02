@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
   <zoom_level>10</zoom_level>
   <element>
     <id>UMLGeneric</id>
@@ -10,7 +11,9 @@
     </coordinates>
     <panel_attributes>symbol=component
 layer=1
+&lt;&lt;external&gt;&gt;
 GoogleMapsService
+valign=center
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>

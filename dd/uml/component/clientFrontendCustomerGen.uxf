@@ -51,4 +51,16 @@ layer=100
 to ServiceCommunicator</panel_attributes>
     <additional_attributes>20.0;10.0;20.0;50.0</additional_attributes>
   </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>390</y>
+      <w>190</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+m1=to GoogleMapsService</panel_attributes>
+    <additional_attributes>20.0;100.0;20.0;10.0</additional_attributes>
+  </element>
 </diagram>

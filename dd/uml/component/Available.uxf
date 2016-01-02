@@ -4,8 +4,8 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>126</x>
-      <y>54</y>
+      <x>180</x>
+      <y>288</y>
       <w>171</w>
       <h>72</h>
     </coordinates>
@@ -19,8 +19,8 @@ valign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>117</x>
-      <y>117</y>
+      <x>171</x>
+      <y>351</y>
       <w>135</w>
       <h>117</h>
     </coordinates>
@@ -32,8 +32,8 @@ m2=to Authenticator</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>135</x>
-      <y>117</y>
+      <x>189</x>
+      <y>351</y>
       <w>189</w>
       <h>72</h>
     </coordinates>
@@ -46,8 +46,8 @@ to ServiceCommunicator
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>198</x>
-      <y>18</y>
+      <x>252</x>
+      <y>252</y>
       <w>162</w>
       <h>54</h>
     </coordinates>
@@ -58,12 +58,26 @@ AvailableTaxiInterface</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>126</x>
-      <y>54</y>
+      <x>180</x>
+      <y>288</y>
       <w>171</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>bg=yellow</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>171</x>
+      <y>207</y>
+      <w>171</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=)-
+layer=100
+m1=to GoogleMapsService
+</panel_attributes>
+    <additional_attributes>20.0;20.0;20.0;90.0</additional_attributes>
   </element>
 </diagram>

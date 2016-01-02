@@ -275,8 +275,7 @@ Core
 
 \begin_layout Enumerate
 \noindent
-Database.
- 
+Database
 \end_layout
 
 \begin_layout Standard
@@ -290,6 +289,8 @@ Frontend is used to allow customers and taxi drivers to interact with the
  Service Communicator has to ensure the comunication between the front end
  and the core, providing services to both the components.
  Database trivially must store data that system generates and exploits.
+ The GoogleMaps component is also included but it's external.
+ Its API is provided by the Google Company.
 \end_layout
 
 \begin_layout Subsection
@@ -355,6 +356,11 @@ Required interfaces
 \begin_layout Enumerate
 Interface to ServiceCommunicator: needed for dialogate with the core of
  the system
+\end_layout
+
+\begin_layout Enumerate
+Interface to GoogleMapsService: needed for gathering the position of the
+ customer.
 \end_layout
 
 \end_inset
@@ -497,6 +503,10 @@ Required interfaces
 Interface to ServiceCommunicator
 \end_layout
 
+\begin_layout Enumerate
+Interface to GoogleMapsService
+\end_layout
+
 \end_inset
 </cell>
 </row>
@@ -543,6 +553,7 @@ Description
 \begin_layout Plain Layout
 The duty of performanceHandler is to present generic requests made by the
  customer using the ServiceCommunicator.
+ The position can also be gathered using the GoogleMapsService component.
 \end_layout
 
 \end_inset
@@ -742,7 +753,11 @@ Required interfaces
 \begin_inset Text
 
 \begin_layout Enumerate
-Interface to ServiceCommunicator for dialogates with the system.
+Interface to ServiceCommunicator
+\end_layout
+
+\begin_layout Enumerate
+Interface to GoogleMapsService 
 \end_layout
 
 \end_inset
@@ -889,6 +904,11 @@ Interface to ServiceCommunicator to inform the system about the availability
 Interface to Authenticator for verifying identity of taxi driver.
 \end_layout
 
+\begin_layout Enumerate
+Interface to GoogleMapsService.
+ 
+\end_layout
+
 \end_inset
 </cell>
 </row>
@@ -935,6 +955,7 @@ Description
 It manage the availability of a taxi.
  Using this component taxi drivers can set their status to available or
  unavailable.
+ It also notifies the change of zone of the taxi driver to Core.
 \end_layout
 
 \end_inset
@@ -2283,6 +2304,10 @@ Required interfaces
 Interface to accessDatabase, needed to retrieve information about taxis.
 \end_layout
 
+\begin_layout Enumerate
+Interface to GoogleMapsService to calculate position of taxis.
+\end_layout
+
 \end_inset
 </cell>
 </row>
@@ -2360,6 +2385,36 @@ This component manages the status of every taxi and allow taxi drivers to
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align left
+Assembling all the core components previously described the complete Core
+ component is obtained.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/component/serverCore.png
+	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Google Maps Service
+\end_layout
+
+\begin_layout Standard
+This is an external component that is provided by Google.
 \end_layout
 
 \begin_layout Standard
@@ -2468,28 +2523,6 @@ This is an external component provided by Google and used by the system
 \begin_inset Graphics
 	filename uml/component/googleMapsServiceComp.png
 	width 9cm
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align left
-Assembling all the core components previously described the complete Core
- component is obtained.
-\end_layout
-
-\begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename uml/component/serverCore.png
-	width 15cm
 
 \end_inset
 

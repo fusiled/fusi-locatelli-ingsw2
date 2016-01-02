@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.3">
-  <zoom_level>10</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>80</x>
-      <y>160</y>
-      <w>790</w>
-      <h>310</h>
+      <x>140</x>
+      <y>238</y>
+      <w>553</w>
+      <h>217</h>
     </coordinates>
     <panel_attributes>Taxi Frontend
 symbol=component
@@ -17,10 +17,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>90</x>
-      <y>250</y>
-      <w>190</w>
-      <h>80</h>
+      <x>147</x>
+      <y>301</y>
+      <w>133</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>symbol=component
 Ride
@@ -33,10 +33,10 @@ valign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>100</y>
-      <w>210</w>
-      <h>80</h>
+      <x>182</x>
+      <y>196</y>
+      <w>147</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=[]-()
 layer=100
@@ -46,10 +46,10 @@ m2=AcceptRefusePerformance</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>100</y>
-      <w>130</w>
-      <h>80</h>
+      <x>336</x>
+      <y>196</y>
+      <w>91</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=()-[]
 layer=100
@@ -59,10 +59,10 @@ m1=Authentication</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>350</x>
-      <y>310</y>
-      <w>210</w>
-      <h>80</h>
+      <x>329</x>
+      <y>343</y>
+      <w>147</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>symbol=component
 Authentication
@@ -75,10 +75,10 @@ valign=center</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>660</x>
-      <y>250</y>
-      <w>190</w>
-      <h>80</h>
+      <x>546</x>
+      <y>301</y>
+      <w>133</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>symbol=component
 Available
@@ -90,10 +90,10 @@ valign=center</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>110</y>
-      <w>140</w>
-      <h>70</h>
+      <x>602</x>
+      <y>203</y>
+      <w>98</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>lt=()-[]
 layer=100
@@ -103,10 +103,10 @@ m1=AppearAvailable</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>230</y>
-      <w>80</w>
-      <h>50</h>
+      <x>273</x>
+      <y>287</y>
+      <w>56</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100</panel_attributes>
@@ -115,10 +115,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>260</y>
-      <w>120</w>
-      <h>70</h>
+      <x>399</x>
+      <y>308</y>
+      <w>84</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100
@@ -128,10 +128,10 @@ Authenticator</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>590</x>
-      <y>230</y>
-      <w>90</w>
-      <h>50</h>
+      <x>497</x>
+      <y>287</y>
+      <w>63</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100</panel_attributes>
@@ -140,10 +140,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>460</x>
-      <y>240</y>
-      <w>150</w>
-      <h>50</h>
+      <x>406</x>
+      <y>294</y>
+      <w>105</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 layer=100</panel_attributes>
@@ -152,10 +152,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
-      <y>240</y>
-      <w>140</w>
-      <h>50</h>
+      <x>315</x>
+      <y>294</y>
+      <w>98</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 layer=100</panel_attributes>
@@ -164,10 +164,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>460</y>
-      <w>50</w>
-      <h>60</h>
+      <x>392</x>
+      <y>448</y>
+      <w>35</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=[]-(
 layer=100</panel_attributes>
@@ -176,10 +176,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>580</x>
-      <y>320</y>
-      <w>190</w>
-      <h>120</h>
+      <x>490</x>
+      <y>350</y>
+      <w>133</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100</panel_attributes>
@@ -188,10 +188,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>320</y>
-      <w>170</w>
-      <h>110</h>
+      <x>182</x>
+      <y>350</y>
+      <w>119</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=-(
 layer=100</panel_attributes>
@@ -200,10 +200,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>220</y>
-      <w>150</w>
-      <h>50</h>
+      <x>182</x>
+      <y>280</y>
+      <w>105</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=()-
 RideTaxiInterface</panel_attributes>
@@ -212,10 +212,10 @@ RideTaxiInterface</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>130</x>
-      <y>150</y>
-      <w>50</w>
-      <h>90</h>
+      <x>175</x>
+      <y>231</y>
+      <w>35</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=-(</panel_attributes>
     <additional_attributes>20.0;10.0;20.0;60.0</additional_attributes>
@@ -223,10 +223,10 @@ RideTaxiInterface</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>350</x>
-      <y>150</y>
-      <w>50</w>
-      <h>70</h>
+      <x>329</x>
+      <y>231</y>
+      <w>35</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>lt=-(</panel_attributes>
     <additional_attributes>20.0;10.0;20.0;40.0</additional_attributes>
@@ -234,10 +234,10 @@ RideTaxiInterface</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>360</x>
-      <y>200</y>
-      <w>220</w>
-      <h>130</h>
+      <x>336</x>
+      <y>266</y>
+      <w>154</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>lt=()-
 m1=AuthenticationTaxiInterface</panel_attributes>
@@ -246,10 +246,10 @@ m1=AuthenticationTaxiInterface</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>730</x>
-      <y>150</y>
-      <w>50</w>
-      <h>90</h>
+      <x>595</x>
+      <y>231</y>
+      <w>35</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=-(</panel_attributes>
     <additional_attributes>20.0;10.0;20.0;60.0</additional_attributes>
@@ -257,10 +257,10 @@ m1=AuthenticationTaxiInterface</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>740</x>
-      <y>220</y>
-      <w>180</w>
-      <h>50</h>
+      <x>602</x>
+      <y>280</y>
+      <w>126</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=()-
 AvailableTaxiInterface</panel_attributes>
@@ -269,10 +269,10 @@ AvailableTaxiInterface</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>380</y>
-      <w>50</w>
-      <h>60</h>
+      <x>392</x>
+      <y>392</y>
+      <w>35</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=)-
 layer=100</panel_attributes>
@@ -281,10 +281,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
+      <x>399</x>
       <y>420</y>
-      <w>30</w>
-      <h>60</h>
+      <w>21</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100</panel_attributes>
@@ -293,10 +293,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>460</x>
-      <y>400</y>
-      <w>140</w>
-      <h>90</h>
+      <x>406</x>
+      <y>406</y>
+      <w>98</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100</panel_attributes>
@@ -305,10 +305,10 @@ layer=100</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>290</x>
-      <y>390</y>
-      <w>190</w>
-      <h>100</h>
+      <x>287</x>
+      <y>399</y>
+      <w>133</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=()-
 layer=100</panel_attributes>
@@ -317,10 +317,10 @@ layer=100</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>560</x>
-      <y>510</y>
-      <w>230</w>
-      <h>70</h>
+      <x>476</x>
+      <y>483</y>
+      <w>161</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>Required interface to ServiceComunicator
 bg=green</panel_attributes>
@@ -329,12 +329,50 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>470</x>
-      <y>490</y>
-      <w>110</w>
-      <h>40</h>
+      <x>413</x>
+      <y>469</y>
+      <w>77</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>175</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=()-
+layer=100</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>490</x>
+      <y>140</y>
+      <w>147</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>symbol=component
+layer=1
+&lt;&lt;external&gt;&gt;
+GoogleMapsService
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>546</x>
+      <y>217</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=)-</panel_attributes>
+    <additional_attributes>20.0;20.0;20.0;120.0</additional_attributes>
   </element>
 </diagram>
