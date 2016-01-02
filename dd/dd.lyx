@@ -2982,6 +2982,8 @@ When a customer submits a performance to the system, Customer Frontend does
  The response can be positive (a taxi has been found and so the response
  contains details about the chosen taxi and ETA) or negative (a simple message
  that the service is not available).
+ If a taxi is found an insertion is done in the db to keep track of the
+ ride.
 \end_layout
 
 \begin_layout Standard
@@ -3026,7 +3028,8 @@ Queue Algorithm
 
 \begin_layout Standard
 The processing of a performance in the Queue Manager starts with retrieving
- the zone where the ride indicated by the performance will start.
+ the zone where the ride indicated by the performance will start using the
+ status and the position of taxi drivers stored in the database.
  In this way is possible to get the queue of taxis available in the zone.
  The Queue Manager will start to sequentally contact all the taxis in the
  queue asking them if they want to accept the ride until the queue is empty
@@ -3181,6 +3184,72 @@ When a taxi driver wants to change his current status (from available to
 \begin_inset Graphics
 	filename uml/runtime/bpmnTaxiAvailable.png
 	width 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Change Taxi Zone
+\end_layout
+
+\begin_layout Standard
+The app of installed in taxi smartphone continuosly checks if a taxi driver
+ change the zone where he is using the GoogleMapsServiceComponent.
+ If a zone change takes place, then the Core is immediatly notified.
+ In this way Core always knows where a taxi is keeping memory of the zone
+ in the database.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/runtime/changeTaxiZone.png
+	height 12cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Start ride
+\end_layout
+
+\begin_layout Standard
+When a taxi driver finds the costumer and the ride begins the taxi driver
+ must notify the system of this event.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/runtime/startRide.png
+	width 15cm
+	height 15cm
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Close ride
+\end_layout
+
+\begin_layout Standard
+When a ride is ended the taxi driver must notify this event to the system.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename uml/runtime/closeRide.png
+	width 15cm
+	height 12cm
+	keepAspectRatio
 
 \end_inset
 
