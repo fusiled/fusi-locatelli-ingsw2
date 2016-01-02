@@ -206,9 +206,11 @@ Section 1 describes the main purpose and the structure of this Design Document.
  Section 3 contains the main algorithm implemented in the core of the system,
  that manages the taxi queue and the sending of messages to customers and
  taxi drivers.
- Section 4 shows how every functional requirement described in the RASD
+ Section 4 contains the user interface design, that is how is structured
+ the interface that users see when they use this application.
+ Section 5 shows how every functional requirement described in the RASD
  document is covered by the components of the system.
- Lastly, section 5 contains all the references to external documents needed
+ Lastly, section 6 contains all the references to external documents needed
  to fully understand this paper.
 \end_layout
 
@@ -2848,6 +2850,21 @@ FinishZone
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+The following ER (Entity-Relationship) diagram explains the connection between
+ tables in the database.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename uml/ER diagram/ER.png
+	width 13cm
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Deployment view
 \end_layout
