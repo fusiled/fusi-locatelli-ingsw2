@@ -102,7 +102,12 @@ Document version
 \end_layout
 
 \begin_layout Itemize
-1.0 - 4/12/2015: first release
+1.1 5/1/2016: clarified database section, added GoogleMapsService component
+ and added runtime diagram related to taxi.
+\end_layout
+
+\begin_layout Itemize
+1.0 - 4/12/2015: first release.
 \end_layout
 
 \begin_layout Subsection
