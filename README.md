@@ -6,7 +6,8 @@ Students:
 
 ## Documents Released
 * RASD 1.0.1
-* Design Document 1.0
+* Design Document 1.1.0
+* Code Inspection 1.0.0
 
 
 ## Project schedule
