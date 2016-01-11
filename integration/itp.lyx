@@ -212,6 +212,35 @@ Furthermore we assume that the integration between the GoogleMapsService
 Elements to be integrated
 \end_layout
 
+\begin_layout Standard
+In the following picture there are all the system components that have to
+ be integrated and the arrows represent the order in which the components
+ have to be integrated.
+ In order to integrate a component that is placed at the tail of an arrow,
+ the component at the head of that arrow must be integrated first.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+//inserire immagine schema completo senza stub
+\end_layout
+
+\begin_layout Standard
+\noindent
+In order to guarantee an easier and faster integration procedure, the system
+ is split in three parts (front end, service communicator and core) so the
+ integration of these three macro components can be done simultaneously.
+ In order to test also the communication between this parts, we use stubs
+ that can simulate all the needed functionalities of the components that
+ the analyzed component is connected to.
+\end_layout
+
+\begin_layout Standard
+\noindent
+//inserire immagine schema con stub
+\end_layout
+
 \begin_layout Subsection
 Integration testing strategy
 \end_layout
