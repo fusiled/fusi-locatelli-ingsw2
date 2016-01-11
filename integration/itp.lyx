@@ -195,6 +195,19 @@ Integration Strategy
 Entry criteria
 \end_layout
 
+\begin_layout Standard
+We assume that every component is working properly: this means that it has
+ been tested individually.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Furthermore we assume that the integration between the GoogleMapsService
+ and the components of our system is working because of the fact that it
+ is an external component that we chose to use.
+\end_layout
+
 \begin_layout Subsection
 Elements to be integrated
 \end_layout
