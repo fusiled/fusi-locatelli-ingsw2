@@ -104,11 +104,23 @@ Time Spent
 
 \begin_layout Itemize
 Matteo M.
- Fusi: 
+ Fusi: ~8h
 \end_layout
 
 \begin_layout Itemize
-Matteo Locatelli: 
+Matteo Locatelli: ~8h
+\end_layout
+
+\begin_layout Subsection
+Software used
+\end_layout
+
+\begin_layout Itemize
+Astah Professional (used to design the graphs)
+\end_layout
+
+\begin_layout Itemize
+Lyx (used to write this document)
 \end_layout
 
 \begin_layout Standard
@@ -1336,7 +1348,7 @@ Test Item(s)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Core Facade → Service Communicator Driver
+Core Facade → Service Core Driver
 \end_layout
 
 \end_inset
@@ -1402,7 +1414,7 @@ Environmental Needs
 \begin_inset Text
 
 \begin_layout Plain Layout
-Service Communicator Driver
+Service Core Driver
 \end_layout
 
 \end_inset
@@ -2177,7 +2189,7 @@ Test Item(s)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Performance Handler → Service Communicator Driver
+Performance Handler → Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2246,7 +2258,7 @@ Environmental Needs
 \begin_inset Text
 
 \begin_layout Plain Layout
-Service Communicator Driver
+Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2320,7 +2332,7 @@ Test Item(s)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Confirmation Handler → Service Communicator Driver
+Confirmation Handler → Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2390,7 +2402,7 @@ Environmental Needs
 \begin_inset Text
 
 \begin_layout Plain Layout
-Service Communicator Driver
+Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2462,7 +2474,7 @@ Test Item(s)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Authentication Engine → Service Communicator Driver
+Authentication Engine → Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2529,7 +2541,7 @@ Environmental Needs
 \begin_inset Text
 
 \begin_layout Plain Layout
-Service Communicator Driver
+Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2745,7 +2757,7 @@ Test Item(s)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Available → Service Communicator Driver
+Available → Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2812,7 +2824,7 @@ Environmental Needs
 \begin_inset Text
 
 \begin_layout Plain Layout
-Service Communicator Driver
+Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2886,7 +2898,7 @@ Test Item(s)
 \begin_inset Text
 
 \begin_layout Plain Layout
-Ride Handler→ Service Communicator Driver
+Ride Handler→ Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -2953,7 +2965,7 @@ Environmental Needs
 \begin_inset Text
 
 \begin_layout Plain Layout
-Service Communicator Driver
+Service Frontend Driver
 \end_layout
 
 \end_inset
@@ -4224,8 +4236,53 @@ Execute I21, then I22 and finally I23 - I24
 Tools and Test Equipment Required
 \end_layout
 
+\begin_layout Standard
+In order to implement the integration tests explained in the previous section,
+ we decided to use the combination Arquillian + JUnit: we use JUnit to generate
+ a test unit for each test case explained in section 2, then we use Arquillian
+ to simulate a component when needed.
+ A test suite will be created for each test procedure.
+ We decided to use Aquillian because our system structure is very modular
+ and the feature of Arquillian to simulate components and to integrate them
+ can be very useful in our case.
+\end_layout
+
 \begin_layout Section
 Program Stubs and Test Data Required
+\end_layout
+
+\begin_layout Standard
+In order to properly execute the integration of the components of the system
+ and referred to the system diagram in section 2.3, the following drivers
+ are needed:
+\end_layout
+
+\begin_layout Itemize
+Frontend driver: it simulates ServiceFrontendPort from the Service Communicator
+ point of view.
+\end_layout
+
+\begin_layout Itemize
+Service Core driver: it simulates CoreServicePort from the Core point of
+ view.
+\end_layout
+
+\begin_layout Itemize
+Service Frontend driver: it simulates FrontendServicePort from the Frontend
+ point of view.
+\end_layout
+
+\begin_layout Itemize
+Core driver: it simulates ServiceCorePort from the Core point of view.
+\end_layout
+
+\begin_layout Itemize
+Database driver: it simulates CoreDatabasePort from the Core point of view.
+\end_layout
+
+\begin_layout Standard
+Trivially every driver simulates the behaviour of the corresponding component.
+ 
 \end_layout
 
 \end_body
