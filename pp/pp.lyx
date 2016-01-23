@@ -474,5 +474,47 @@ Resources allocation
 Possible risks
 \end_layout
 
+\begin_layout Standard
+The possible risks that we can encounter during the planning and the developing
+ of the mytaxi application are:
+\end_layout
+
+\begin_layout Enumerate
+a change in the organization of the taxi service during the developing process,
+ like the introduction or the deletion of a zone of the city.
+ This issue can be resolved guaranteeing a flexible application that can
+ be easily modified during the development process.
+\end_layout
+
+\begin_layout Enumerate
+a change in the requirements after the RASD documente has been completed.
+ This can cause a delay in the developing process, because the RASD must
+ be modified, along with other documents or the code if the coding phase
+ has already begun.
+\end_layout
+
+\begin_layout Enumerate
+an inaccurate cost estimation, caused by the statistical nature of the FP
+ and Cocomo II, that can't provide an exact value of the costs that the
+ application requires.
+ This means that the actual costs could be smaller (this doesn't represent
+ a problem) or bigger, meaning that additional money has to be invested
+ in the application development.
+\end_layout
+
+\begin_layout Enumerate
+problems with the testing and/or integration phase, this means that if one
+ of these two steps show some error in the code, it has to be corrected
+ and then tested and integrated againg, causing a delay in the development
+ time.
+\end_layout
+
+\begin_layout Standard
+The maxmimum estimated delay in the process is 2 months; in the case of
+ a delay another viable option is to release the application on the scheduled
+ day without the reservation functionalities, that can be added later by
+ means of an update.
+\end_layout
+
 \end_body
 \end_document
