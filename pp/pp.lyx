@@ -95,7 +95,7 @@ Document version
 \end_layout
 
 \begin_layout Itemize
-1.0 - 21/1/2016: first release
+1.0 - 2/2/2016: first release
 \end_layout
 
 \begin_layout Subsection
@@ -146,8 +146,21 @@ LatexCommand tableofcontents
 Introduction
 \end_layout
 
-\begin_layout Subsection
-Purpose and scope
+\begin_layout Standard
+The sake of this document is to define a plan for the implementation of
+ the software needed by the mytaxi service specified by the attached RASD
+ (see 
+\emph on
+1.3 List of referenced documents
+\emph default
+ for further details).
+ This document also include a cost estimation based on the Function Points
+ / COCOMO method: in this way it will be possible to know an estimation
+ of number on source lines of code, effort and number of people required
+ to finish the project in a reasonable amount of time.
+ After that a schedule of tasks will be proposed.
+ In the end a list of possible risks that could slow down the development
+ will be shown to the reader.
 \end_layout
 
 \begin_layout Subsection
@@ -1269,8 +1282,36 @@ Project Schedule
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Resources allocation
+\end_layout
+
+\begin_layout Standard
+The allocation criterion of people on tasks is based on the assumption that
+ a person will be the responsible of every task and the other person will
+ help the other as much as possible in terms of time and effort.
+ The tasks are divided in the way that every member of the team has assigned
+ the same amount of work.
+\end_layout
+
+\begin_layout Itemize
+Matteo M.
+ Fusi: responsible of requirement analysis, model verification, project
+ planning, design document and module & integration testing
+\end_layout
+
+\begin_layout Itemize
+Matteo Locatelli: responsible of cost analysis, implementation & development,
+ code inspection and system testing.
+\end_layout
+
+\begin_layout Standard
+It's remarkable that important tasks of the development such as the requirement
+ analysis and the final system testing are executed by the entire team.
+ Code inspection must also be executed together because different points
+ of view are important.
+ The development and the testing tasks are exectued in parallel for the
+ sake of speed up the entire project.
 \end_layout
 
 \begin_layout Section
